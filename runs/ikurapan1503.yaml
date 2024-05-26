@@ -2,19 +2,19 @@ uid: ikurapan1503
 runner: ikurapan
 src_id: z19j11jm
 videos:
-  - remote: 'https://www.youtube.com/watch?v=xvzybvqtGC8'
+  - remote: 'https://youtu.be/xvzybvqtGC8'
     segments:
       - - 3265
         - 365328
-  - remote: 'https://www.youtube.com/watch?v=9HwyiCnR-CQ'
+  - remote: 'https://youtu.be/9HwyiCnR-CQ'
     segments:
       - - 229
         - 454869
-  - remote: 'https://www.youtube.com/watch?v=or3XkyHnN8I'
+  - remote: 'https://youtu.be/or3XkyHnN8I'
     segments:
       - - 246
         - 419722
-  - remote: 'https://www.youtube.com/watch?v=csH39gmkeDc'
+  - remote: 'https://youtu.be/csH39gmkeDc'
     segments:
       - - 265
         - 390572

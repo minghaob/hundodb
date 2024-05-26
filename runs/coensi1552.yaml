@@ -2,11 +2,11 @@ uid: coensi1552
 runner: coensi
 src_id: zgp40xvz
 videos:
-  - remote: 'https://www.youtube.com/watch?v=QshAUhKWS20'
+  - remote: 'https://youtu.be/QshAUhKWS20'
     segments:
       - - 132932
         - 1038004
-  - remote: 'https://www.youtube.com/watch?v=CCYh2UXCDk4'
+  - remote: 'https://youtu.be/CCYh2UXCDk4'
     segments:
       - - 903
         - 373575

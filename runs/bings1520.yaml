@@ -2,13 +2,13 @@ uid: bings1520
 runner: BingsF
 src_id: yjwo1l3m
 videos:
-  - remote: 'https://www.youtube.com/watch?v=jG9dDOcJHyk'
+  - remote: 'https://youtu.be/jG9dDOcJHyk'
     segments:
       - - 3422
         - 441466
       - - 493568
         - 956395
-  - remote: 'https://www.youtube.com/watch?v=LxZ1QiY3R3Q'
+  - remote: 'https://youtu.be/LxZ1QiY3R3Q'
     segments:
       - - 1944
         - 457347

@@ -2,19 +2,19 @@ uid: pancake1544
 runner: PancakeTurtle
 src_id: yw62jd0m
 videos:
-  - remote: 'https://www.youtube.com/watch?v=VuLPcjFHrRo'
+  - remote: 'https://youtu.be/VuLPcjFHrRo'
     segments:
       - - 2276
         - 519230
-  - remote: 'https://www.youtube.com/watch?v=8VioZRzbgl0'
+  - remote: 'https://youtu.be/8VioZRzbgl0'
     segments:
       - - 226
         - 414343
-  - remote: 'https://www.youtube.com/watch?v=WN_YbGWU_y8'
+  - remote: 'https://youtu.be/WN_YbGWU_y8'
     segments:
       - - 1054
         - 477622
-  - remote: 'https://www.youtube.com/watch?v=LLfUp8iBoN4'
+  - remote: 'https://youtu.be/LLfUp8iBoN4'
     segments:
       - - 3101
         - 296043

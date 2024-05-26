@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+.move-table {
+	width: 100%;
+	border-collapse: collapse;
+	user-select: none;
+	white-space: nowrap;
+}
+.move-table th, td {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 3px;
+	font-size: 12px;
+}
+.move-table th {
+	background-color: #f2f2f2;
+	font-size: 13px;
+}
+.move-table tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.move-table tr td:nth-child(2) {
+    text-align: right;
+}
+
+.move-table a {
+    text-decoration: none;
+}
+
+.move-table a:hover {
+    text-decoration: underline;
+}
+
+.no-background-tooltip {
+    background: transparent;      /* Make background transparent */
+    border: none;                 /* Remove border */
+    box-shadow: none;             /* Remove shadow */
+    text-shadow: 1px 1px black, 1px -1px  black, -1px 1px black, -1px -1px black;
+    color: white; /* Set text color */
+    font-size: 12px; /* Set font size */
+    font-family: Arial, sans-serif;
+}
+
+.no-background-tooltip::before { /* Remove the tooltip arrow */
+    border: none;
+}
+
+/* Additional style adjustments if needed */
+.no-background-tooltip .leaflet-tooltip-content {
+    padding: 0; /* Remove padding */
+}
