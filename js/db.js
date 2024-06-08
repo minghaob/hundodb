@@ -25,7 +25,7 @@ function addMove(from, to, runUID, eventIdx, numFrame) {
 function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 	let run = g_runs[runUID];
 	if (!run)
-		return null;
+		return [null, null];
 	
 	for (let vidIdx = 0; vidIdx < run.videos.length; vidIdx++) {
 		for (let segIdx = 0; segIdx < run.videos[vidIdx].segments.length; segIdx++) {
@@ -41,7 +41,7 @@ function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 		}
 	}
 
-	return 'null1';
+	return [null, null];
 }
 
 const hdbRunsURL = 'runs/';
