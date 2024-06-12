@@ -15,2073 +15,2154 @@ videos:
       - - 493664
         - 794508
 events:
-  - frame: 11329
+  - frame: 11328
     label: Ja Baij Shrine
-  - frame: 14505
+  - frame: 14504
     label: Great Plateau Tower
-  - frame: 20964
+  - frame: 20962
     label: Oman Au Shrine
-  - frame: 26334
+  - frame: 21682
+    label: Great Plateau Tower
+    type: Travel
+  - frame: 26333
     label: Keh Namut Shrine
-  - frame: 30601
+  - frame: 30600
     label: Owa Daim Shrine
-  - frame: 41407
+  - frame: 41406
     label: Mogg Latan Shrine
-  - frame: 42318
+  - frame: 42317
     label: R60
-  - frame: 46779
+  - frame: 46778
     label: X19
-  - frame: 49743
+  - frame: 49741
     label: X08
-  - frame: 50597
+  - frame: 50596
     label: X13
-  - frame: 59243
+  - frame: 59242
     label: Kaya Wan Shrine
-  - frame: 62271
+  - frame: 62270
     label: Daka Tuss Shrine
-  - frame: 65295
+  - frame: 65294
     label: Ta'loh Naeg Shrine
-  - frame: 121370
+  - frame: 121369
     label: N42
-  - frame: 131784
+  - frame: 131783
     label: N48
-  - frame: 132817
+  - frame: 132816
     label: N43
-  - frame: 134780
+  - frame: 134779
     label: N59
-  - frame: 135580
+  - frame: 135579
     label: N58
-  - frame: 136938
+  - frame: 136937
     label: N50
-  - frame: 137262
+  - frame: 137260
     label: N49
-  - frame: 138054
+  - frame: 138046
     label: Hateno Tower
-  - frame: 140080
+  - frame: 140079
     label: D53
-  - frame: 141031
+  - frame: 141030
     label: D58
-  - frame: 141541
+  - frame: 141540
     label: D57
-  - frame: 142179
+  - frame: 142178
     label: F07
-  - frame: 142820
+  - frame: 142819
     label: F13
-  - frame: 143558
+  - frame: 143557
     label: F06
-  - frame: 145317
+  - frame: 145316
     label: F09
-  - frame: 145943
+  - frame: 145942
     label: F08
-  - frame: 146975
+  - frame: 146974
     label: F12
-  - frame: 147543
+  - frame: 147542
     label: F11
-  - frame: 148364
+  - frame: 148363
     label: F17
-  - frame: 152650
+  - frame: 152642
     label: Faron Tower
-  - frame: 154641
+  - frame: 154640
     label: F25
-  - frame: 155612
+  - frame: 155610
     label: F39
-  - frame: 156460
+  - frame: 156459
     label: F40
-  - frame: 157714
+  - frame: 157713
     label: F46
-  - frame: 162083
+  - frame: 157836
+    label: Ta'loh Naeg Shrine
+    type: Travel
+  - frame: 162082
     label: D21
-  - frame: 165189
+  - frame: 165188
     label: D20
-  - frame: 165796
+  - frame: 165795
     label: D19
-  - frame: 166277
+  - frame: 166276
     label: D18
-  - frame: 170275
+  - frame: 166393
+    label: Kaya Wan Shrine
+    type: Travel
+  - frame: 170274
     label: Z37
-  - frame: 171282
+  - frame: 171280
     label: Z38
-  - frame: 171890
+  - frame: 171888
     label: Z39
-  - frame: 172289
+  - frame: 172288
     label: Z40
-  - frame: 173300
+  - frame: 173298
     label: Z12
-  - frame: 175956
+  - frame: 173425
+    label: Mogg Latan Shrine
+    type: Travel
+  - frame: 175946
     label: Tabantha Tower
-  - frame: 182120
+  - frame: 182119
     label: T02
-  - frame: 206970
+  - frame: 206969
     label: T10
-  - frame: 207905
+  - frame: 207903
     label: T13
-  - frame: 209982
+  - frame: 209981
     label: Sha Warvo Shrine
-  - frame: 211685
+  - frame: 211684
     label: H54
-  - frame: 212573
+  - frame: 212572
     label: H55
-  - frame: 213297
+  - frame: 213296
     label: T03
-  - frame: 215888
+  - frame: 215887
     label: H43
-  - frame: 216754
+  - frame: 216753
     label: H27
-  - frame: 218404
+  - frame: 218402
     label: Shada Naw Shrine
-  - frame: 220229
+  - frame: 220228
     label: H33
-  - frame: 220823
+  - frame: 220821
     label: H34
   - frame: 221811
     label: H46
-  - frame: 222292
+  - frame: 222291
     label: H48
-  - frame: 223018
+  - frame: 223017
     label: H50
-  - frame: 223299
+  - frame: 223296
     label: H47
-  - frame: 223542
+  - frame: 223541
     label: H49
-  - frame: 224141
+  - frame: 224139
     label: H44
-  - frame: 224786
+  - frame: 224785
     label: H45
-  - frame: 225799
+  - frame: 225798
     label: H56
-  - frame: 226340
+  - frame: 226339
     label: H51
-  - frame: 228845
+  - frame: 228844
     label: Gee Ha'rah Shrine
-  - frame: 230659
+  - frame: 230658
     label: H57
-  - frame: 232305
+  - frame: 232304
     label: Lanno Kooh Shrine
-  - frame: 233203
+  - frame: 233202
     label: H64
-  - frame: 234159
+  - frame: 234158
     label: H61
-  - frame: 234760
+  - frame: 234759
     label: Hebra Tower
-  - frame: 237264
+  - frame: 237263
     label: H67
-  - frame: 237845
+  - frame: 237843
     label: H70
-  - frame: 238485
+  - frame: 238482
     label: H69
-  - frame: 239141
+  - frame: 239140
     label: H72
-  - frame: 239696
+  - frame: 239694
     label: T18
-  - frame: 240792
+  - frame: 240791
     label: H65
-  - frame: 241342
+  - frame: 241341
     label: H66
-  - frame: 242260
+  - frame: 242259
     label: T19
-  - frame: 244445
+  - frame: 242385
+    label: Mogg Latan Shrine
+    type: Travel
+  - frame: 244444
     label: G19
-  - frame: 245292
+  - frame: 245291
     label: G13
-  - frame: 246276
+  - frame: 246275
     label: G10
-  - frame: 247149
+  - frame: 247148
     label: G12
-  - frame: 250365
+  - frame: 250364
     label: Kuh Takkar Shrine
-  - frame: 252503
+  - frame: 252502
     label: Gerudo Tower
-  - frame: 256201
+  - frame: 256200
     label: W29
-  - frame: 258015
+  - frame: 258013
     label: Daqo Chisay Shrine
-  - frame: 264526
+  - frame: 264525
     label: W47
-  - frame: 265508
+  - frame: 265507
     label: W36
-  - frame: 266231
+  - frame: 266230
     label: W28
-  - frame: 302599
+  - frame: 266351
+    label: Kuh Takkar Shrine
+    type: Travel
+  - frame: 274196
+    label: Daqo Chisay Shrine
+    type: Travel
+  - frame: 302598
     label: Dako Tah Shrine
-  - frame: 304175
+  - frame: 304174
     label: G34
-  - frame: 305151
+  - frame: 305149
     label: W19
-  - frame: 306920
+  - frame: 306919
     label: Kay Noh Shrine
-  - frame: 307893
+  - frame: 307892
     label: W15
-  - frame: 310181
+  - frame: 309007
+    label: Vah Naboris (Tamed)
+    type: Travel
+  - frame: 310180
     label: W33
-  - frame: 310704
+  - frame: 310703
     label: W31
-  - frame: 311236
+  - frame: 311235
     label: W32
-  - frame: 311786
+  - frame: 311776
     label: Wasteland Tower
-  - frame: 314023
+  - frame: 314022
     label: W12
-  - frame: 314562
+  - frame: 314561
     label: W16
-  - frame: 315101
+  - frame: 315100
     label: W11
-  - frame: 316662
+  - frame: 316661
     label: W24
-  - frame: 316949
+  - frame: 316947
     label: W23
-  - frame: 318154
+  - frame: 318153
     label: W34
-  - frame: 318919
+  - frame: 318918
     label: W39
-  - frame: 319703
+  - frame: 319702
     label: W38
-  - frame: 321322
+  - frame: 321321
     label: W50
-  - frame: 322172
+  - frame: 322171
     label: W58
-  - frame: 323986
+  - frame: 323985
     label: Dila Maag Shrine
-  - frame: 325729
+  - frame: 325728
     label: W54
-  - frame: 326518
+  - frame: 326517
     label: W59
-  - frame: 327444
+  - frame: 327443
     label: W64
-  - frame: 328212
+  - frame: 328211
     label: W60
-  - frame: 331278
+  - frame: 331277
     label: Suma Sahma Shrine
-  - frame: 332466
+  - frame: 332465
     label: W53
-  - frame: 333122
+  - frame: 333120
     label: W41
-  - frame: 333787
+  - frame: 333785
     label: W46
-  - frame: 334489
+  - frame: 334488
     label: W45
-  - frame: 335284
+  - frame: 335283
     label: W49
-  - frame: 336059
+  - frame: 336057
     label: W48
-  - frame: 336945
+  - frame: 336944
     label: W52
-  - frame: 337817
+  - frame: 337816
     label: W63
-  - frame: 338450
+  - frame: 338449
     label: W68
-  - frame: 340561
+  - frame: 340560
     label: Misae Suma Shrine
-  - frame: 341774
+  - frame: 341773
     label: W62
-  - frame: 342376
+  - frame: 342375
     label: W67
-  - frame: 344537
+  - frame: 342541
+    label: Hateno Ancient Tech Lab
+    type: Travel
+  - frame: 344536
     label: N44
-  - frame: 347728
+  - frame: 347727
     label: N18
-  - frame: 348296
+  - frame: 348294
     label: N24
-  - frame: 349396
+  - frame: 349395
     label: N31
-  - frame: 350357
+  - frame: 350356
     label: N39
-  - frame: 351786
+  - frame: 351785
     label: N21
-  - frame: 352825
+  - frame: 352822
     label: N29
-  - frame: 353592
+  - frame: 353591
     label: N30
-  - frame: 353974
+  - frame: 353972
     label: N22
-  - frame: 354545
+  - frame: 354544
     label: N23
-  - frame: 358763
+  - frame: 358762
     label: Jitan Sa'mi Shrine
-  - frame: 363698
+  - frame: 363697
     label: N19
-  - frame: 365773
+  - frame: 365772
     label: N17
-  - frame: 368895
+  - frame: 368894
     label: N15
-  - frame: 369557
+  - frame: 369555
     label: N16
-  - frame: 371193
+  - frame: 371192
     label: Dow Na'eh Shrine
-  - frame: 372906
+  - frame: 372905
     label: N20
-  - frame: 374198
+  - frame: 374196
     label: N11
-  - frame: 375112
+  - frame: 375111
     label: N13
-  - frame: 376303
+  - frame: 376302
     label: N06
-  - frame: 376821
+  - frame: 376820
     label: N05
-  - frame: 379842
+  - frame: 379841
     label: N04
-  - frame: 380533
+  - frame: 380532
     label: N02
-  - frame: 381181
+  - frame: 381180
     label: N03
-  - frame: 382507
+  - frame: 382505
     label: Mezza Lo Shrine
-  - frame: 383631
+  - frame: 383630
     label: Z42
-  - frame: 384410
+  - frame: 384409
     label: Z43
-  - frame: 385170
+  - frame: 385168
     label: Z44
-  - frame: 387375
+  - frame: 387374
     label: Z33
-  - frame: 389008
+  - frame: 389007
     label: Z32
-  - frame: 391020
+  - frame: 391019
     label: Z25
-  - frame: 400801
+  - frame: 400799
     label: Ne'ez Yohma Shrine
-  - frame: 402467
+  - frame: 402466
     label: Z18
-  - frame: 403024
+  - frame: 403023
     label: Z26
-  - frame: 424034
+  - frame: 424033
     label: Dagah Keek Shrine
-  - frame: 426489
+  - frame: 426488
     label: Z24
-  - frame: 427161
+  - frame: 427160
     label: Z34
-  - frame: 429122
+  - frame: 429121
     label: Z27
-  - frame: 430142
+  - frame: 430141
     label: Z19
-  - frame: 430736
+  - frame: 430735
     label: Z20
-  - frame: 431480
+  - frame: 431478
     label: Z08
-  - frame: 433033
+  - frame: 433032
     label: Z16
-  - frame: 434663
+  - frame: 434662
     label: Z05
-  - frame: 435577
+  - frame: 435575
     label: Z04
-  - frame: 436657
+  - frame: 436656
     label: Akkala Tower
-  - frame: 438600
+  - frame: 438599
     label: A41
-  - frame: 439158
+  - frame: 439156
     label: A40
-  - frame: 439569
+  - frame: 439568
     label: A39
-  - frame: 441402
+  - frame: 441400
     label: E12
-  - frame: 442247
+  - frame: 442245
     label: A25
-  - frame: 442898
+  - frame: 442896
     label: A30
-  - frame: 443550
+  - frame: 443548
     label: A31
-  - frame: 444314
+  - frame: 444312
     label: A32
-  - frame: 446550
+  - frame: 446548
     label: A49
-  - frame: 448700
+  - frame: 448699
     label: Dah Hesho Shrine
-  - frame: 449763
+  - frame: 449762
     label: A47
-  - frame: 450938
+  - frame: 450937
     label: A51
-  - frame: 451700
+  - frame: 451697
     label: A52
-  - frame: 453410
+  - frame: 453409
     label: A50
-  - frame: 454597
+  - frame: 454596
     label: E39
-  - frame: 456245
+  - frame: 456244
     label: Sah Dahaj Shrine
-  - frame: 457790
+  - frame: 457788
     label: E34
-  - frame: 458686
+  - frame: 458685
     label: E30
-  - frame: 459364
+  - frame: 459363
     label: E29
-  - frame: 460179
+  - frame: 460178
     label: E32
-  - frame: 460937
+  - frame: 460936
     label: E33
-  - frame: 461891
+  - frame: 461881
     label: Eldin Tower
-  - frame: 463922
+  - frame: 463920
     label: E27
-  - frame: 465365
+  - frame: 465364
     label: E26
-  - frame: 466417
+  - frame: 466416
     label: E31
-  - frame: 468494
+  - frame: 468493
     label: E24
-  - frame: 469046
+  - frame: 469045
     label: E25
-  - frame: 472494
+  - frame: 472493
     label: E19
-  - frame: 473483
+  - frame: 473482
     label: E18
-  - frame: 474613
+  - frame: 474612
     label: E14
-  - frame: 475114
+  - frame: 475113
     label: E13
-  - frame: 476430
+  - frame: 476429
     label: E15
-  - frame: 479436
+  - frame: 479435
     label: Shae Mo'sah Shrine
-  - frame: 481719
+  - frame: 481718
     label: E08
-  - frame: 482838
+  - frame: 482837
     label: E09
-  - frame: 483524
+  - frame: 483523
     label: E06
-  - frame: 485649
+  - frame: 485647
     label: E11
-  - frame: 486492
+  - frame: 486491
     label: E10
-  - frame: 487174
+  - frame: 487173
     label: E07
-  - frame: 488658
+  - frame: 488657
     label: Shora Hah Shrine
-  - frame: 491520
+  - frame: 491519
     label: K08
-  - frame: 492375
+  - frame: 492374
     label: K07
-  - frame: 492997
+  - frame: 492996
     label: K06
-  - frame: 493859
+  - frame: 493858
     label: K05
-  - frame: 494998
+  - frame: 494997
     label: H16
-  - frame: 497033
+  - frame: 497032
     label: Qaza Tokki Shrine
-  - frame: 498590
+  - frame: 498589
     label: H15
-  - frame: 499837
+  - frame: 499834
     label: H22
-  - frame: 500796
+  - frame: 500795
     label: K11
-  - frame: 504672
+  - frame: 504670
     label: Ketoh Wawai Shrine
-  - frame: 507256
+  - frame: 507255
     label: K04
-  - frame: 508126
+  - frame: 508125
     label: K01
-  - frame: 509676
+  - frame: 509675
     label: K02
-  - frame: 512964
+  - frame: 512963
     label: K03
-  - frame: 514694
+  - frame: 514693
     label: E01
-  - frame: 516001
+  - frame: 516000
     label: E02
-  - frame: 516763
+  - frame: 516762
     label: E03
-  - frame: 517779
+  - frame: 517778
     label: E04
-  - frame: 518530
+  - frame: 518529
     label: E05
-  - frame: 521629
+  - frame: 521628
     label: Gorae Torr Shrine
-  - frame: 523635
+  - frame: 523634
     label: A01
-  - frame: 525694
+  - frame: 525693
     label: A05
-  - frame: 526562
+  - frame: 526560
     label: A10
-  - frame: 527477
+  - frame: 527476
     label: A11
-  - frame: 528016
+  - frame: 528015
     label: A12
-  - frame: 528993
+  - frame: 528992
     label: A06
-  - frame: 530521
+  - frame: 530520
     label: Zuna Kai Shrine
-  - frame: 532354
+  - frame: 532353
     label: A02
-  - frame: 533079
+  - frame: 533078
     label: A03
-  - frame: 534438
+  - frame: 534437
     label: A04
-  - frame: 535150
+  - frame: 535148
     label: A13
-  - frame: 536831
+  - frame: 536830
     label: A07
-  - frame: 538436
+  - frame: 538434
     label: A16
-  - frame: 540733
+  - frame: 540732
     label: A15
-  - frame: 541662
+  - frame: 541661
     label: A14
-  - frame: 544090
+  - frame: 544089
     label: Tu Ka'loh Shrine
-  - frame: 545445
+  - frame: 545444
     label: A08
-  - frame: 546485
+  - frame: 546484
     label: A09
-  - frame: 547392
+  - frame: 547391
     label: A17
-  - frame: 548548
+  - frame: 548547
     label: A24
-  - frame: 549391
+  - frame: 549390
     label: A29
-  - frame: 550288
+  - frame: 550287
     label: A28
-  - frame: 551050
+  - frame: 551049
     label: A23
-  - frame: 552477
+  - frame: 552476
     label: Katosa Aug Shrine
-  - frame: 555015
+  - frame: 555014
     label: A19
-  - frame: 555590
+  - frame: 555588
     label: A22
-  - frame: 556310
+  - frame: 556309
     label: A18
-  - frame: 556869
+  - frame: 556868
     label: A21
-  - frame: 560948
+  - frame: 560947
     label: Tutsuwa Nima Shrine
-  - frame: 562346
+  - frame: 562345
     label: A26
-  - frame: 563263
+  - frame: 563262
     label: A20
-  - frame: 564101
+  - frame: 564100
     label: A27
-  - frame: 566246
+  - frame: 566245
     label: A37
-  - frame: 571128
+  - frame: 567961
+    label: Shae Mo'sah Shrine
+    type: Travel
+  - frame: 571127
     label: E16
-  - frame: 571838
+  - frame: 571835
     label: E17
-  - frame: 573497
+  - frame: 573496
     label: Daqa Koh Shrine
-  - frame: 607223
+  - frame: 607222
     label: Kayra Mah Shrine
-  - frame: 608747
+  - frame: 608745
     label: E20
-  - frame: 609591
+  - frame: 609590
     label: E21
-  - frame: 610349
+  - frame: 610348
     label: E22
-  - frame: 611284
+  - frame: 611283
     label: E23
-  - frame: 612255
+  - frame: 612254
     label: E28
-  - frame: 614076
+  - frame: 614075
     label: Qua Raym Shrine
-  - frame: 615617
+  - frame: 615616
     label: E35
-  - frame: 616652
+  - frame: 616651
     label: K32
-  - frame: 617525
+  - frame: 617524
     label: K31
-  - frame: 618173
+  - frame: 618170
     label: Woodland Tower
-  - frame: 641367
+  - frame: 641366
     label: Daag Chokah Shrine
-  - frame: 643678
+  - frame: 642020
     label: Keo Ruug Shrine
-  - frame: 647596
+    type: Travel
+  - frame: 643676
+    label: Keo Ruug Shrine
+  - frame: 647595
     label: Maag Halan Shrine
-  - frame: 652942
+  - frame: 652940
     label: Kuhn Sidajj Shrine
-  - frame: 655725
+  - frame: 655724
     label: X06
-  - frame: 656103
+  - frame: 656102
     label: X05
-  - frame: 656659
+  - frame: 656658
     label: X10
-  - frame: 657307
+  - frame: 657306
     label: X07
-  - frame: 665759
+  - frame: 665758
     label: X03
-  - frame: 666687
+  - frame: 666685
     label: X02
-  - frame: 667830
+  - frame: 667829
     label: K30
-  - frame: 668837
+  - frame: 668835
     label: X11
-  - frame: 673480
+  - frame: 673478
     label: Saas Ko'sah Shrine
-  - frame: 675492
+  - frame: 675491
     label: X01
-  - frame: 676193
+  - frame: 676192
     label: X04
-  - frame: 678706
+  - frame: 678705
     label: X09
-  - frame: 679680
+  - frame: 679679
     label: X14
-  - frame: 680253
+  - frame: 680252
     label: X17
-  - frame: 680929
+  - frame: 680927
     label: X18
-  - frame: 681673
+  - frame: 681671
     label: X23
-  - frame: 681999
+  - frame: 681998
     label: X21
-  - frame: 682334
+  - frame: 682332
     label: X22
-  - frame: 683102
+  - frame: 683101
     label: X16
-  - frame: 683967
+  - frame: 683966
     label: X12
-  - frame: 685159
+  - frame: 685158
     label: X15
-  - frame: 686046
+  - frame: 686045
     label: X20
-  - frame: 686721
+  - frame: 686720
     label: X24
-  - frame: 687187
+  - frame: 687186
     label: C16
-  - frame: 688223
+  - frame: 688222
     label: X25
-  - frame: 688928
+  - frame: 688926
     label: C32
-  - frame: 689582
+  - frame: 689581
     label: C27
-  - frame: 690337
+  - frame: 690335
     label: C31
-  - frame: 692437
+  - frame: 692436
     label: Katah Chuki Shrine
-  - frame: 693680
+  - frame: 693679
     label: C30
-  - frame: 694170
+  - frame: 694169
     label: C25
-  - frame: 694715
+  - frame: 694714
     label: C26
-  - frame: 695459
+  - frame: 695458
     label: C22
-  - frame: 696346
+  - frame: 696345
     label: C21
-  - frame: 696780
+  - frame: 696778
     label: C20
-  - frame: 698127
+  - frame: 698126
     label: C15
-  - frame: 699038
+  - frame: 699037
     label: C08
-  - frame: 699640
+  - frame: 699639
     label: C03
-  - frame: 700186
+  - frame: 700185
     label: C01
-  - frame: 701187
+  - frame: 701186
     label: R11
-  - frame: 701822
+  - frame: 701820
     label: C07
-  - frame: 702295
+  - frame: 702294
     label: C14
-  - frame: 704551
+  - frame: 704549
     label: Noya Neha Shrine
-  - frame: 706443
+  - frame: 706442
     label: R19
-  - frame: 706817
+  - frame: 706816
     label: R16
-  - frame: 707921
+  - frame: 707919
     label: R10
-  - frame: 710144
+  - frame: 710143
     label: R07
-  - frame: 711206
+  - frame: 711204
     label: K29
-  - frame: 712371
+  - frame: 712370
     label: K27
-  - frame: 712843
+  - frame: 712842
     label: K28
-  - frame: 713980
+  - frame: 713979
     label: K19
-  - frame: 714524
+  - frame: 714523
     label: K16
-  - frame: 715023
+  - frame: 715022
     label: K18
-  - frame: 715758
+  - frame: 715757
     label: K26
-  - frame: 716359
+  - frame: 716358
     label: K24
-  - frame: 717299
+  - frame: 717298
     label: K25
-  - frame: 718581
+  - frame: 718580
     label: K17
-  - frame: 719236
+  - frame: 719235
     label: K23
-  - frame: 720809
+  - frame: 720808
     label: Monya Toma Shrine
-  - frame: 722989
+  - frame: 722988
     label: Maag No'rah Shrine
-  - frame: 724235
+  - frame: 724234
     label: R03
-  - frame: 724860
+  - frame: 724858
     label: H71
-  - frame: 725681
+  - frame: 725680
     label: R02
-  - frame: 726533
+  - frame: 726532
     label: R06
-  - frame: 727164
+  - frame: 727162
     label: R09
-  - frame: 728020
+  - frame: 728019
     label: Ridgeland Tower
-  - frame: 732407
+  - frame: 732405
     label: R08
-  - frame: 735985
+  - frame: 735984
     label: Toh Yahsa Shrine
-  - frame: 737252
+  - frame: 737251
     label: R14
-  - frame: 738477
+  - frame: 738475
     label: R15
-  - frame: 739391
+  - frame: 739390
     label: R24
-  - frame: 739833
+  - frame: 739832
     label: R23
-  - frame: 740613
+  - frame: 740612
     label: R18
-  - frame: 741523
+  - frame: 741522
     label: R25
-  - frame: 743116
+  - frame: 743115
     label: Zalta Wa Shrine
-  - frame: 744527
+  - frame: 744525
     label: C24
-  - frame: 745515
+  - frame: 745514
     label: R26
-  - frame: 745789
+  - frame: 745788
     label: R27
-  - frame: 746604
+  - frame: 746603
     label: R44
-  - frame: 747069
+  - frame: 747067
     label: R43
-  - frame: 748403
+  - frame: 748402
     label: R45
-  - frame: 749032
+  - frame: 749031
     label: R42
-  - frame: 750543
+  - frame: 750542
     label: C38
-  - frame: 751235
+  - frame: 751234
     label: C36
-  - frame: 751977
+  - frame: 751976
     label: R49
-  - frame: 752471
+  - frame: 752470
     label: R48
-  - frame: 753395
+  - frame: 753393
     label: R39
-  - frame: 754134
+  - frame: 754132
     label: R40
-  - frame: 754910
+  - frame: 754909
     label: R41
-  - frame: 758292
+  - frame: 758290
     label: Sheem Dagoze Shrine
-  - frame: 759480
+  - frame: 759479
     label: R38
-  - frame: 760138
+  - frame: 760137
     label: R47
-  - frame: 760751
+  - frame: 760750
     label: R37
-  - frame: 765552
+  - frame: 765551
     label: Mijah Rokee Shrine
-  - frame: 767049
+  - frame: 767048
     label: R72
-  - frame: 767604
+  - frame: 767603
     label: R71
-  - frame: 768298
+  - frame: 768297
     label: R59
-  - frame: 769531
+  - frame: 768434
+    label: Shrine of Resurrection
+    type: Travel
+  - frame: 769530
     label: P09
-  - frame: 770846
+  - frame: 769639
+    label: Owa Daim Shrine
+    type: Travel
+  - frame: 770845
     label: P18
-  - frame: 771672
+  - frame: 771671
     label: P11
-  - frame: 772117
+  - frame: 772116
     label: P10
-  - frame: 772862
+  - frame: 772861
     label: P06
-  - frame: 773361
+  - frame: 773360
     label: P05
-  - frame: 774073
+  - frame: 774072
     label: P02
-  - frame: 774416
+  - frame: 774414
     label: P01
-  - frame: 776638
+  - frame: 776636
     label: P04
-  - frame: 777675
+  - frame: 777674
     label: C81
-  - frame: 778254
+  - frame: 778253
     label: C82
-  - frame: 778930
+  - frame: 778929
     label: C83
-  - frame: 779990
+  - frame: 779989
     label: C76
-  - frame: 780461
+  - frame: 780460
     label: C75
-  - frame: 783262
+  - frame: 783260
     label: C69
-  - frame: 783991
+  - frame: 783989
     label: C63
-  - frame: 784546
+  - frame: 784544
     label: C62
-  - frame: 786760
+  - frame: 786758
     label: Kaam Ya'tak Shrine
-  - frame: 788084
+  - frame: 788083
     label: C61
-  - frame: 788653
+  - frame: 788652
     label: C60
-  - frame: 789255
+  - frame: 789254
     label: C57
-  - frame: 790064
+  - frame: 790062
     label: C58
-  - frame: 790795
+  - frame: 790794
     label: C59
-  - frame: 791245
+  - frame: 791244
     label: R74
-  - frame: 794454
+  - frame: 794453
     label: R79
-  - frame: 799133
+  - frame: 799131
     label: C78
-  - frame: 799748
+  - frame: 799747
     label: C72
-  - frame: 801503
+  - frame: 801501
     label: Rota Ooh Shrine
-  - frame: 802779
+  - frame: 802778
     label: C85
-  - frame: 803315
+  - frame: 803314
     label: R80
-  - frame: 803813
+  - frame: 803812
     label: C86
-  - frame: 804521
+  - frame: 804520
     label: C87
-  - frame: 805405
+  - frame: 805404
     label: C89
-  - frame: 807578
+  - frame: 807576
     label: Dah Kaso Shrine
-  - frame: 808896
+  - frame: 808895
     label: G29
-  - frame: 809798
+  - frame: 809796
     label: C88
-  - frame: 815144
+  - frame: 815143
     label: W07
-  - frame: 823336
+  - frame: 823334
     label: Joloo Nah Shrine
-  - frame: 826329
+  - frame: 826328
     label: W08
-  - frame: 826661
+  - frame: 826660
     label: G32
-  - frame: 827190
+  - frame: 827189
     label: W10
-  - frame: 828713
+  - frame: 828712
     label: G35
-  - frame: 833787
+  - frame: 833786
     label: W17
-  - frame: 837570
+  - frame: 837569
     label: Sasa Kai Shrine
-  - frame: 839287
+  - frame: 839286
     label: G31
-  - frame: 840050
+  - frame: 840049
     label: G30
-  - frame: 841376
+  - frame: 841375
     label: G21
-  - frame: 842096
+  - frame: 842095
     label: G16
-  - frame: 843044
+  - frame: 843043
     label: G20
-  - frame: 843484
+  - frame: 843483
     label: G15
-  - frame: 844588
+  - frame: 844587
     label: G11
-  - frame: 845746
+  - frame: 845745
     label: G07
-  - frame: 847588
+  - frame: 847587
     label: Kema Kosassa Shrine
-  - frame: 849774
+  - frame: 849773
     label: G08
-  - frame: 851068
+  - frame: 851067
     label: G04
-  - frame: 851927
+  - frame: 851926
     label: G05
-  - frame: 853099
+  - frame: 853097
     label: G01
-  - frame: 854327
+  - frame: 854326
     label: G02
-  - frame: 856284
+  - frame: 856283
     label: G03
-  - frame: 857334
+  - frame: 857333
     label: G06
-  - frame: 859590
+  - frame: 859589
     label: Keeha Yoog Shrine
-  - frame: 861057
+  - frame: 861055
     label: G09
-  - frame: 863654
+  - frame: 863652
     label: G26
-  - frame: 864163
+  - frame: 864162
     label: W01
-  - frame: 866636
+  - frame: 866635
     label: Sho Dantu Shrine
-  - frame: 868248
+  - frame: 868247
     label: W02
-  - frame: 869047
+  - frame: 869046
     label: G25
-  - frame: 870083
+  - frame: 870082
     label: W04
-  - frame: 870785
+  - frame: 870784
     label: W05
-  - frame: 871345
+  - frame: 871344
     label: W03
-  - frame: 872311
+  - frame: 872310
     label: W06
-  - frame: 873284
+  - frame: 873283
     label: G33
-  - frame: 875139
+  - frame: 875138
     label: Kema Zoos Shrine
-  - frame: 876111
+  - frame: 876110
     label: W09
-  - frame: 876714
+  - frame: 876713
     label: W13
-  - frame: 877230
+  - frame: 877229
     label: W18
-  - frame: 877917
+  - frame: 877916
     label: W25
-  - frame: 880558
+  - frame: 880557
     label: Tho Kayu Shrine
-  - frame: 882466
+  - frame: 882465
     label: W51
-  - frame: 883411
+  - frame: 883410
     label: W65
-  - frame: 887412
+  - frame: 887411
     label: Hawa Koth Shrine
-  - frame: 889648
+  - frame: 889647
     label: W55
-  - frame: 890419
+  - frame: 890418
     label: W61
-  - frame: 891151
+  - frame: 891150
     label: W66
-  - frame: 892228
+  - frame: 892225
     label: W57
-  - frame: 892795
+  - frame: 892794
     label: W56
-  - frame: 900244
+  - frame: 900243
     label: Raqa Zunzo Shrine
-  - frame: 904380
+  - frame: 904379
     label: W42
-  - frame: 910527
+  - frame: 910526
     label: W43
-  - frame: 911347
+  - frame: 911346
     label: W37
-  - frame: 912569
+  - frame: 912568
     label: W44
-  - frame: 913436
+  - frame: 913435
     label: W35
-  - frame: 917191
+  - frame: 917190
     label: Korsh O'hu Shrine
-  - frame: 918543
+  - frame: 918542
     label: W40
-  - frame: 919542
+  - frame: 919541
     label: W30
-  - frame: 923430
+  - frame: 921824
+    label: Kuh Takkar Shrine
+    type: Travel
+  - frame: 923429
     label: G22
-  - frame: 924006
+  - frame: 924005
     label: G17
-  - frame: 925223
+  - frame: 925222
     label: G18
-  - frame: 925905
+  - frame: 925903
     label: G23
-  - frame: 926718
+  - frame: 926717
     label: G27
-  - frame: 927561
+  - frame: 927560
     label: G28
-  - frame: 928679
+  - frame: 928678
     label: G24
-  - frame: 929686
+  - frame: 929685
     label: W14
-  - frame: 930519
+  - frame: 930518
     label: W26
-  - frame: 931714
+  - frame: 931713
     label: Jee Noh Shrine
-  - frame: 932907
+  - frame: 932906
     label: G36
-  - frame: 933424
+  - frame: 933423
     label: W20
-  - frame: 933893
+  - frame: 933892
     label: W21
-  - frame: 934466
+  - frame: 934465
     label: W27
-  - frame: 935196
+  - frame: 935195
     label: W22
-  - frame: 936357
+  - frame: 936356
     label: L21
-  - frame: 936948
+  - frame: 936947
     label: L22
-  - frame: 938023
+  - frame: 938022
     label: L36
-  - frame: 939820
+  - frame: 939818
     label: L62
-  - frame: 943453
+  - frame: 943452
     label: L64
-  - frame: 944345
+  - frame: 944344
     label: L63
-  - frame: 945034
+  - frame: 945033
     label: L47
-  - frame: 946046
+  - frame: 946045
     label: L38
-  - frame: 946827
+  - frame: 946826
     label: L24
-  - frame: 947681
+  - frame: 947680
     label: L08
-  - frame: 948250
+  - frame: 948249
     label: L25
-  - frame: 949778
+  - frame: 949777
     label: Ya Naga Shrine
-  - frame: 951568
+  - frame: 951567
     label: L26
-  - frame: 951920
+  - frame: 951919
     label: L15
-  - frame: 952335
+  - frame: 952334
     label: L14
-  - frame: 953179
+  - frame: 953178
     label: D54
-  - frame: 953777
+  - frame: 953776
     label: L09
-  - frame: 954268
+  - frame: 954266
     label: L27
-  - frame: 955143
+  - frame: 955142
     label: L30
-  - frame: 955456
+  - frame: 955455
     label: L31
-  - frame: 956329
+  - frame: 956328
     label: L32
-  - frame: 957006
+  - frame: 957005
     label: L33
-  - frame: 957963
+  - frame: 957962
     label: L39
-  - frame: 958488
+  - frame: 958486
     label: L40
-  - frame: 959073
+  - frame: 959072
     label: L44
-  - frame: 959701
+  - frame: 959699
     label: L42
-  - frame: 959947
+  - frame: 959946
     label: L43
-  - frame: 960912
+  - frame: 960911
     label: L51
-  - frame: 961835
+  - frame: 961834
     label: Lake Tower
-  - frame: 963830
+  - frame: 963829
     label: L48
-  - frame: 964463
+  - frame: 964462
     label: L49
-  - frame: 965943
+  - frame: 965942
     label: L50
-  - frame: 966384
+  - frame: 966383
     label: L59
-  - frame: 967080
+  - frame: 967079
     label: L60
-  - frame: 967832
+  - frame: 967830
     label: L52
-  - frame: 968476
+  - frame: 968475
     label: L53
-  - frame: 970336
+  - frame: 970334
     label: Pumaag Nitae Shrine
-  - frame: 971728
+  - frame: 971727
     label: L55
-  - frame: 972399
+  - frame: 972398
     label: L61
-  - frame: 973090
+  - frame: 973088
     label: L66
-  - frame: 974100
+  - frame: 974099
     label: L72
-  - frame: 974750
+  - frame: 974749
     label: F38
-  - frame: 975938
+  - frame: 975937
     label: L79
-  - frame: 976745
+  - frame: 976744
     label: L92
-  - frame: 977421
+  - frame: 977420
     label: L78
-  - frame: 980093
+  - frame: 980092
     label: L77
-  - frame: 980845
+  - frame: 980844
     label: L75
-  - frame: 990917
+  - frame: 990916
     label: Ka'o Makagh Shrine
-  - frame: 993724
+  - frame: 993723
     label: L65
-  - frame: 994476
+  - frame: 994475
     label: L70
-  - frame: 995148
+  - frame: 995146
     label: L71
-  - frame: 996109
+  - frame: 996108
     label: L73
-  - frame: 996988
+  - frame: 996987
     label: L74
-  - frame: 998090
+  - frame: 998089
     label: L76
-  - frame: 998976
+  - frame: 998975
     label: L91
-  - frame: 999583
+  - frame: 999582
     label: L90
-  - frame: 1000049
+  - frame: 1000048
     label: L89
-  - frame: 1000555
+  - frame: 1000553
     label: L88
-  - frame: 1004965
+  - frame: 1004964
     label: Shoqa Tatone Shrine
-  - frame: 1006355
+  - frame: 1006354
     label: L86
-  - frame: 1006820
+  - frame: 1006818
     label: L87
-  - frame: 1014406
+  - frame: 1014405
     label: L85
-  - frame: 1014906
+  - frame: 1014905
     label: L83
-  - frame: 1015292
+  - frame: 1015290
     label: L82
-  - frame: 1015578
+  - frame: 1015577
     label: L84
-  - frame: 1016285
+  - frame: 1016284
     label: L81
-  - frame: 1017203
+  - frame: 1017202
     label: L80
-  - frame: 1018077
+  - frame: 1018076
     label: L69
-  - frame: 1019240
+  - frame: 1019238
     label: L68
-  - frame: 1019831
+  - frame: 1019830
     label: L67
-  - frame: 1021262
+  - frame: 1021261
     label: Ishto Soh Shrine
-  - frame: 1023089
+  - frame: 1023088
     label: L41
-  - frame: 1023771
+  - frame: 1023770
     label: L37
-  - frame: 1024634
+  - frame: 1024633
     label: L23
-  - frame: 1025244
+  - frame: 1025243
     label: P17
-  - frame: 1025642
+  - frame: 1025641
     label: P16
-  - frame: 1026529
+  - frame: 1026528
     label: P15
-  - frame: 1027183
+  - frame: 1027182
     label: P14
-  - frame: 1027922
+  - frame: 1027921
     label: P07
-  - frame: 1028552
+  - frame: 1028550
     label: P08
-  - frame: 1029597
+  - frame: 1029596
     label: P03
-  - frame: 1030246
+  - frame: 1030245
     label: C80
-  - frame: 1030689
+  - frame: 1030688
     label: C79
-  - frame: 1031243
+  - frame: 1031242
     label: C74
-  - frame: 1031943
+  - frame: 1031942
     label: C73
-  - frame: 1032509
+  - frame: 1032508
     label: C68
-  - frame: 1032795
+  - frame: 1032794
     label: C67
-  - frame: 1033492
+  - frame: 1033491
     label: C66
-  - frame: 1034109
+  - frame: 1034108
     label: C52
-  - frame: 1035064
+  - frame: 1035063
     label: C53
-  - frame: 1035746
+  - frame: 1035745
     label: Central Tower
-  - frame: 1037593
+  - frame: 1037592
     label: C48
-  - frame: 1038558
+  - frame: 1038557
     label: C54
-  - frame: 1039345
+  - frame: 1039344
     label: C49
-  - frame: 1040038
+  - frame: 1040037
     label: C55
-  - frame: 1040778
+  - frame: 1040776
     label: C64
-  - frame: 1041809
+  - frame: 1041807
     label: C70
-  - frame: 1042450
+  - frame: 1042449
     label: C71
-  - frame: 1043280
+  - frame: 1043279
     label: C65
-  - frame: 1045155
+  - frame: 1045154
     label: Wahgo Katta Shrine
-  - frame: 1047563
+  - frame: 1047561
     label: C77
-  - frame: 1047865
+  - frame: 1047864
     label: D14
-  - frame: 1048641
+  - frame: 1048640
     label: D22
-  - frame: 1049790
+  - frame: 1049788
     label: C84
-  - frame: 1050385
+  - frame: 1050384
     label: D26
-  - frame: 1050890
+  - frame: 1050889
     label: D27
-  - frame: 1051468
+  - frame: 1051467
     label: D34
-  - frame: 1051898
+  - frame: 1051897
     label: D33
-  - frame: 1053499
+  - frame: 1053497
     label: Bosh Kala Shrine
-  - frame: 1054674
+  - frame: 1054672
     label: D32
-  - frame: 1055378
+  - frame: 1055377
     label: D31
-  - frame: 1055827
+  - frame: 1055826
     label: D44
-  - frame: 1056604
+  - frame: 1056603
     label: P12
-  - frame: 1057002
+  - frame: 1057001
     label: P13
-  - frame: 1058556
+  - frame: 1058555
     label: D43
-  - frame: 1060506
+  - frame: 1060505
     label: L03
-  - frame: 1061347
+  - frame: 1061346
     label: L10
-  - frame: 1062150
+  - frame: 1062149
     label: L11
-  - frame: 1063010
+  - frame: 1063009
     label: L16
-  - frame: 1063968
+  - frame: 1063967
     label: L05
-  - frame: 1064370
+  - frame: 1064369
     label: L06
-  - frame: 1064963
+  - frame: 1064961
     label: L02
-  - frame: 1065826
+  - frame: 1065825
     label: L01
-  - frame: 1066431
+  - frame: 1066430
     label: L04
-  - frame: 1068277
+  - frame: 1068276
     label: D45
-  - frame: 1069176
+  - frame: 1069175
     label: D35
-  - frame: 1070085
+  - frame: 1070084
     label: D36
-  - frame: 1070699
+  - frame: 1070698
     label: D46
-  - frame: 1071370
+  - frame: 1071369
     label: D37
-  - frame: 1071813
+  - frame: 1071810
     label: D38
-  - frame: 1072692
+  - frame: 1072691
     label: D47
-  - frame: 1073567
+  - frame: 1073566
     label: D39
-  - frame: 1075491
+  - frame: 1075490
     label: Ree Dahee Shrine
-  - frame: 1078007
+  - frame: 1078006
     label: Ha Dahamar Shrine
-  - frame: 1079054
+  - frame: 1079053
     label: D42
-  - frame: 1080712
+  - frame: 1080711
     label: D17
-  - frame: 1081674
+  - frame: 1081673
     label: D30
-  - frame: 1082869
+  - frame: 1082867
     label: D41
-  - frame: 1083076
+  - frame: 1083075
     label: D40
-  - frame: 1083680
+  - frame: 1083678
     label: D49
-  - frame: 1085101
+  - frame: 1085099
     label: Shee Vaneer Shrine
-  - frame: 1087102
+  - frame: 1087100
     label: Shee Venath Shrine
-  - frame: 1088651
+  - frame: 1088650
     label: D48
-  - frame: 1089215
+  - frame: 1089214
     label: Dueling Peaks Tower
-  - frame: 1091487
+  - frame: 1091486
     label: D50
-  - frame: 1092509
+  - frame: 1092507
     label: L07
-  - frame: 1093130
+  - frame: 1093129
     label: L19
-  - frame: 1094457
+  - frame: 1094456
     label: L20
-  - frame: 1096567
+  - frame: 1096566
     label: Shae Katha Shrine
-  - frame: 1097943
+  - frame: 1097942
     label: L13
-  - frame: 1098617
+  - frame: 1098615
     label: L18
-  - frame: 1098814
+  - frame: 1098813
     label: L17
-  - frame: 1099563
+  - frame: 1099562
     label: L12
-  - frame: 1100378
+  - frame: 1100376
     label: L28
-  - frame: 1101010
+  - frame: 1101009
     label: L29
-  - frame: 1101963
+  - frame: 1101962
     label: L34
-  - frame: 1102639
+  - frame: 1102636
     label: L35
-  - frame: 1103241
+  - frame: 1103239
     label: L45
-  - frame: 1103888
+  - frame: 1103887
     label: L54
-  - frame: 1105043
+  - frame: 1105042
     label: L56
-  - frame: 1106345
+  - frame: 1106343
     label: L57
-  - frame: 1107040
+  - frame: 1107038
     label: F24
-  - frame: 1107518
+  - frame: 1107516
     label: F23
-  - frame: 1108182
+  - frame: 1108181
     label: L58
-  - frame: 1108872
+  - frame: 1108870
     label: L46
-  - frame: 1110271
+  - frame: 1110270
     label: F02
-  - frame: 1111771
+  - frame: 1111769
     label: F05
-  - frame: 1112191
+  - frame: 1112190
     label: F01
-  - frame: 1113103
+  - frame: 1113102
     label: F04
-  - frame: 1113933
+  - frame: 1113932
     label: F03
-  - frame: 1115154
+  - frame: 1115153
     label: F10
-  - frame: 1115911
+  - frame: 1115910
     label: F16
-  - frame: 1116486
+  - frame: 1116485
     label: F15
-  - frame: 1117671
+  - frame: 1117670
     label: F34
-  - frame: 1119315
+  - frame: 1119314
     label: F41
-  - frame: 1120815
+  - frame: 1120814
     label: Shai Utoh Shrine
-  - frame: 1122438
+  - frame: 1122437
     label: F48
-  - frame: 1122930
+  - frame: 1122928
     label: F55
-  - frame: 1123614
+  - frame: 1123613
     label: F54
-  - frame: 1124419
+  - frame: 1124418
     label: F53
-  - frame: 1124973
+  - frame: 1124971
     label: F56
-  - frame: 1127003
+  - frame: 1127002
     label: F43
-  - frame: 1127748
+  - frame: 1127747
     label: F30
-  - frame: 1129080
+  - frame: 1129079
     label: F35
-  - frame: 1129805
+  - frame: 1129803
     label: F42
-  - frame: 1131279
+  - frame: 1131278
     label: F28
-  - frame: 1132115
+  - frame: 1132113
     label: F26
-  - frame: 1132653
+  - frame: 1132652
     label: F27
-  - frame: 1134429
+  - frame: 1134428
     label: Shoda Sah Shrine
-  - frame: 1136048
+  - frame: 1136047
     label: F19
-  - frame: 1136745
+  - frame: 1136744
     label: F20
-  - frame: 1138283
+  - frame: 1138281
     label: F29
-  - frame: 1141279
+  - frame: 1141277
     label: Qukah Nata Shrine
-  - frame: 1142734
+  - frame: 1142733
     label: F21
-  - frame: 1145304
+  - frame: 1145303
     label: F14
-  - frame: 1149957
+  - frame: 1149956
     label: Tawa Jinn Shrine
-  - frame: 1153919
+  - frame: 1153918
     label: F47
-  - frame: 1154655
+  - frame: 1154653
     label: F57
-  - frame: 1157202
+  - frame: 1157201
     label: F49
-  - frame: 1158073
+  - frame: 1158072
     label: F50
-  - frame: 1158577
+  - frame: 1158576
     label: F58
-  - frame: 1159228
+  - frame: 1159227
     label: F51
-  - frame: 1161215
+  - frame: 1161214
     label: F52
-  - frame: 1165930
+  - frame: 1165929
     label: Kah Yah Shrine
-  - frame: 1167059
+  - frame: 1167058
     label: F37
-  - frame: 1168457
+  - frame: 1168455
     label: F45
-  - frame: 1169730
+  - frame: 1169729
     label: F44
-  - frame: 1172231
+  - frame: 1172229
     label: F36
-  - frame: 1174025
+  - frame: 1174024
     label: Yah Rin Shrine
-  - frame: 1175236
+  - frame: 1175235
     label: F31
-  - frame: 1176543
+  - frame: 1176542
     label: F22
-  - frame: 1177289
+  - frame: 1177288
     label: F18
-  - frame: 1177961
+  - frame: 1177960
     label: N64
-  - frame: 1178843
+  - frame: 1178842
     label: F32
-  - frame: 1181380
+  - frame: 1181379
     label: Muwo Jeem Shrine
-  - frame: 1182379
+  - frame: 1182378
     label: F33
-  - frame: 1183202
+  - frame: 1183201
     label: N65
-  - frame: 1184308
+  - frame: 1184307
     label: N61
-  - frame: 1185341
+  - frame: 1185339
     label: N60
-  - frame: 1187894
+  - frame: 1187893
     label: N62
-  - frame: 1189245
+  - frame: 1189244
     label: N54
-  - frame: 1190127
+  - frame: 1190125
     label: N56
-  - frame: 1191439
+  - frame: 1191437
     label: N63
-  - frame: 1192356
+  - frame: 1192355
     label: N57
-  - frame: 1192992
+  - frame: 1192991
     label: N55
-  - frame: 1195636
+  - frame: 1195635
     label: Chaas Qeta Shrine
-  - frame: 1196783
+  - frame: 1196782
     label: N66
-  - frame: 1205288
+  - frame: 1205287
     label: Korgu Chideh Shrine
-  - frame: 1209767
+  - frame: 1205983
+    label: Dah Hesho Shrine
+    type: Travel
+  - frame: 1207802
+    label: Dueling Peaks Tower
+    type: Travel
+  - frame: 1209765
     label: D16
-  - frame: 1211400
+  - frame: 1211399
     label: D25
-  - frame: 1211975
+  - frame: 1211974
     label: D29
-  - frame: 1212629
+  - frame: 1212628
     label: D28
-  - frame: 1213287
+  - frame: 1213286
     label: D23
-  - frame: 1214316
+  - frame: 1214314
     label: D24
-  - frame: 1214884
+  - frame: 1214883
     label: D15
-  - frame: 1215952
+  - frame: 1215951
     label: D13
-  - frame: 1217947
+  - frame: 1217945
     label: Hila Rao Shrine
-  - frame: 1219395
+  - frame: 1219394
     label: D01
-  - frame: 1220213
+  - frame: 1220212
     label: Z47
-  - frame: 1220800
+  - frame: 1220799
     label: Z48
-  - frame: 1221415
+  - frame: 1221414
     label: Z49
-  - frame: 1222003
+  - frame: 1222002
     label: Z50
-  - frame: 1222846
+  - frame: 1222845
     label: Z60
-  - frame: 1223858
+  - frame: 1223857
     label: N01
-  - frame: 1225012
+  - frame: 1225010
     label: Z41
-  - frame: 1226314
+  - frame: 1226313
     label: Z22
-  - frame: 1227183
+  - frame: 1227182
     label: Z23
-  - frame: 1230822
+  - frame: 1230821
     label: Z31
-  - frame: 1235944
+  - frame: 1235942
     label: Sheh Rata Shrine
-  - frame: 1237750
+  - frame: 1237748
     label: Z30
-  - frame: 1238539
+  - frame: 1238538
     label: Z29
-  - frame: 1239325
+  - frame: 1239324
     label: C46
-  - frame: 1240215
+  - frame: 1240214
     label: C51
-  - frame: 1243469
+  - frame: 1243468
     label: C56
-  - frame: 1244972
+  - frame: 1244970
     label: C50
-  - frame: 1245605
+  - frame: 1245604
     label: C44
-  - frame: 1246254
+  - frame: 1246253
     label: C45
-  - frame: 1247028
+  - frame: 1247026
     label: C34
-  - frame: 1248350
+  - frame: 1248349
     label: Z21
-  - frame: 1248860
+  - frame: 1248859
     label: Z11
-  - frame: 1250008
+  - frame: 1250007
     label: C13
-  - frame: 1250976
+  - frame: 1250975
     label: K35
-  - frame: 1251926
+  - frame: 1251925
     label: Z02
-  - frame: 1252261
+  - frame: 1252260
     label: Z03
-  - frame: 1253022
+  - frame: 1253021
     label: K34
-  - frame: 1253759
+  - frame: 1253758
     label: K33
-  - frame: 1255765
+  - frame: 1255764
     label: Mirro Shaz Shrine
-  - frame: 1259293
+  - frame: 1259292
     label: C02
-  - frame: 1262442
+  - frame: 1262441
     label: Namika Ozz Shrine
-  - frame: 1263585
+  - frame: 1263584
     label: C09
-  - frame: 1264105
+  - frame: 1264104
     label: C11
-  - frame: 1264682
+  - frame: 1264680
     label: C12
-  - frame: 1265329
+  - frame: 1265328
     label: C19
-  - frame: 1265894
+  - frame: 1265892
     label: C23
-  - frame: 1266419
+  - frame: 1266417
     label: C18
-  - frame: 1267334
+  - frame: 1267333
     label: C10
-  - frame: 1267959
+  - frame: 1267958
     label: C06
-  - frame: 1268813
+  - frame: 1268811
     label: C05
-  - frame: 1269467
+  - frame: 1269465
     label: C04
-  - frame: 1270218
+  - frame: 1270215
     label: C17
-  - frame: 1270892
+  - frame: 1270890
     label: C29
-  - frame: 1271213
+  - frame: 1271212
     label: C28
-  - frame: 1272049
+  - frame: 1272048
     label: C33
-  - frame: 1272554
+  - frame: 1272553
     label: C35
-  - frame: 1274640
+  - frame: 1274638
     label: C42
-  - frame: 1275003
+  - frame: 1275002
     label: C43
-  - frame: 1276048
+  - frame: 1276046
     label: C40
-  - frame: 1276290
+  - frame: 1276289
     label: C41
-  - frame: 1276901
+  - frame: 1276899
     label: C39
-  - frame: 1277641
+  - frame: 1277640
     label: C47
-  - frame: 1278610
+  - frame: 1278609
     label: C37
-  - frame: 1279121
+  - frame: 1279120
     label: R58
-  - frame: 1279905
+  - frame: 1279902
     label: R57
-  - frame: 1280346
+  - frame: 1280345
     label: R56
-  - frame: 1280973
+  - frame: 1280971
     label: R55
-  - frame: 1282040
+  - frame: 1282038
     label: R54
-  - frame: 1283340
+  - frame: 1283339
     label: R62
-  - frame: 1283920
+  - frame: 1283919
     label: R53
-  - frame: 1284507
+  - frame: 1284506
     label: R52
-  - frame: 1285121
+  - frame: 1285120
     label: R61
-  - frame: 1285963
+  - frame: 1285962
     label: R68
-  - frame: 1286270
+  - frame: 1286269
     label: R69
-  - frame: 1287229
+  - frame: 1287227
     label: R78
-  - frame: 1287805
+  - frame: 1287803
     label: R77
-  - frame: 1288370
+  - frame: 1288368
     label: R75
-  - frame: 1288668
+  - frame: 1288667
     label: R76
-  - frame: 1289296
+  - frame: 1289295
     label: G14
-  - frame: 1290368
+  - frame: 1290366
     label: R70
-  - frame: 1291387
+  - frame: 1291386
     label: R73
-  - frame: 1292113
+  - frame: 1292112
     label: R67
-  - frame: 1292835
+  - frame: 1292834
     label: R66
-  - frame: 1293490
+  - frame: 1293488
     label: R65
-  - frame: 1293929
+  - frame: 1293927
     label: R64
-  - frame: 1294662
+  - frame: 1294661
     label: R51
-  - frame: 1295323
+  - frame: 1295321
     label: R63
-  - frame: 1295976
+  - frame: 1295975
     label: R50
-  - frame: 1297794
+  - frame: 1297793
     label: R46
-  - frame: 1298375
+  - frame: 1298374
     label: R36
-  - frame: 1299489
+  - frame: 1299488
     label: R35
-  - frame: 1299748
+  - frame: 1299747
     label: R34
-  - frame: 1300441
+  - frame: 1300440
     label: R33
-  - frame: 1301070
+  - frame: 1301069
     label: R32
-  - frame: 1303089
+  - frame: 1303087
     label: Kah Okeo Shrine
-  - frame: 1304410
+  - frame: 1304409
     label: T36
-  - frame: 1305192
+  - frame: 1305191
     label: T32
-  - frame: 1305982
+  - frame: 1305981
     label: T27
-  - frame: 1306675
+  - frame: 1306674
     label: T26
-  - frame: 1307519
+  - frame: 1307517
     label: T23
-  - frame: 1308716
+  - frame: 1308715
     label: T28
-  - frame: 1309086
+  - frame: 1309085
     label: T29
-  - frame: 1309872
+  - frame: 1309871
     label: T30
-  - frame: 1310472
+  - frame: 1310471
     label: T24
-  - frame: 1313635
+  - frame: 1313634
     label: T33
-  - frame: 1315756
+  - frame: 1315754
     label: Tena Ko'sah Shrine
-  - frame: 1318193
+  - frame: 1318192
     label: T35
-  - frame: 1319142
+  - frame: 1319141
     label: T37
-  - frame: 1320638
+  - frame: 1320637
     label: T31
-  - frame: 1322145
+  - frame: 1322144
     label: T20
-  - frame: 1324553
+  - frame: 1324552
     label: Bareeda Naag Shrine
-  - frame: 1325660
+  - frame: 1325659
     label: T15
-  - frame: 1330052
+  - frame: 1330051
     label: Akh Va'quot Shrine
-  - frame: 1331005
+  - frame: 1331004
     label: T14
-  - frame: 1334193
+  - frame: 1334192
     label: T17
-  - frame: 1339479
+  - frame: 1339477
     label: Voo Lota Shrine
-  - frame: 1340894
+  - frame: 1340893
     label: T16
-  - frame: 1341508
+  - frame: 1341507
     label: T12
-  - frame: 1342566
+  - frame: 1342565
     label: T09
-  - frame: 1343916
+  - frame: 1343915
     label: T04
-  - frame: 1345122
+  - frame: 1345121
     label: T05
-  - frame: 1345689
+  - frame: 1345688
     label: T11
-  - frame: 1347603
+  - frame: 1347602
     label: T21
-  - frame: 1348323
+  - frame: 1348322
     label: T22
-  - frame: 1348985
+  - frame: 1348984
     label: T25
-  - frame: 1350065
+  - frame: 1350063
     label: R05
-  - frame: 1350972
+  - frame: 1350971
     label: R13
-  - frame: 1351472
+  - frame: 1351471
     label: R17
-  - frame: 1352323
+  - frame: 1352322
     label: R22
-  - frame: 1352819
+  - frame: 1352817
     label: R31
-  - frame: 1353491
+  - frame: 1353490
     label: R30
-  - frame: 1354081
+  - frame: 1354080
     label: R21
-  - frame: 1355611
+  - frame: 1355610
     label: Shae Loya Shrine
-  - frame: 1358272
+  - frame: 1358271
     label: T34
-  - frame: 1359119
+  - frame: 1359118
     label: R28
-  - frame: 1359787
+  - frame: 1359786
     label: R29
-  - frame: 1360486
+  - frame: 1360485
     label: R20
-  - frame: 1361261
+  - frame: 1361260
     label: R12
-  - frame: 1363448
+  - frame: 1363446
     label: Dunba Taag Shrine
-  - frame: 1364872
+  - frame: 1364871
     label: H73
-  - frame: 1365756
+  - frame: 1365754
     label: R04
-  - frame: 1367401
+  - frame: 1365868
+    label: Shada Naw Shrine
+    type: Travel
+  - frame: 1367400
     label: H10
-  - frame: 1368133
+  - frame: 1368130
     label: H11
-  - frame: 1368859
+  - frame: 1368858
     label: H09
-  - frame: 1370032
+  - frame: 1370031
     label: H04
-  - frame: 1371433
+  - frame: 1371432
     label: H01
-  - frame: 1373319
+  - frame: 1373318
     label: Hia Miu Shrine
-  - frame: 1374985
+  - frame: 1374984
     label: H23
-  - frame: 1376350
+  - frame: 1376349
     label: H07
-  - frame: 1377167
+  - frame: 1377166
     label: H08
-  - frame: 1378005
+  - frame: 1378004
     label: H02
-  - frame: 1379809
+  - frame: 1379808
     label: H03
-  - frame: 1380962
+  - frame: 1380961
     label: To Quomo Shrine
-  - frame: 1382923
+  - frame: 1381789
+    label: Shada Naw Shrine
+    type: Travel
+  - frame: 1382922
     label: H20
-  - frame: 1383817
+  - frame: 1383816
     label: H21
-  - frame: 1384699
+  - frame: 1384698
     label: H12
-  - frame: 1387560
+  - frame: 1384856
+    label: Dah Hesho Shrine
+    type: Travel
+  - frame: 1387559
     label: A34
-  - frame: 1388221
+  - frame: 1388220
     label: A38
-  - frame: 1395135
+  - frame: 1388345
+    label: Ne'ez Yohma Shrine
+    type: Travel
+  - frame: 1395134
     label: Z17
-  - frame: 1396389
+  - frame: 1396388
     label: Z15
-  - frame: 1397258
+  - frame: 1397257
     label: Z14
-  - frame: 1398015
+  - frame: 1398014
     label: Lanayru Tower
-  - frame: 1401821
+  - frame: 1401820
     label: Soh Kofi Shrine
-  - frame: 1403460
+  - frame: 1403459
     label: Z13
-  - frame: 1404617
+  - frame: 1404616
     label: E45
-  - frame: 1406250
+  - frame: 1406249
     label: Tah Muhl Shrine
-  - frame: 1407523
+  - frame: 1407522
     label: E44
-  - frame: 1409050
+  - frame: 1409048
     label: Mo'a Keet Shrine
-  - frame: 1410857
+  - frame: 1410856
     label: E40
-  - frame: 1411618
+  - frame: 1411617
     label: E38
-  - frame: 1412198
+  - frame: 1412197
     label: E42
-  - frame: 1412467
+  - frame: 1412466
     label: E41
-  - frame: 1413134
+  - frame: 1413133
     label: E43
-  - frame: 1414484
+  - frame: 1414483
     label: E37
-  - frame: 1415064
+  - frame: 1415063
     label: E36
-  - frame: 1416413
+  - frame: 1415173
+    label: Akkala Tower
+    type: Travel
+  - frame: 1416412
     label: A42
-  - frame: 1416767
+  - frame: 1416766
     label: A43
-  - frame: 1417312
+  - frame: 1417311
     label: A46
-  - frame: 1418437
+  - frame: 1418435
     label: A45
-  - frame: 1420088
+  - frame: 1420087
     label: Ze Kasho Shrine
-  - frame: 1425432
+  - frame: 1425431
     label: A44
-  - frame: 1426546
+  - frame: 1426544
     label: A35
-  - frame: 1427162
+  - frame: 1427161
     label: A36
-  - frame: 1430041
+  - frame: 1430040
     label: Ritaag Zumo Shrine
-  - frame: 1430929
+  - frame: 1430928
     label: A33
-  - frame: 1434345
+  - frame: 1431098
+    label: Shada Naw Shrine
+    type: Travel
+  - frame: 1434344
     label: Mozo Shenno Shrine
-  - frame: 1435749
+  - frame: 1435748
     label: H26
-  - frame: 1436606
+  - frame: 1436604
     label: H19
-  - frame: 1437216
+  - frame: 1437214
     label: H18
-  - frame: 1438204
+  - frame: 1438203
     label: H17
-  - frame: 1439387
+  - frame: 1439386
     label: H24
-  - frame: 1440197
+  - frame: 1440196
     label: H25
-  - frame: 1442090
+  - frame: 1442089
     label: H32
-  - frame: 1442683
+  - frame: 1442681
     label: H40
-  - frame: 1444062
+  - frame: 1444061
     label: H53
-  - frame: 1444827
+  - frame: 1444826
     label: H60
-  - frame: 1445301
+  - frame: 1445300
     label: T08
-  - frame: 1445924
+  - frame: 1445922
     label: T06
-  - frame: 1447657
+  - frame: 1447656
     label: T07
-  - frame: 1448590
+  - frame: 1448589
     label: T01
-  - frame: 1450938
+  - frame: 1450937
     label: H39
-  - frame: 1451725
+  - frame: 1451724
     label: H41
-  - frame: 1452202
+  - frame: 1452201
     label: H42
-  - frame: 1454155
+  - frame: 1454154
     label: Maka Rah Shrine
-  - frame: 1473404
+  - frame: 1454873
+    label: Ta'loh Naeg Shrine
+    type: Travel
+  - frame: 1473402
     label: D02
-  - frame: 1474103
+  - frame: 1474102
     label: D03
-  - frame: 1479044
+  - frame: 1479042
     label: D04
-  - frame: 1479271
+  - frame: 1479270
     label: D05
-  - frame: 1480560
+  - frame: 1480559
     label: D12
-  - frame: 1481206
+  - frame: 1481205
     label: D08
-  - frame: 1481457
+  - frame: 1481455
     label: D06
-  - frame: 1482465
+  - frame: 1482464
     label: N07
-  - frame: 1483167
+  - frame: 1483166
     label: N08
-  - frame: 1484097
+  - frame: 1484096
     label: N10
-  - frame: 1485116
+  - frame: 1485114
     label: N09
-  - frame: 1485853
+  - frame: 1485852
     label: D07
-  - frame: 1486420
+  - frame: 1486419
     label: D11
-  - frame: 1487123
+  - frame: 1487122
     label: D10
-  - frame: 1487636
+  - frame: 1487634
     label: D09
-  - frame: 1492085
+  - frame: 1492084
     label: Lakna Rokee Shrine
-  - frame: 1494297
+  - frame: 1494296
     label: N28
-  - frame: 1496396
+  - frame: 1496395
     label: Kam Urog Shrine
-  - frame: 1499563
+  - frame: 1499561
     label: D59
-  - frame: 1501112
+  - frame: 1501111
     label: Toto Sah Shrine
-  - frame: 1502141
+  - frame: 1502140
     label: D56
-  - frame: 1502800
+  - frame: 1502799
     label: D55
-  - frame: 1503497
+  - frame: 1503496
     label: D51
-  - frame: 1504206
+  - frame: 1504205
     label: D52
-  - frame: 1505273
+  - frame: 1505272
     label: N33
-  - frame: 1506427
+  - frame: 1506426
     label: N34
-  - frame: 1507049
+  - frame: 1507048
     label: N27
-  - frame: 1507895
+  - frame: 1507893
     label: N26
-  - frame: 1508689
+  - frame: 1508688
     label: N35
-  - frame: 1509470
+  - frame: 1509467
     label: N36
-  - frame: 1510242
+  - frame: 1510241
     label: N37
-  - frame: 1511028
+  - frame: 1511027
     label: N38
-  - frame: 1511878
+  - frame: 1511877
     label: N41
-  - frame: 1513271
+  - frame: 1513270
     label: N45
-  - frame: 1513821
+  - frame: 1513820
     label: N46
-  - frame: 1514368
+  - frame: 1514367
     label: N51
-  - frame: 1515126
+  - frame: 1515125
     label: N52
-  - frame: 1515855
+  - frame: 1515853
     label: N53
-  - frame: 1518481
+  - frame: 1518479
     label: Myahm Agana Shrine
-  - frame: 1531530
+  - frame: 1531529
     label: N47
-  - frame: 1532750
+  - frame: 1532749
     label: N32
-  - frame: 1534038
+  - frame: 1534037
     label: Tahno O'ah Shrine
-  - frame: 1535602
+  - frame: 1535601
     label: N40
-  - frame: 1536809
+  - frame: 1536808
     label: N25
-  - frame: 1537789
+  - frame: 1537788
     label: Z62
-  - frame: 1538282
+  - frame: 1538281
     label: Z61
-  - frame: 1539349
+  - frame: 1539348
     label: Z59
-  - frame: 1540156
+  - frame: 1540155
     label: Z58
-  - frame: 1543575
+  - frame: 1543574
     label: Z56
-  - frame: 1544373
+  - frame: 1544372
     label: Z57
-  - frame: 1545184
+  - frame: 1545183
     label: N12
-  - frame: 1545732
+  - frame: 1545731
     label: Z55
-  - frame: 1546316
+  - frame: 1546315
     label: Z54
-  - frame: 1547236
+  - frame: 1547235
     label: N14
-  - frame: 1548286
+  - frame: 1548285
     label: Z51
-  - frame: 1549819
+  - frame: 1549818
     label: Rucco Maag Shrine
-  - frame: 1551441
+  - frame: 1551439
     label: Z53
-  - frame: 1551820
+  - frame: 1551817
     label: Z52
-  - frame: 1552681
+  - frame: 1552680
     label: Z45
-  - frame: 1553760
+  - frame: 1553759
     label: Z46
-  - frame: 1556103
+  - frame: 1556102
     label: Shai Yota Shrine
-  - frame: 1557202
+  - frame: 1557201
     label: Z36
-  - frame: 1558027
+  - frame: 1558025
     label: Z35
-  - frame: 1559408
+  - frame: 1559407
     label: Z28
-  - frame: 1560376
+  - frame: 1560375
     label: Z10
-  - frame: 1560911
+  - frame: 1560909
     label: Z09
-  - frame: 1561599
+  - frame: 1561597
     label: A56
-  - frame: 1562278
+  - frame: 1562276
     label: A57
-  - frame: 1564763
+  - frame: 1564762
     label: Ke'nai Shakah Shrine
-  - frame: 1565970
+  - frame: 1565969
     label: A55
-  - frame: 1566769
+  - frame: 1566767
     label: A54
-  - frame: 1567481
+  - frame: 1567480
     label: A53
-  - frame: 1568237
+  - frame: 1568236
     label: Z07
-  - frame: 1568670
+  - frame: 1568669
     label: Z06
-  - frame: 1569583
+  - frame: 1569582
     label: Z01
-  - frame: 1571044
+  - frame: 1571043
     label: Kah Mael Shrine
-  - frame: 1573409
+  - frame: 1571760
+    label: Shada Naw Shrine
+    type: Travel
+  - frame: 1573408
     label: H28
-  - frame: 1575898
+  - frame: 1575897
     label: Goma Asaagh Shrine
-  - frame: 1576973
+  - frame: 1576972
     label: H35
-  - frame: 1578586
+  - frame: 1578584
     label: H36
-  - frame: 1579491
+  - frame: 1579490
     label: H29
-  - frame: 1580246
+  - frame: 1580245
     label: H31
-  - frame: 1581318
+  - frame: 1581317
     label: H30
-  - frame: 1582866
+  - frame: 1582865
     label: Rok Uwog Shrine
-  - frame: 1584653
+  - frame: 1584651
     label: H13
-  - frame: 1585589
+  - frame: 1585588
     label: H05
-  - frame: 1587345
+  - frame: 1587344
     label: Sha Gehma Shrine
-  - frame: 1588649
+  - frame: 1588648
     label: H06
-  - frame: 1589152
+  - frame: 1589151
     label: H14
-  - frame: 1590107
+  - frame: 1590106
     label: H37
-  - frame: 1592784
+  - frame: 1592783
     label: Rin Oyaa Shrine
-  - frame: 1594065
+  - frame: 1594064
     label: H52
-  - frame: 1594669
+  - frame: 1594668
     label: H58
-  - frame: 1595555
+  - frame: 1595553
     label: H62
-  - frame: 1596530
+  - frame: 1596529
     label: H59
-  - frame: 1597577
+  - frame: 1597576
     label: H38
-  - frame: 1598475
+  - frame: 1598474
     label: K10
-  - frame: 1599307
+  - frame: 1599306
     label: K12
-  - frame: 1604034
+  - frame: 1604033
     label: R01
-  - frame: 1604637
+  - frame: 1604636
     label: H68
-  - frame: 1605588
+  - frame: 1605587
     label: K22
-  - frame: 1606392
+  - frame: 1606391
     label: K20
-  - frame: 1606929
+  - frame: 1606928
     label: K21
-  - frame: 1607631
+  - frame: 1607630
     label: K15
-  - frame: 1608068
+  - frame: 1608067
     label: H63
-  - frame: 1608711
+  - frame: 1608710
     label: K13
-  - frame: 1609297
+  - frame: 1609296
     label: K14
-  - frame: 1610658
+  - frame: 1610657
     label: K09
-  - frame: 1611917
+  - frame: 1611916
     label: Rona Kachta Shrine
-  - frame: 1621105
+  - frame: 1619636
+    label: Dah Hesho Shrine
+    type: Travel
+  - frame: 1621104
     label: A48
+  - frame: 1640728
+    label: Keo Ruug Shrine
+    type: Travel
+  - frame: 1652732
+    label: Ha Dahamar Shrine
+    type: Travel

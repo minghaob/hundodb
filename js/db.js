@@ -1,7 +1,7 @@
 let g_runs = {};		// uid -> runDoc
-let g_moves = {};		// from -> { to -> [{ runUID, eventIdx, numFrame }, ... (sorted by numFrame decreasing order) ]]}
+let g_moves = {};		// from -> { to -> [{ runUID, startEventIdx, endEventIdx, numFrame }, ... (sorted by numFrame decreasing order) ]]}
 
-function addMove(from, to, runUID, eventIdx, numFrame) {
+function addMove(from, to, runUID, startEventIdx, endEventIdx, numFrame) {
 	if (!g_moves[from])
 		g_moves[from] = {};
 	if (!g_moves[from][to])
@@ -9,7 +9,8 @@ function addMove(from, to, runUID, eventIdx, numFrame) {
 	let arr = g_moves[from][to];
 	arr.push({
 		runUID : runUID,
-		eventIdx : eventIdx,
+		startEventIdx : startEventIdx,
+		endEventIdx : endEventIdx,
 		numFrame : numFrame
 	});
 	for (let cur = arr.length - 1;
@@ -44,55 +45,63 @@ function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 	return [null, null];
 }
 
-const hdbRunsURL = 'runs/';
-fetch(hdbRunsURL + 'list.txt')
-    .then(response => response.text())
-    .then(text => {
-        const files = text.split('\n');
+function fetchDB() {
+	const hdbRunsURL = 'runs/';
+	fetch(hdbRunsURL + 'list.txt')
+		.then(response => response.text())
+		.then(text => {
+			const files = text.split('\n');
 
-        let numTotalRuns = 0;
-        let numProcessedRuns = 0;
-        let numLoadedRuns = 0;
-        files.forEach(file => {
-            if (file.length > 0)
-                numTotalRuns++;
-        });
-        if (files.length >0)
-            console.log("Loading " + numTotalRuns + " runs from HundoDB");
-        files.forEach((file) => {
-            if (file.length > 0) {
-                fetch(hdbRunsURL + file)
-                    .then(response => response.text())
-                    .then(text => {
-                        let runDoc = jsyaml.load(text);
-						if (g_runs[runDoc.uid])
-							throw("run uid " + uid + " already used.");
-						g_runs[runDoc.uid] = runDoc;
-                        const events = runDoc.events;
-                        for (let evtIdx = 0; evtIdx < events.length; evtIdx++) {
-                            let last = evtIdx == 0 ? "" : events[evtIdx - 1].label;
-                            let cur = events[evtIdx].label;
-							let numFrame = evtIdx == 0 ? events[evtIdx].frame : events[evtIdx].frame - events[evtIdx - 1].frame;
-							addMove(last, cur, runDoc.uid, evtIdx, numFrame);
-                        }
-                        numProcessedRuns++;
-                        numLoadedRuns++;
-                        if (numProcessedRuns == numTotalRuns) {
-                            console.log("Loaded " + numLoadedRuns + " runs from HundoDB");
-							addMovesToMap();
-						}
-                    })
-                    .catch(error => {
-                        console.log("Cannot load " + hdbRunsURL + file + ": " + error);
-                        numProcessedRuns++;
-                        if (numProcessedRuns == numTotalRuns) {
-                            console.log("Loaded " + numLoadedRuns + " runs from HundoDB");
-							addMovesToMap();
-						}
-                    });
-            }
-        });
-    })
-    .catch (error => {
-        console.log("Error fetching HundoDB runs: " + error);
-    });
+			let numTotalRuns = 0;
+			let numProcessedRuns = 0;
+			let numLoadedRuns = 0;
+			files.forEach(file => {
+				if (file.length > 0)
+					numTotalRuns++;
+			});
+			if (files.length >0)
+				console.log("Loading " + numTotalRuns + " runs from HundoDB");
+			files.forEach((file) => {
+				if (file.length > 0) {
+					fetch(hdbRunsURL + file)
+						.then(response => response.text())
+						.then(text => {
+							let runDoc = jsyaml.load(text);
+							if (g_runs[runDoc.uid])
+								throw("run uid " + uid + " already used.");
+							g_runs[runDoc.uid] = runDoc;
+							const events = runDoc.events;
+							for (let evtIdx = 0; evtIdx < events.length; evtIdx++) {
+								if (events[evtIdx].type == 'Travel')
+									continue;
+								let last = evtIdx == 0 ? "Shrine of Resurrection" : events[evtIdx - 1].label;
+								let cur = events[evtIdx].label;
+								let numFrame = evtIdx == 0 ? events[evtIdx].frame : events[evtIdx].frame - events[evtIdx - 1].frame;
+								let startEventIdx = evtIdx - 1;
+								while (startEventIdx >= 0 && events[startEventIdx].type == 'Travel')
+									startEventIdx--;
+									
+								addMove(last, cur, runDoc.uid, startEventIdx, evtIdx, numFrame);
+							}
+							numProcessedRuns++;
+							numLoadedRuns++;
+							if (numProcessedRuns == numTotalRuns) {
+								console.log("Loaded " + numLoadedRuns + " runs from HundoDB");
+								addMovesToMap();
+							}
+						})
+						.catch(error => {
+							console.log("Cannot load " + hdbRunsURL + file + ": " + error);
+							numProcessedRuns++;
+							if (numProcessedRuns == numTotalRuns) {
+								console.log("Loaded " + numLoadedRuns + " runs from HundoDB");
+								addMovesToMap();
+							}
+						});
+				}
+			});
+		})
+		.catch (error => {
+			console.log("Error fetching HundoDB runs: " + error);
+		});
+}

@@ -57,6 +57,10 @@ function initMap() {
 		iconAnchor:   [10, 10],
 	});
 
+	g_map.createPane('movesPane').style.zIndex = 450;
+	g_map.createPane('markerFrontPane').style.zIndex = 500;
+	g_map.createPane('markerBackPane').style.zIndex = 400;
+
 	fetch('data/coords.json').then(response => {
 		if (response.ok)
 			return response.json();
@@ -68,6 +72,7 @@ function initMap() {
 		for (let k in data){
 			let icon;
 			let zOffset = 0;
+			let pane = 'markerFrontPane';
 			if (k.endsWith('Tower')) {
 				icon = towerIcon;
 				zOffset = 10000;
@@ -79,6 +84,7 @@ function initMap() {
 			else if (k.length == 3) {
 				icon = korokIcon;
 				zOffset = data[k].Y;
+				pane = 'markerBackPane';
 			}
 			else if (k.startsWith('Vah')) {
 				var name = k.split(' ').slice(0, 2).join('_').toLowerCase();
@@ -111,12 +117,14 @@ function initMap() {
 			}
 			else
 				continue;
-			let marker = L.marker([-data[k].Z, data[k].X], {icon: icon, zIndexOffset : zOffset, keyboard: false});
+			let marker = L.marker([-data[k].Z, data[k].X], {icon: icon, zIndexOffset : zOffset, keyboard: false, pane : pane});
 			marker.addTo(markers).bindTooltip(k, { className : 'no-background-tooltip' });
 			if (g_markerMapping[k])
 				throw 'multiple markers with same name \'' + k + '\'';
 			g_markerMapping[k] = {marker: marker, count: 0};
 		}
+
+		fetchDB();
 	})
 	.catch(error => {
 		console.log('Cannot load map elements' + error);
@@ -128,7 +136,7 @@ function createHTMLContentForMovePopup(from, to) {
 	let mergedCompareLinkParam = '';
 	let moves = g_moves[from][to];
 	for (let i = 0; i < moves.length; i++) {
-		let frame = moves[i].eventIdx == 0 ? 0 : g_runs[moves[i].runUID].events[moves[i].eventIdx - 1].frame;
+		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame;
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(moves[i].numFrame) + '</a>';
 		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + moves[i].runUID + "</td></tr>";
@@ -156,24 +164,25 @@ function createHTMLContentForMovePopup(from, to) {
 async function addMovesToMap() {
 	for (const [from, tos] of Object.entries(g_moves)) {
 		for (const [to, moves] of Object.entries(tos)) {
-			if (g_moves[to][from] && to < from)
+			if (g_moves[to] && g_moves[to][from] && to < from)
 				continue;
-			let latLngs = [g_markerMapping[from.length > 0 ? from : "Shrine of Resurrection"].marker.getLatLng(),g_markerMapping[to].marker.getLatLng()];
+			let latLngs = [g_markerMapping[from].marker.getLatLng(), g_markerMapping[to].marker.getLatLng()];
 
 			let path = L.polyline(latLngs, {
-				"weight": 4,
+				"weight": 3,
 				"color": 'khaki',
 				"opacity": 1,
+				"pane": 'movesPane',
 			}).addTo(g_map);
 			path.on('mouseover', function(e) {
-				path.setStyle({ weight: 6});
+				path.setStyle({ weight: 5});
 			});
 			path.on('mouseout', function(e) {
-				path.setStyle({ weight: 4});
+				path.setStyle({ weight: 3});
 			});
 			{
 				let htmlContent = createHTMLContentForMovePopup(from, to);
-				if (g_moves[to][from])
+				if (g_moves[to] && g_moves[to][from])
 					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from);
 				path.bindPopup(htmlContent);
 			}
