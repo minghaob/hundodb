@@ -1881,9 +1881,9 @@ events:
   - frame: 1449412
     label: A36
   - frame: 1450709
-    label: Ritaag Zumo Shrine
-  - frame: 1452967
     label: A33
+  - frame: 1452967
+    label: Ritaag Zumo Shrine
   - frame: 1453653
     label: Hateno Tower
     type: Travel
