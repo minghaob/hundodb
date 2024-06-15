@@ -131,10 +131,9 @@ function initMap() {
 	});
 }
 
-function createHTMLContentForMovePopup(from, to) {
+function createHTMLContentForMovePopup(from, to, moves) {
 	let htmlContent = '';
 	let mergedCompareLinkParam = '';
-	let moves = g_moves[from][to];
 	for (let i = 0; i < moves.length; i++) {
 		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame;
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
@@ -148,7 +147,7 @@ function createHTMLContentForMovePopup(from, to) {
 	}
 	let compareLink = 'https://viewsync.net/watch?' + mergedCompareLinkParam;
 	htmlContent = 
-		`<div style = "font-weight: bold">` + (from ? from : 'SoR') + ' --> ' + to + `</div>
+		`<div style = "font-weight: bold">` + from + ' --> ' + to + `</div>
 		<table class="move-table">
 			<thead><tr>
 				<th><button title="Compare" onclick="window.open('` + compareLink + `', '_blank')"` + `>C</button></th>
@@ -161,6 +160,22 @@ function createHTMLContentForMovePopup(from, to) {
 	return htmlContent;
 }
 
+function createMovePolyline(latLngs) {
+	let path = L.polyline(latLngs, {
+		"weight": 3,
+		"color": 'khaki',
+		"opacity": 1,
+		"pane": 'movesPane',
+	}).addTo(g_map);
+	path.on('mouseover', function(e) {
+		path.setStyle({weight: 5});
+	});
+	path.on('mouseout', function(e) {
+		path.setStyle({weight: 3});
+	});
+	return path;
+}
+
 async function addMovesToMap() {
 	for (const [from, tos] of Object.entries(g_moves)) {
 		for (const [to, moves] of Object.entries(tos)) {
@@ -168,24 +183,32 @@ async function addMovesToMap() {
 				continue;
 			let latLngs = [g_markerMapping[from].marker.getLatLng(), g_markerMapping[to].marker.getLatLng()];
 
-			let path = L.polyline(latLngs, {
-				"weight": 3,
-				"color": 'khaki',
-				"opacity": 1,
-				"pane": 'movesPane',
-			}).addTo(g_map);
-			path.on('mouseover', function(e) {
-				path.setStyle({ weight: 5});
+			let path = createMovePolyline(latLngs);
+
+			let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
+			if (g_moves[to] && g_moves[to][from])
+				htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
+			path.bindPopup(htmlContent);
+		}
+	}
+
+	for (const [from, tos] of Object.entries(g_travelMoves)) {
+		let htmlContent = '';
+		for (const [to, moves] of Object.entries(tos)) {
+			if (htmlContent.length)
+				htmlContent += '<br>';
+			htmlContent += createHTMLContentForMovePopup(from, to, g_travelMoves[from][to]);
+		}
+
+		if (htmlContent.length) {
+			let latLngs = [g_markerMapping[from].marker.getLatLng()];
+			latLngs.push(L.latLng(latLngs[0].lat + 100, latLngs[0].lng));
+
+			let path = createMovePolyline(latLngs);
+			path.setStyle({
+				dashArray: '10, 5'
 			});
-			path.on('mouseout', function(e) {
-				path.setStyle({ weight: 3});
-			});
-			{
-				let htmlContent = createHTMLContentForMovePopup(from, to);
-				if (g_moves[to] && g_moves[to][from])
-					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from);
-				path.bindPopup(htmlContent);
-			}
+			path.bindPopup(htmlContent);
 		}
 	}
 }

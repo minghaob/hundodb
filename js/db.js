@@ -1,18 +1,22 @@
 let g_runs = {};		// uid -> runDoc
 let g_moves = {};		// from -> { to -> [{ runUID, startEventIdx, endEventIdx, numFrame }, ... (sorted by numFrame decreasing order) ]]}
+let g_travelMoves = {};	// same format as g_moves but ends on a travel
 
-function addMove(from, to, runUID, startEventIdx, endEventIdx, numFrame) {
-	if (!g_moves[from])
-		g_moves[from] = {};
-	if (!g_moves[from][to])
-		g_moves[from][to] = [];
-	let arr = g_moves[from][to];
+function addMove(from, to, isTravel, runUID, startEventIdx, endEventIdx, numFrame) {
+	let moves = isTravel ? g_travelMoves : g_moves;
+	if (!moves[from])
+		moves[from] = {};
+	if (!moves[from][to])
+		moves[from][to] = [];
+	let arr = moves[from][to];
 	arr.push({
 		runUID : runUID,
 		startEventIdx : startEventIdx,
 		endEventIdx : endEventIdx,
 		numFrame : numFrame
 	});
+
+	// sort arr so faster moves come first
 	for (let cur = arr.length - 1;
 		cur > 0	&& (
 			arr[cur].numFrame < arr[cur - 1].numFrame
@@ -72,16 +76,11 @@ function fetchDB() {
 							g_runs[runDoc.uid] = runDoc;
 							const events = runDoc.events;
 							for (let evtIdx = 0; evtIdx < events.length; evtIdx++) {
-								if (events[evtIdx].type == 'Travel')
-									continue;
 								let last = evtIdx == 0 ? "Shrine of Resurrection" : events[evtIdx - 1].label;
 								let cur = events[evtIdx].label;
 								let numFrame = evtIdx == 0 ? events[evtIdx].frame : events[evtIdx].frame - events[evtIdx - 1].frame;
 								let startEventIdx = evtIdx - 1;
-								while (startEventIdx >= 0 && events[startEventIdx].type == 'Travel')
-									startEventIdx--;
-									
-								addMove(last, cur, runDoc.uid, startEventIdx, evtIdx, numFrame);
+								addMove(last, cur, events[evtIdx].type == 'Travel', runDoc.uid, startEventIdx, evtIdx, numFrame);
 							}
 							numProcessedRuns++;
 							numLoadedRuns++;
