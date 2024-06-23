@@ -150,8 +150,8 @@ function createHTMLContentForMovePopup(from, to, moves) {
 		`<div style = "font-weight: bold">` + from + ' --> ' + to + `</div>
 		<table class="move-table">
 			<thead><tr>
-				<th><button title="Compare" onclick="window.open('` + compareLink + `', '_blank')"` + `>C</button></th>
-				<th>Time</th>
+				<th></th>
+				<th style="width:30px"><a href = "` + compareLink + `" target = "_blank" class="header">Time</a></th>
 				<th>Run</th>
 			</tr></thead>`
 		+ htmlContent
@@ -162,31 +162,46 @@ function createHTMLContentForMovePopup(from, to, moves) {
 function createHTMLContentForSingleLabelMovePopup(label, moves) {
 	let htmlContent = '';
 	let mergedCompareLinkParam = '';
+	let mergedSegmentCompareLinkParam = new Array(moves.segNames.length).fill('');
 	for (let i = 0; i < moves.records.length; i++) {
 		let record = moves.records[i];
-		let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
-		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
-		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
-		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + record.runUID + "</td>";
-		for (let segFrame of record.segFrames)
-			htmlContent += '<td>' + frameIdxToTime(segFrame) + '</td>';
-		htmlContent += '</tr>';
-		if (compareLinkParam) {
-			if (mergedCompareLinkParam.length)
-				mergedCompareLinkParam += '&';
-			mergedCompareLinkParam += compareLinkParam;
+		{
+			let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
+			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
+			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
+			htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + record.runUID + "</td>";
+			if (compareLinkParam) {
+				if (mergedCompareLinkParam.length)
+					mergedCompareLinkParam += '&';
+				mergedCompareLinkParam += compareLinkParam;
+			}
 		}
+		for (let j = 0; j < record.segFrames.length; j++) {
+			let segFrame = record.segFrames[j];
+			let frame = j == 0 ? g_runs[record.runUID].events[record.eventIdx].frame[0] : g_runs[record.runUID].events[record.eventIdx].segments[j - 1][0];
+			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
+			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(segFrame) + '</a>';
+			htmlContent += '<td>' + link + '</td>';
+			if (compareLinkParam) {
+				if (mergedSegmentCompareLinkParam[j].length)
+					mergedSegmentCompareLinkParam[j] += '&';
+				mergedSegmentCompareLinkParam[j] += compareLinkParam;
+			}			
+		}
+		htmlContent += '</tr>';
 	}
 	let segmentsHeader = '';
-	for (let segName of moves.segNames)
-		segmentsHeader += '<th>' + segName + '</th>';
+	for (let i = 0; i < moves.segNames.length; i++) {
+		let compareLink = 'https://viewsync.net/watch?' + mergedSegmentCompareLinkParam[i];
+		segmentsHeader += '<th><a href = "' + compareLink + '" target = "_blank" class="header">' +  moves.segNames[i] + '</a></th>';
+	}
 	let compareLink = 'https://viewsync.net/watch?' + mergedCompareLinkParam;
 	htmlContent = 
 		`<div style = "font-weight: bold">` + label + `</div>
 		<table class="move-table">
 			<thead><tr>
-				<th><button title="Compare" onclick="window.open('` + compareLink + `', '_blank')"` + `>C</button></th>
-				<th>Time</th>
+				<th></th>
+				<th><a href = "` + compareLink + `" target = "_blank" class="header">Time</a></th>
 				<th>Run</th>`
 		+ segmentsHeader
 		+ `</tr></thead>`
@@ -252,7 +267,7 @@ async function addMovesToMap() {
 	// single label movements (e.g. shrines, divine beasts)
 	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
 		let htmlContent = createHTMLContentForSingleLabelMovePopup(label, moves);
-		g_markerMapping[label].marker.bindPopup(htmlContent);
+		g_markerMapping[label].marker.bindPopup(htmlContent, { maxWidth : 500});
 	}
 }
 

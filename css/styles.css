@@ -18,7 +18,7 @@ body, html {
 }
 .move-table th, td {
 	border: 1px solid #dddddd;
-	text-align: left;
+	text-align: right;
 	padding: 3px;
 	font-size: 12px;
 }
@@ -30,12 +30,17 @@ body, html {
 	background-color: #f9f9f9;
 }
 
-.move-table tr td:nth-child(2) {
-    text-align: right;
+.move-table tr th:nth-child(3),td:nth-child(3) {
+    text-align: left;
 }
 
 .move-table a {
     text-decoration: none;
+}
+
+.move-table a.header {
+    color: inherit;
+    text-decoration: underline;
 }
 
 .move-table a:hover {
