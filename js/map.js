@@ -135,7 +135,7 @@ function createHTMLContentForMovePopup(from, to, moves) {
 	let htmlContent = '';
 	let mergedCompareLinkParam = '';
 	for (let i = 0; i < moves.length; i++) {
-		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame;
+		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame[1];
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(moves[i].numFrame) + '</a>';
 		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + moves[i].runUID + "</td></tr>";
@@ -155,8 +155,43 @@ function createHTMLContentForMovePopup(from, to, moves) {
 				<th>Run</th>
 			</tr></thead>`
 		+ htmlContent
-		+ `<tr></tr>
-		</table>`;
+		+ `</table>`;
+	return htmlContent;
+}
+
+function createHTMLContentForSingleLabelMovePopup(label, moves) {
+	let htmlContent = '';
+	let mergedCompareLinkParam = '';
+	for (let i = 0; i < moves.records.length; i++) {
+		let record = moves.records[i];
+		let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
+		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
+		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
+		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + record.runUID + "</td>";
+		for (let segFrame of record.segFrames)
+			htmlContent += '<td>' + frameIdxToTime(segFrame) + '</td>';
+		htmlContent += '</tr>';
+		if (compareLinkParam) {
+			if (mergedCompareLinkParam.length)
+				mergedCompareLinkParam += '&';
+			mergedCompareLinkParam += compareLinkParam;
+		}
+	}
+	let segmentsHeader = '';
+	for (let segName of moves.segNames)
+		segmentsHeader += '<th>' + segName + '</th>';
+	let compareLink = 'https://viewsync.net/watch?' + mergedCompareLinkParam;
+	htmlContent = 
+		`<div style = "font-weight: bold">` + label + `</div>
+		<table class="move-table">
+			<thead><tr>
+				<th><button title="Compare" onclick="window.open('` + compareLink + `', '_blank')"` + `>C</button></th>
+				<th>Time</th>
+				<th>Run</th>`
+		+ segmentsHeader
+		+ `</tr></thead>`
+		+ htmlContent
+		+ `</table>`;
 	return htmlContent;
 }
 
@@ -177,6 +212,7 @@ function createMovePolyline(latLngs) {
 }
 
 async function addMovesToMap() {
+	// movements
 	for (const [from, tos] of Object.entries(g_moves)) {
 		for (const [to, moves] of Object.entries(tos)) {
 			if (g_moves[to] && g_moves[to][from] && to < from)
@@ -192,12 +228,13 @@ async function addMovesToMap() {
 		}
 	}
 
-	for (const [from, tos] of Object.entries(g_travelMoves)) {
+	// warp movements
+	for (const [from, tos] of Object.entries(g_warpMoves)) {
 		let htmlContent = '';
 		for (const [to, moves] of Object.entries(tos)) {
 			if (htmlContent.length)
 				htmlContent += '<br>';
-			htmlContent += createHTMLContentForMovePopup(from, to, g_travelMoves[from][to]);
+			htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
 		}
 
 		if (htmlContent.length) {
@@ -210,6 +247,12 @@ async function addMovesToMap() {
 			});
 			path.bindPopup(htmlContent);
 		}
+	}
+
+	// single label movements (e.g. shrines, divine beasts)
+	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
+		let htmlContent = createHTMLContentForSingleLabelMovePopup(label, moves);
+		g_markerMapping[label].marker.bindPopup(htmlContent);
 	}
 }
 
