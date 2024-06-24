@@ -158,6 +158,7 @@ events:
   - {frame: [348964, 350363], label: Jitan Sa'mi Shrine, type: Shrine, segments: [[349253, Enter], [350116, Main], [350363, Leave]]}
   - {frame: [354273, 354308], label: N19, type: Korok Seed}
   - {frame: [356136, 356172], label: N17, type: Korok Seed}
+  - {frame: [357650, 358281], label: Memory 11, type: Memory}
   - {frame: [359256, 359291], label: N15, type: Korok Seed}
   - {frame: [359905, 359939], label: N16, type: Korok Seed}
   - {frame: [360450, 361984], label: Dow Na'eh Shrine, type: Shrine, segments: [[360694, Enter], [361773, Main], [361984, Leave]]}
@@ -214,6 +215,7 @@ events:
   - {frame: [449960, 449968], label: Eldin Tower, type: Tower Activation}
   - {frame: [451940, 451977], label: E27, type: Korok Seed}
   - {frame: [453273, 453306], label: E26, type: Korok Seed}
+  - {frame: [454306, 454945], label: Memory 05, type: Memory}
   - {frame: [455595, 455630], label: E31, type: Korok Seed}
   - {frame: [456451, 456484], label: E24, type: Korok Seed}
   - {frame: [457366, 457403], label: E25, type: Korok Seed}
@@ -278,6 +280,7 @@ events:
   - {frame: [543081, 543114], label: A22, type: Korok Seed}
   - {frame: [543847, 543880], label: A18, type: Korok Seed}
   - {frame: [544440, 544477], label: A21, type: Korok Seed}
+  - {frame: [544963, 545593], label: Memory 09, type: Memory}
   - {frame: [547054, 549216], label: Tutsuwa Nima Shrine, type: Shrine, segments: [[547315, Enter], [548997, Main], [549216, Leave]]}
   - {frame: [550049, 550087], label: A26, type: Korok Seed}
   - {frame: [551057, 551092], label: A20, type: Korok Seed}
@@ -314,6 +317,7 @@ events:
   - {frame: [656760, 659127], label: Saas Ko'sah Shrine, type: Shrine, segments: [[657037, Enter], [658872, Main], [659127, Leave]]}
   - {frame: [659840, 659878], label: X01, type: Korok Seed}
   - {frame: [660514, 660547], label: X04, type: Korok Seed}
+  - {frame: [661704, 662333], label: Memory 08, type: Memory}
   - {frame: [662886, 662924], label: X09, type: Korok Seed}
   - {frame: [663601, 663637], label: X14, type: Korok Seed}
   - {frame: [664124, 664161], label: X17, type: Korok Seed}
@@ -350,6 +354,7 @@ events:
   - {frame: [691215, 691250], label: R11, type: Korok Seed}
   - {frame: [692679, 692716], label: R10, type: Korok Seed}
   - {frame: [693301, 693337], label: R07, type: Korok Seed}
+  - {frame: [693865, 694506], label: Memory 06, type: Memory}
   - {frame: [695831, 695867], label: K29, type: Korok Seed}
   - {frame: [696822, 696859], label: K27, type: Korok Seed}
   - {frame: [697356, 697392], label: K28, type: Korok Seed}
@@ -416,6 +421,7 @@ events:
   - {frame: [758758, 758794], label: C83, type: Korok Seed}
   - {frame: [759603, 759639], label: C76, type: Korok Seed}
   - {frame: [760119, 760155], label: C75, type: Korok Seed}
+  - {frame: [761245, 761886], label: Memory 02, type: Memory}
   - {frame: [762635, 762671], label: C69, type: Korok Seed}
   - {frame: [763452, 763487], label: C63, type: Korok Seed}
   - {frame: [764218, 764252], label: C62, type: Korok Seed}
@@ -426,6 +432,7 @@ events:
   - {frame: [769665, 769701], label: C58, type: Korok Seed}
   - {frame: [770333, 770366], label: C59, type: Korok Seed}
   - {frame: [770742, 770777], label: R74, type: Korok Seed}
+  - {frame: [771548, 772172], label: Memory 10, type: Memory}
   - {frame: [773985, 774019], label: R79, type: Korok Seed}
   - {frame: [778347, 778384], label: C78, type: Korok Seed}
   - {frame: [778960, 778995], label: C72, type: Korok Seed}
@@ -443,6 +450,7 @@ events:
   - {frame: [804768, 804802], label: G32, type: Korok Seed}
   - {frame: [805352, 805388], label: W10, type: Korok Seed}
   - {frame: [806920, 806957], label: G35, type: Korok Seed}
+  - {frame: [808572, 809203], label: Memory 04, type: Memory}
   - {frame: [812153, 812190], label: W17, type: Korok Seed}
   - {frame: [814439, 816629], label: Sasa Kai Shrine, type: Shrine, segments: [[814728, Enter], [816398, Main], [816629, Leave]]}
   - {frame: [817559, 817597], label: G31, type: Korok Seed}
@@ -638,6 +646,7 @@ events:
   - {frame: [1041793, 1041828], label: L01, type: Korok Seed}
   - {frame: [1042410, 1042444], label: L04, type: Korok Seed}
   - {frame: [1042910, 1042944], label: D45, type: Korok Seed}
+  - {frame: [1043384, 1044012], label: Memory 07, type: Memory}
   - {frame: [1044984, 1045021], label: D35, type: Korok Seed}
   - {frame: [1045859, 1045896], label: D36, type: Korok Seed}
   - {frame: [1046444, 1046480], label: D46, type: Korok Seed}
@@ -768,6 +777,7 @@ events:
   - {frame: [1212033, 1212069], label: Z29, type: Korok Seed}
   - {frame: [1212700, 1212735], label: C46, type: Korok Seed}
   - {frame: [1213969, 1214002], label: C51, type: Korok Seed}
+  - {frame: [1214852, 1215482], label: Memory 12, type: Memory}
   - {frame: [1216664, 1216700], label: C56, type: Korok Seed}
   - {frame: [1218015, 1218049], label: C50, type: Korok Seed}
   - {frame: [1218599, 1218634], label: C44, type: Korok Seed}
@@ -799,6 +809,7 @@ events:
   - {frame: [1245137, 1245174], label: C28, type: Korok Seed}
   - {frame: [1246097, 1246131], label: C33, type: Korok Seed}
   - {frame: [1246618, 1246654], label: C35, type: Korok Seed}
+  - {frame: [1247125, 1247753], label: Memory 01, type: Memory}
   - {frame: [1248667, 1248703], label: C42, type: Korok Seed}
   - {frame: [1249099, 1249135], label: C43, type: Korok Seed}
   - {frame: [1249902, 1249939], label: C41, type: Korok Seed}
@@ -849,6 +860,7 @@ events:
   - {frame: [1284256, 1284291], label: T24, type: Korok Seed}
   - {frame: [1287274, 1287308], label: T33, type: Korok Seed}
   - {frame: [1287818, 1290010], label: Tena Ko'sah Shrine, type: Shrine, segments: [[1288090, Enter], [1289768, Main], [1290010, Leave]]}
+  - {frame: [1290539, 1291168], label: Memory 03, type: Memory}
   - {frame: [1291908, 1291944], label: T35, type: Korok Seed}
   - {frame: [1292755, 1292791], label: T37, type: Korok Seed}
   - {frame: [1293655, 1293691], label: T31, type: Korok Seed}
