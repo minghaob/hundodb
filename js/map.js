@@ -226,18 +226,33 @@ function createMovePolyline(latLngs) {
 	return path;
 }
 
+function AdjustPositionAfterDivineBeast(label)
+{
+	// link warps automatically after a divine beast
+	// adjust the starting position of the next movement accordingly
+	if (label == 'Vah Medoh')
+		return [1802.698, -3590.5625];
+	else if (label == 'Vah Naboris')
+		return [-2861.727, -3782.125];
+	else if (label == 'Vah Ruta')
+		return [430.644, 3283.5];
+	else if (label == 'Vah Rudania')
+		return [2424.264, 1583.75];
+
+	return g_markerMapping[label].marker.getLatLng();
+}
+
 async function addMovesToMap() {
 	// movements
 	for (const [from, tos] of Object.entries(g_moves)) {
 		for (const [to, moves] of Object.entries(tos)) {
-			if (g_moves[to] && g_moves[to][from] && to < from)
+			if (g_moves[to] && g_moves[to][from] && to < from && !from.startsWith("Vah") && !to.startsWith("Vah"))
 				continue;
-			let latLngs = [g_markerMapping[from].marker.getLatLng(), g_markerMapping[to].marker.getLatLng()];
-
+			let latLngs = [AdjustPositionAfterDivineBeast(from), g_markerMapping[to].marker.getLatLng()];
 			let path = createMovePolyline(latLngs);
 
 			let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
-			if (g_moves[to] && g_moves[to][from])
+			if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 				htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
 			path.bindPopup(htmlContent);
 		}
@@ -253,7 +268,7 @@ async function addMovesToMap() {
 		}
 
 		if (htmlContent.length) {
-			let latLngs = [g_markerMapping[from].marker.getLatLng()];
+			let latLngs = [AdjustPositionAfterDivineBeast(from)];
 			latLngs.push(L.latLng(latLngs[0].lat + 100, latLngs[0].lng));
 
 			let path = createMovePolyline(latLngs);
