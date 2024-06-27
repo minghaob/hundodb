@@ -39,6 +39,7 @@ events:
   - {frame: [150119, 150153], label: R60, type: Korok Seed}
   - {frame: [155409, 157183], label: Sha Warvo Shrine, type: Shrine, segments: [[155733, Enter], [156916, Main], [157183, Leave]]}
   - {frame: [157591, 157623], label: T02, type: Korok Seed}
+  - {frame: [162775, 170567], label: Vah Medoh, type: Medoh, segments: [[164520, T1], [165293, T2], [165773, T3], [166804, T4], [167856, T5], [168401, To Blight], [169068, Blight], [170567, Leave]]}
   - {frame: [171739, 171772], label: T10, type: Korok Seed}
   - {frame: [172551, 172585], label: T13, type: Korok Seed}
   - {frame: [173556, 173589], label: T04, type: Korok Seed}
@@ -63,6 +64,7 @@ events:
   - {frame: [206012, 206044], label: W28, type: Korok Seed}
   - {frame: [206136, 206694], label: Kuh Takkar Shrine, type: Warp}
   - {frame: [215666, 216247], label: Daqo Chisay Shrine, type: Warp}
+  - {frame: [224665, 234371], label: Vah Naboris, type: Naboris, segments: [[227108, T1], [227890, T2], [228392, T3], [228882, T4], [231169, T5], [231802, To Blight], [232685, Blight], [234371, Leave]]}
   - {frame: [243433, 243469], label: W29, type: Korok Seed}
   - {frame: [244412, 246190], label: Dako Tah Shrine, type: Shrine, segments: [[244690, Enter], [245964, Main], [246190, Leave]]}
   - {frame: [247197, 247231], label: G34, type: Korok Seed}
@@ -138,6 +140,7 @@ events:
   - {frame: [340714, 342311], label: Ne'ez Yohma Shrine, type: Shrine, segments: [[341020, Enter], [342054, Main], [342311, Leave]]}
   - {frame: [347383, 347416], label: Z18, type: Korok Seed}
   - {frame: [347875, 347909], label: Z26, type: Korok Seed}
+  - {frame: [353195, 362205], label: Vah Ruta, type: Ruta, segments: [[354660, T1], [357215, T2], [357998, T3], [358770, T4], [359223, T5], [359616, To Blight], [360664, Blight], [362205, Leave]]}
   - {frame: [369604, 371109], label: Dagah Keek Shrine, type: Shrine, segments: [[369898, Enter], [370853, Main], [371109, Leave]]}
   - {frame: [373093, 373128], label: Z24, type: Korok Seed}
   - {frame: [373610, 373642], label: Z34, type: Korok Seed}
@@ -245,6 +248,7 @@ events:
   - {frame: [521152, 521185], label: E16, type: Korok Seed}
   - {frame: [521786, 521821], label: E17, type: Korok Seed}
   - {frame: [523306, 524755], label: Daqa Koh Shrine, type: Shrine, segments: [[523565, Enter], [524523, Main], [524755, Leave]]}
+  - {frame: [537585, 546426], label: Vah Rudania, type: Rudania, segments: [[539399, T1], [542000, T2], [543151, T3], [543547, T4], [544174, T5], [544441, To Blight], [545001, Blight], [546426, Leave]]}
   - {frame: [555313, 557058], label: Kayra Mah Shrine, type: Shrine, segments: [[555588, Enter], [556837, Main], [557058, Leave]]}
   - {frame: [558042, 558077], label: E20, type: Korok Seed}
   - {frame: [559349, 559382], label: E21, type: Korok Seed}
