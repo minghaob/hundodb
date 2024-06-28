@@ -110,6 +110,7 @@ function initMap() {
 			else if (k.startsWith('Zora Monument')) {
 				icon = monumentIcon;
 				zOffset = -1000;
+				pane = 'markerBackPane';
 			}
 			else if (k.endsWith('Tech Lab')) {
 				icon = techLabIcon;
