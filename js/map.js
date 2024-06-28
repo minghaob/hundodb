@@ -211,7 +211,7 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 	return htmlContent;
 }
 
-function createMovePolyline(latLngs) {
+function createMovePolyline(latLngs, from, to) {
 	let path = L.polyline(latLngs, {
 		"weight": 3,
 		"color": 'khaki',
@@ -220,9 +220,17 @@ function createMovePolyline(latLngs) {
 	}).addTo(g_map);
 	path.on('mouseover', function(e) {
 		path.setStyle({weight: 5});
+		// if (to)
+		// 	g_markerMapping[to].marker.openTooltip();
+		// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
+		// 	g_markerMapping[from].marker.openTooltip();
 	});
 	path.on('mouseout', function(e) {
 		path.setStyle({weight: 3});
+		// if (to)
+		// 	g_markerMapping[to].marker.closeTooltip();
+		// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
+		// 	g_markerMapping[from].marker.closeTooltip();
 	});
 	return path;
 }
@@ -250,12 +258,17 @@ async function addMovesToMap() {
 			if (g_moves[to] && g_moves[to][from] && to < from && !from.startsWith("Vah") && !to.startsWith("Vah"))
 				continue;
 			let latLngs = [AdjustPositionAfterDivineBeast(from), g_markerMapping[to].marker.getLatLng()];
-			let path = createMovePolyline(latLngs);
+			let path = createMovePolyline(latLngs, from, to);
 
 			let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
 			if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 				htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
 			path.bindPopup(htmlContent);
+			path.on('click', function(e) {
+				g_markerMapping[to].marker.openTooltip();
+				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
+					g_markerMapping[from].marker.openTooltip();
+			});
 		}
 	}
 
@@ -272,11 +285,15 @@ async function addMovesToMap() {
 			let latLngs = [AdjustPositionAfterDivineBeast(from)];
 			latLngs.push(L.latLng(latLngs[0].lat + 100, latLngs[0].lng));
 
-			let path = createMovePolyline(latLngs);
+			let path = createMovePolyline(latLngs, from);
 			path.setStyle({
 				dashArray: '10, 5'
 			});
 			path.bindPopup(htmlContent);
+			path.on('click', function(e) {
+				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
+					g_markerMapping[from].marker.openTooltip();
+			});
 		}
 	}
 
