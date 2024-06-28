@@ -133,14 +133,20 @@ events:
   - {frame: [328400, 328436], label: Z43, type: Korok Seed}
   - {frame: [328946, 328979], label: N06, type: Korok Seed}
   - {frame: [329591, 329624], label: Z44, type: Korok Seed}
+  - {frame: [331108, 331125], label: Zora Monument 06, type: Zora Monument}
+  - {frame: [331792, 331813], label: Zora Monument 07, type: Zora Monument}
   - {frame: [332185, 332220], label: Z33, type: Korok Seed}
+  - {frame: [332951, 332964], label: Zora Monument 04, type: Zora Monument}
   - {frame: [333635, 333670], label: Z32, type: Korok Seed}
+  - {frame: [334274, 334295], label: Zora Monument 03, type: Zora Monument}
+  - {frame: [334757, 334771], label: Zora Monument 08, type: Zora Monument}
   - {frame: [335370, 335403], label: Z25, type: Korok Seed}
   - {frame: [335977, 336010], label: Z17, type: Korok Seed}
   - {frame: [340714, 342311], label: Ne'ez Yohma Shrine, type: Shrine, segments: [[341020, Enter], [342054, Main], [342311, Leave]]}
   - {frame: [347383, 347416], label: Z18, type: Korok Seed}
   - {frame: [347875, 347909], label: Z26, type: Korok Seed}
   - {frame: [353195, 362205], label: Vah Ruta, type: Ruta, segments: [[354660, T1], [357215, T2], [357998, T3], [358770, T4], [359223, T5], [359616, To Blight], [360664, Blight], [362205, Leave]]}
+  - {frame: [368029, 368046], label: Zora Monument 10, type: Zora Monument}
   - {frame: [369604, 371109], label: Dagah Keek Shrine, type: Shrine, segments: [[369898, Enter], [370853, Main], [371109, Leave]]}
   - {frame: [373093, 373128], label: Z24, type: Korok Seed}
   - {frame: [373610, 373642], label: Z34, type: Korok Seed}
@@ -148,6 +154,7 @@ events:
   - {frame: [376606, 376640], label: Z19, type: Korok Seed}
   - {frame: [377125, 377160], label: Z20, type: Korok Seed}
   - {frame: [378157, 378190], label: Z08, type: Korok Seed}
+  - {frame: [378988, 379005], label: Zora Monument 09, type: Zora Monument}
   - {frame: [379750, 379783], label: Z16, type: Korok Seed}
   - {frame: [381672, 381708], label: Z05, type: Korok Seed}
   - {frame: [382407, 382441], label: Z04, type: Korok Seed}
@@ -720,6 +727,9 @@ events:
   - {frame: [1170320, 1170356], label: Z22, type: Korok Seed}
   - {frame: [1171093, 1171128], label: Z23, type: Korok Seed}
   - {frame: [1172807, 1172842], label: Z31, type: Korok Seed}
+  - {frame: [1173593, 1173612], label: Zora Monument 05, type: Zora Monument}
+  - {frame: [1174470, 1174490], label: Zora Monument 01, type: Zora Monument}
+  - {frame: [1175031, 1175052], label: Zora Monument 02, type: Zora Monument}
   - {frame: [1179070, 1179106], label: Z30, type: Korok Seed}
   - {frame: [1180085, 1180117], label: Z29, type: Korok Seed}
   - {frame: [1180859, 1180892], label: C46, type: Korok Seed}
