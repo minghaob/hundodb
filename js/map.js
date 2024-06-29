@@ -1,5 +1,8 @@
 let g_map;
 let g_markerMapping = {};			// A mapping from marker tooltip string to {marker, count}, where marker is the handle and count is the number of events that this marker is assigned to
+let g_movePaths = {};				// from -> { to -> path }
+let g_warpMovePaths = {};			// from ->  path
+let g_highlightedRun;				// uid of the run being highlighted
 
 function initMap() {
 	g_map = L.map('map', {
@@ -84,7 +87,7 @@ function initMap() {
 			else if (k.length == 3) {
 				icon = korokIcon;
 				zOffset = data[k].Y;
-				pane = 'markerBackPane';
+				//pane = 'markerBackPane';
 			}
 			else if (k.startsWith('Vah')) {
 				var name = k.split(' ').slice(0, 2).join('_').toLowerCase();
@@ -110,7 +113,7 @@ function initMap() {
 			else if (k.startsWith('Zora Monument')) {
 				icon = monumentIcon;
 				zOffset = -1000;
-				pane = 'markerBackPane';
+				//pane = 'markerBackPane';
 			}
 			else if (k.endsWith('Tech Lab')) {
 				icon = techLabIcon;
@@ -139,7 +142,7 @@ function createHTMLContentForMovePopup(from, to, moves) {
 		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame[1];
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(moves[i].numFrame) + '</a>';
-		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + moves[i].runUID + "</td></tr>";
+		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="highlightRun(\'' + moves[i].runUID + '\')">' + moves[i].runUID + "</a></td></tr>";
 		if (compareLinkParam) {
 			if (mergedCompareLinkParam.length)
 				mergedCompareLinkParam += '&';
@@ -170,7 +173,7 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 			let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
 			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
 			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
-			htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + "</td><td>" + record.runUID + "</td>";
+			htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="highlightRun(\'' + record.runUID + '\')">' + record.runUID + "</a></td>";
 			if (compareLinkParam) {
 				if (mergedCompareLinkParam.length)
 					mergedCompareLinkParam += '&';
@@ -251,6 +254,73 @@ function AdjustPositionAfterDivineBeast(label)
 	return g_markerMapping[label].marker.getLatLng();
 }
 
+function highlightRun(runUID) {
+	if (g_highlightedRun != runUID)
+		g_highlightedRun = runUID;
+	else
+		g_highlightedRun = null;
+
+	let lightGrayHalfTransparent = {
+		color: 'grey',
+		opacity: 0.5,
+	};
+	let khakiOpaque = {
+		color: 'khaki',
+		opacity: 1,
+	};
+	let defaultColor = g_highlightedRun ? lightGrayHalfTransparent : khakiOpaque;
+
+	for (const [from, tos] of Object.entries(g_movePaths))
+		for (const [to, path] of Object.entries(tos))
+			path.setStyle(defaultColor);
+	for (const [from, path] of Object.entries(g_warpMovePaths))
+		path.setStyle(defaultColor);
+
+	if (g_highlightedRun)
+		highlightMovesInRun(runUID);
+}
+
+function highlightMovesInRun(runUID) {
+	let colors = [
+		{ color: 'dodgerblue', opacity: 1, },
+		{ color: 'red', opacity: 1, },
+		{ color: 'magenta', opacity: 1, },
+		{ color: 'greenyellow', opacity: 1, },
+		{ color: 'aqua', opacity: 1, },
+		{ color: 'white', opacity: 1, },
+		{ color: 'orange', opacity: 1, },
+		{ color: 'gold', opacity: 1, },
+		{ color: 'black', opacity: 1, },
+	];
+	let curColorIdx = 0;
+
+	if (!g_runs[runUID])
+		return;
+	const events = g_runs[runUID].events;
+	for (let evtIdx = 0; evtIdx < events.length; evtIdx++) {
+		let last = evtIdx == 0 ? "Shrine of Resurrection" : events[evtIdx - 1].label;
+		let cur = events[evtIdx].label;
+		let isWarp = events[evtIdx].type == 'Warp';
+		if (isWarp) {
+			if (g_warpMovePaths[last]) {
+				g_warpMovePaths[last].setStyle(colors[curColorIdx]);
+				g_warpMovePaths[last].bringToFront();
+			}
+			curColorIdx = (curColorIdx + 1) % colors.length;
+		}
+		else {
+			if (g_movePaths[last] && g_movePaths[last][cur]) {
+				g_movePaths[last][cur].setStyle(colors[curColorIdx]);
+				g_movePaths[last][cur].bringToFront();
+			}
+			else if (g_movePaths[cur] && g_movePaths[cur][last]) {
+				g_movePaths[cur][last].setStyle(colors[curColorIdx]);
+				g_movePaths[cur][last].bringToFront();
+			}
+		}
+	}
+}
+
 async function addMovesToMap() {
 	// movements
 	for (const [from, tos] of Object.entries(g_moves)) {
@@ -269,6 +339,9 @@ async function addMovesToMap() {
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
 			});
+			if (!g_movePaths[from])
+				g_movePaths[from] = {};
+			g_movePaths[from][to] = path;
 		}
 	}
 
@@ -294,6 +367,7 @@ async function addMovesToMap() {
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
 			});
+			g_warpMovePaths[from] = path;
 		}
 	}
 
