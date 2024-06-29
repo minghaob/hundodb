@@ -11,6 +11,7 @@ events:
   - {frame: [21682, 22196], label: Great Plateau Tower, type: Warp}
   - {frame: [24185, 26929], label: Keh Namut Shrine, type: Shrine, segments: [[24479, Enter], [26658, Main], [26929, Leave]]}
   - {frame: [28124, 31203], label: Owa Daim Shrine, type: Shrine, segments: [[28363, Enter], [30912, Main], [31203, Leave]]}
+  - {frame: [33586, 33590], label: Paraglider, type: Paraglider}
   - {frame: [40209, 41996], label: Mogg Latan Shrine, type: Shrine, segments: [[40486, Enter], [41726, Main], [41996, Leave]]}
   - {frame: [42317, 42353], label: R60, type: Korok Seed}
   - {frame: [46778, 46817], label: X19, type: Korok Seed}
@@ -67,15 +68,15 @@ events:
   - {frame: [215887, 215922], label: H43, type: Korok Seed}
   - {frame: [216753, 216792], label: H27, type: Korok Seed}
   - {frame: [217473, 218955], label: Shada Naw Shrine, type: Shrine, segments: [[217745, Enter], [218735, Main], [218955, Leave]]}
-  - {frame: [220228, 220265], label: H33, type: Korok Seed}
+  - {frame: [220228, 220266], label: H33, type: Korok Seed}
   - {frame: [220821, 220858], label: H34, type: Korok Seed}
-  - {frame: [221811, 221846], label: H46, type: Korok Seed}
+  - {frame: [221810, 221846], label: H46, type: Korok Seed}
   - {frame: [222291, 222329], label: H48, type: Korok Seed}
   - {frame: [223017, 223055], label: H50, type: Korok Seed}
   - {frame: [223296, 223334], label: H47, type: Korok Seed}
   - {frame: [223541, 223578], label: H49, type: Korok Seed}
   - {frame: [224139, 224175], label: H44, type: Korok Seed}
-  - {frame: [224785, 224824], label: H45, type: Korok Seed}
+  - {frame: [224785, 224825], label: H45, type: Korok Seed}
   - {frame: [225798, 225834], label: H56, type: Korok Seed}
   - {frame: [226339, 226374], label: H51, type: Korok Seed}
   - {frame: [227882, 229388], label: Gee Ha'rah Shrine, type: Shrine, segments: [[228128, Enter], [229169, Main], [229388, Leave]]}
@@ -102,9 +103,10 @@ events:
   - {frame: [256200, 256240], label: W29, type: Korok Seed}
   - {frame: [257067, 258593], label: Daqo Chisay Shrine, type: Shrine, segments: [[257353, Enter], [258344, Main], [258593, Leave]]}
   - {frame: [264525, 264564], label: W47, type: Korok Seed}
-  - {frame: [265507, 265545], label: W36, type: Korok Seed}
+  - {frame: [265507, 265546], label: W36, type: Korok Seed}
   - {frame: [266230, 266266], label: W28, type: Korok Seed}
   - {frame: [266351, 266898], label: Kuh Takkar Shrine, type: Warp}
+  - {frame: [274074, 274108], label: Thunder Helm, type: Thunder Helm}
   - {frame: [274196, 274765], label: Daqo Chisay Shrine, type: Warp}
   - {frame: [282995, 293073], label: Vah Naboris, type: Naboris, segments: [[285297, T1], [286431, T2], [286909, T3], [287385, T4], [289491, T5], [290501, To Blight], [291524, Blight], [293073, Leave]]}
   - {frame: [301305, 303154], label: Dako Tah Shrine, type: Shrine, segments: [[301574, Enter], [302927, Main], [303154, Leave]]}
@@ -126,7 +128,7 @@ events:
   - {frame: [318918, 318955], label: W39, type: Korok Seed}
   - {frame: [319702, 319740], label: W38, type: Korok Seed}
   - {frame: [321321, 321360], label: W50, type: Korok Seed}
-  - {frame: [322171, 322208], label: W58, type: Korok Seed}
+  - {frame: [322171, 322209], label: W58, type: Korok Seed}
   - {frame: [323200, 324529], label: Dila Maag Shrine, type: Shrine, segments: [[323463, Enter], [324317, Main], [324529, Leave]]}
   - {frame: [325728, 325767], label: W54, type: Korok Seed}
   - {frame: [326517, 326554], label: W59, type: Korok Seed}
@@ -516,9 +518,9 @@ events:
   - {frame: [918542, 918578], label: W40, type: Korok Seed}
   - {frame: [919541, 919578], label: W30, type: Korok Seed}
   - {frame: [921824, 922378], label: Kuh Takkar Shrine, type: Warp}
-  - {frame: [923429, 923467], label: G22, type: Korok Seed}
-  - {frame: [924005, 924041], label: G17, type: Korok Seed}
-  - {frame: [925222, 925260], label: G18, type: Korok Seed}
+  - {frame: [923429, 923468], label: G22, type: Korok Seed}
+  - {frame: [924005, 924042], label: G17, type: Korok Seed}
+  - {frame: [925222, 925261], label: G18, type: Korok Seed}
   - {frame: [925903, 925942], label: G23, type: Korok Seed}
   - {frame: [926717, 926753], label: G27, type: Korok Seed}
   - {frame: [927560, 927596], label: G28, type: Korok Seed}

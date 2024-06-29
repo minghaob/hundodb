@@ -10,6 +10,7 @@ events:
   - {frame: [17511, 17521], label: Great Plateau Tower, type: Tower Activation}
   - {frame: [22263, 25145], label: Owa Daim Shrine, type: Shrine, segments: [[22505, Enter], [24850, Main], [25145, Leave]]}
   - {frame: [26825, 29459], label: Keh Namut Shrine, type: Shrine, segments: [[27109, Enter], [29185, Main], [29459, Leave]]}
+  - {frame: [31656, 31661], label: Paraglider, type: Paraglider}
   - {frame: [38718, 41120], label: Mogg Latan Shrine, type: Shrine, segments: [[39020, Enter], [40851, Main], [41120, Leave]]}
   - {frame: [46921, 49708], label: Kaya Wan Shrine, type: Shrine, segments: [[47228, Enter], [49418, Main], [49708, Leave]]}
   - {frame: [50933, 52910], label: Daka Tuss Shrine, type: Shrine, segments: [[51200, Enter], [52659, Main], [52910, Leave]]}
@@ -62,8 +63,9 @@ events:
   - {frame: [212086, 212122], label: W36, type: Korok Seed}
   - {frame: [212774, 212809], label: W28, type: Korok Seed}
   - {frame: [212884, 213441], label: Kuh Takkar Shrine, type: Warp}
+  - {frame: [222056, 222087], label: Thunder Helm, type: Thunder Helm}
   - {frame: [222169, 222762], label: Daqo Chisay Shrine, type: Warp}
-  - {frame: [230857, 240499], label: Vah Naboris, type: Naboris, segments: [[233427, T1], [234292, T2], [234771, T3], [235342, T4], [237424, T5], [238016, To Blight], [238936, Blight], [240499, Leave]]}
+  - {frame: [230857, 240500], label: Vah Naboris, type: Naboris, segments: [[233427, T1], [234292, T2], [234771, T3], [235342, T4], [237424, T5], [238016, To Blight], [238936, Blight], [240500, Leave]]}
   - {frame: [248295, 250254], label: Dako Tah Shrine, type: Shrine, segments: [[248564, Enter], [250024, Main], [250254, Leave]]}
   - {frame: [251235, 251269], label: G34, type: Korok Seed}
   - {frame: [253041, 253582], label: Vah Naboris (Tamed), type: Warp}

@@ -13,6 +13,7 @@ events:
   - {frame: [20890, 21388], label: Great Plateau Tower, type: Warp}
   - {frame: [22977, 25691], label: Keh Namut Shrine, type: Shrine, segments: [[23271, Enter], [25413, Main], [25691, Leave]]}
   - {frame: [26773, 29665], label: Owa Daim Shrine, type: Shrine, segments: [[27005, Enter], [29379, Main], [29665, Leave]]}
+  - {frame: [31829, 31839], label: Paraglider, type: Paraglider}
   - {frame: [38093, 39853], label: Mogg Latan Shrine, type: Shrine, segments: [[38363, Enter], [39591, Main], [39853, Leave]]}
   - {frame: [40178, 40216], label: R60, type: Korok Seed}
   - {frame: [44499, 44537], label: X19, type: Korok Seed}
@@ -70,7 +71,7 @@ events:
   - {frame: [210163, 211605], label: Shada Naw Shrine, type: Shrine, segments: [[210435, Enter], [211386, Main], [211605, Leave]]}
   - {frame: [212926, 212961], label: H33, type: Korok Seed}
   - {frame: [213495, 213531], label: H34, type: Korok Seed}
-  - {frame: [214471, 214509], label: H46, type: Korok Seed}
+  - {frame: [214470, 214509], label: H46, type: Korok Seed}
   - {frame: [214945, 214981], label: H48, type: Korok Seed}
   - {frame: [215636, 215673], label: H50, type: Korok Seed}
   - {frame: [215905, 215940], label: H49, type: Korok Seed}
@@ -106,6 +107,7 @@ events:
   - {frame: [258592, 258629], label: W36, type: Korok Seed}
   - {frame: [259182, 259218], label: W28, type: Korok Seed}
   - {frame: [259290, 259851], label: Kuh Takkar Shrine, type: Warp}
+  - {frame: [266643, 266675], label: Thunder Helm, type: Thunder Helm}
   - {frame: [266742, 267337], label: Daqo Chisay Shrine, type: Warp}
   - {frame: [275509, 284966], label: Vah Naboris, type: Naboris, segments: [[277674, T1], [278431, T2], [278917, T3], [279405, T4], [281690, T5], [282421, To Blight], [283435, Blight], [284966, Leave]]}
   - {frame: [292392, 294426], label: Dako Tah Shrine, type: Shrine, segments: [[292656, Enter], [294201, Main], [294426, Leave]]}
@@ -921,7 +923,7 @@ events:
   - {frame: [1348416, 1348451], label: H23, type: Korok Seed}
   - {frame: [1349755, 1349789], label: H07, type: Korok Seed}
   - {frame: [1350710, 1350747], label: H08, type: Korok Seed}
-  - {frame: [1351639, 1351674], label: H02, type: Korok Seed}
+  - {frame: [1351639, 1351675], label: H02, type: Korok Seed}
   - {frame: [1353188, 1353224], label: H03, type: Korok Seed}
   - {frame: [1353628, 1354952], label: To Quomo Shrine, type: Shrine, segments: [[1353882, Enter], [1354740, Main], [1354952, Leave]]}
   - {frame: [1355168, 1355659], label: Shada Naw Shrine, type: Warp}
