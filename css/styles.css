@@ -47,6 +47,10 @@ body, html {
     text-decoration: underline;
 }
 
+.move-table tr.highlighted-row {
+    background-color: peachpuff;
+}
+
 .no-background-tooltip {
     background: transparent;      /* Make background transparent */
     border: none;                 /* Remove border */

@@ -142,7 +142,8 @@ function createHTMLContentForMovePopup(from, to, moves) {
 		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame[1];
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(moves[i].numFrame) + '</a>';
-		htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="highlightRun(\'' + moves[i].runUID + '\')">' + moves[i].runUID + "</a></td></tr>";
+		htmlContent += '<tr runUID="' + moves[i].runUID + '" ' + (moves[i].runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '><td>'
+			+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(this)">' + moves[i].runUID + "</a></td></tr>";
 		if (compareLinkParam) {
 			if (mergedCompareLinkParam.length)
 				mergedCompareLinkParam += '&';
@@ -173,7 +174,8 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 			let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
 			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
 			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
-			htmlContent += "<tr><td>" + (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="highlightRun(\'' + record.runUID + '\')">' + record.runUID + "</a></td>";
+			htmlContent += '<tr runUID="' + record.runUID + '" ' + (record.runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '"><td>'
+				+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(this)">' + record.runUID + "</a></td>";
 			if (compareLinkParam) {
 				if (mergedCompareLinkParam.length)
 					mergedCompareLinkParam += '&';
@@ -254,6 +256,18 @@ function AdjustPositionAfterDivineBeast(label)
 	return g_markerMapping[label].marker.getLatLng();
 }
 
+function onClickRunCellText(cell) {
+	highlightRun(cell.textContent);
+	let container = cell.parentNode.parentNode.parentNode.parentNode.parentNode;		// a -> td -> tr -> tbody -> table -> popup
+	let rows = container.querySelectorAll('table.move-table tr');
+	rows.forEach(function (row) {
+		if (row.getAttribute('runUID') == g_highlightedRun)
+			row.classList.add("highlighted-row");
+		else
+			row.classList.remove("highlighted-row");
+	});
+}
+
 function highlightRun(runUID) {
 	if (g_highlightedRun != runUID)
 		g_highlightedRun = runUID;
@@ -262,7 +276,7 @@ function highlightRun(runUID) {
 
 	let lightGrayHalfTransparent = {
 		color: 'grey',
-		opacity: 0.5,
+		opacity: 0.6,
 	};
 	let khakiOpaque = {
 		color: 'khaki',
@@ -330,11 +344,12 @@ async function addMovesToMap() {
 			let latLngs = [AdjustPositionAfterDivineBeast(from), g_markerMapping[to].marker.getLatLng()];
 			let path = createMovePolyline(latLngs, from, to);
 
-			let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
-			if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
-				htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
-			path.bindPopup(htmlContent);
 			path.on('click', function(e) {
+				let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
+				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
+					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
+				L.popup(e.latlng, {content: htmlContent}).openOn(g_map);
+	
 				g_markerMapping[to].marker.openTooltip();
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
@@ -347,14 +362,7 @@ async function addMovesToMap() {
 
 	// warp movements
 	for (const [from, tos] of Object.entries(g_warpMoves)) {
-		let htmlContent = '';
-		for (const [to, moves] of Object.entries(tos)) {
-			if (htmlContent.length)
-				htmlContent += '<br>';
-			htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
-		}
-
-		if (htmlContent.length) {
+		if (Object.keys(tos).length) {
 			let latLngs = [AdjustPositionAfterDivineBeast(from)];
 			latLngs.push(L.latLng(latLngs[0].lat + 100, latLngs[0].lng));
 
@@ -362,8 +370,15 @@ async function addMovesToMap() {
 			path.setStyle({
 				dashArray: '10, 5'
 			});
-			path.bindPopup(htmlContent);
 			path.on('click', function(e) {
+				let htmlContent = '';
+				for (const [to, moves] of Object.entries(tos)) {
+					if (htmlContent.length)
+						htmlContent += '<br>';
+					htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
+				}
+				L.popup(e.latlng, {content: htmlContent}).openOn(g_map);
+
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
 			});
@@ -373,8 +388,11 @@ async function addMovesToMap() {
 
 	// single label movements (e.g. shrines, divine beasts)
 	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
-		let htmlContent = createHTMLContentForSingleLabelMovePopup(label, moves);
-		g_markerMapping[label].marker.bindPopup(htmlContent, { maxWidth : 500});
+		g_markerMapping[label].marker.on('click', function(e) {
+			let htmlContent = createHTMLContentForSingleLabelMovePopup(label, moves);
+			L.popup(g_markerMapping[label].marker.getLatLng(), {content: htmlContent, maxWidth: 500}).openOn(g_map);
+		});
+
 	}
 }
 
