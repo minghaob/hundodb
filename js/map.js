@@ -152,7 +152,7 @@ function createHTMLContentForMovePopup(from, to, moves) {
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(moves[i].numFrame) + '</a>';
 		htmlContent += '<tr runUID="' + moves[i].runUID + '" ' + (moves[i].runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '><td>'
-			+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(this)">' + moves[i].runUID + "</a></td></tr>";
+			+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)">' + moves[i].runUID + "</a></td></tr>";
 		if (compareLinkParam) {
 			if (mergedCompareLinkParam.length)
 				mergedCompareLinkParam += '&';
@@ -184,7 +184,7 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
 			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
 			htmlContent += '<tr runUID="' + record.runUID + '" ' + (record.runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '"><td>'
-				+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(this)">' + record.runUID + "</a></td>";
+				+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)">' + record.runUID + "</a></td>";
 			if (compareLinkParam) {
 				if (mergedCompareLinkParam.length)
 					mergedCompareLinkParam += '&';
@@ -265,7 +265,7 @@ function AdjustPositionAfterDivineBeast(label)
 	return g_markerMapping[label].marker.getLatLng();
 }
 
-function onClickRunCellText(cell) {
+function onClickRunCellText(event, cell) {
 	highlightRun(cell.textContent);
 	let container = cell.parentNode.parentNode.parentNode.parentNode.parentNode;		// a -> td -> tr -> tbody -> table -> popup
 	let rows = container.querySelectorAll('table.move-table tr');
@@ -275,6 +275,8 @@ function onClickRunCellText(cell) {
 		else
 			row.classList.remove("highlighted-row");
 	});
+
+	event.preventDefault();
 }
 
 function highlightRun(runUID) {
@@ -390,6 +392,8 @@ async function addMovesToMap() {
 
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
+				for (const [to, moves] of Object.entries(tos))
+					g_markerMapping[to].marker.openTooltip();
 			});
 			g_warpMovePaths[from] = path;
 		}
