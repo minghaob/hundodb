@@ -1100,3 +1100,4 @@ events:
   - {frame: [1703989, 1704553], label: Monya Toma Shrine, type: Warp}
   - {frame: [1706097, 1706683], label: Keo Ruug Shrine, type: Warp}
   - {frame: [1713984, 1714611], label: Ha Dahamar Shrine, type: Warp}
+  - {frame: [1715295, 1715295], label: Memory Final, type: GG}

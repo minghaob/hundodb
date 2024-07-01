@@ -1097,3 +1097,4 @@ events:
   - {frame: [1601661, 1601694], label: A48, type: Korok Seed}
   - {frame: [1609260, 1609869], label: Keo Ruug Shrine, type: Warp}
   - {frame: [1622020, 1622655], label: Ha Dahamar Shrine, type: Warp}
+  - {frame: [1626489, 1626489], label: Memory Final, type: GG}

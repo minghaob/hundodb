@@ -1098,3 +1098,4 @@ events:
   - {frame: [1687261, 1688091], label: Katah Chuki Shrine, type: Warp}
   - {frame: [1689915, 1690540], label: Keo Ruug Shrine, type: Warp}
   - {frame: [1698998, 1699667], label: Ha Dahamar Shrine, type: Warp}
+  - {frame: [1700584, 1700584], label: Memory Final, type: GG}
