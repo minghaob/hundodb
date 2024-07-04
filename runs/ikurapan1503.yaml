@@ -1,6 +1,7 @@
 uid: ikurapan1503
 runner: ikurapan
 src_id: z19j11jm
+route: omegeb
 videos:
   - {remote: 'https://youtu.be/xvzybvqtGC8', segments: [[3265, 365328]]}
   - {remote: 'https://youtu.be/9HwyiCnR-CQ', segments: [[229, 454869]]}

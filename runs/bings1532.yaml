@@ -1,6 +1,7 @@
 uid: bings1532
 runner: BingsF
 src_id: y6ode1py
+route: omegabow
 videos:
   - {remote: 'https://youtu.be/q2qmIuJOnMk', segments: [[3704, 398938]]}
   - {remote: 'https://youtu.be/u5sEnL_65UM', segments: [[3906, 384118]]}

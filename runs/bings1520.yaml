@@ -1,6 +1,7 @@
 uid: bings1520
 runner: BingsF
 src_id: yjwo1l3m
+route: omegeb
 videos:
   - {remote: 'https://youtu.be/jG9dDOcJHyk', segments: [[3422, 441466], [493568, 956395]]}
   - {remote: 'https://youtu.be/LxZ1QiY3R3Q', segments: [[1944, 457347], [493664, 794508]]}

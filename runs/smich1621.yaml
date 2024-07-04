@@ -1,6 +1,7 @@
 uid: smich1621
 runner: Smich
 src_id: znj769lm
+route: omegabow
 videos:
   - {remote: 'https://youtu.be/lnqTkw94o8s', segments: [[16477, 556345]]}
   - {remote: 'https://youtu.be/x4ISzuoxvL4', segments: [[1939, 330812]]}

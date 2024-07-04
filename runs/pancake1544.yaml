@@ -1,6 +1,7 @@
 uid: pancake1544
 runner: PancakeTurtle
 src_id: yw62jd0m
+route: omegafairy
 videos:
   - {remote: 'https://youtu.be/VuLPcjFHrRo', segments: [[2276, 519230]]}
   - {remote: 'https://youtu.be/8VioZRzbgl0', segments: [[226, 414343]]}
