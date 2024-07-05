@@ -1,0 +1,1100 @@
+uid: johnny1648
+runner: Johnnyboom
+src_id: ydel75qm
+route: granatus
+videos:
+  - {remote: 'https://youtu.be/d4s3-3IcV9A', segments: [[2110, 1002988]]}
+  - {remote: 'https://youtu.be/Nbedyn8cWtk', segments: [[240, 392700]]}
+  - {remote: 'https://youtu.be/R4168mDWg1k', segments: [[889, 422779]]}
+events:
+  - {frame: [7297, 10682], label: Owa Daim Shrine, type: Shrine, segments: [[7551, Enter], [10388, Main], [10682, Leave]]}
+  - {frame: [13358, 16145], label: Keh Namut Shrine, type: Shrine, segments: [[13654, Enter], [15861, Main], [16145, Leave]]}
+  - {frame: [19088, 22192], label: Oman Au Shrine, type: Shrine, segments: [[19372, Enter], [21887, Main], [22192, Leave]]}
+  - {frame: [23860, 23871], label: Great Plateau Tower, type: Tower Activation}
+  - {frame: [28579, 31528], label: Ja Baij Shrine, type: Shrine, segments: [[28868, Enter], [31276, Main], [31528, Leave]]}
+  - {frame: [34004, 34011], label: Paraglider, type: Paraglider}
+  - {frame: [38890, 38923], label: C29, type: Korok Seed}
+  - {frame: [41215, 41251], label: C28, type: Korok Seed}
+  - {frame: [44229, 44264], label: C32, type: Korok Seed}
+  - {frame: [58113, 58147], label: C30, type: Korok Seed}
+  - {frame: [62636, 62670], label: R60, type: Korok Seed}
+  - {frame: [62864, 64618], label: Mogg Latan Shrine, type: Shrine, segments: [[63128, Enter], [64355, Main], [64618, Leave]]}
+  - {frame: [72464, 72499], label: T02, type: Korok Seed}
+  - {frame: [79613, 88753], label: Vah Medoh, type: Medoh, segments: [[81614, T1], [82094, T2], [82694, T3], [84099, T4], [85046, T5], [85647, To Blight], [87210, Blight], [88753, Leave]]}
+  - {frame: [90041, 92174], label: Akh Va'quot Shrine, type: Shrine, segments: [[90313, Enter], [91911, Main], [92174, Leave]]}
+  - {frame: [99264, 99298], label: T19, type: Korok Seed}
+  - {frame: [99404, 100167], label: Great Plateau Tower, type: Warp}
+  - {frame: [102114, 104497], label: Kaya Wan Shrine, type: Shrine, segments: [[102417, Enter], [104205, Main], [104497, Leave]]}
+  - {frame: [105403, 107306], label: Daka Tuss Shrine, type: Shrine, segments: [[105676, Enter], [107044, Main], [107306, Leave]]}
+  - {frame: [118841, 118873], label: N42, type: Korok Seed}
+  - {frame: [129218, 129252], label: N48, type: Korok Seed}
+  - {frame: [129836, 129868], label: N43, type: Korok Seed}
+  - {frame: [132349, 134191], label: Myahm Agana Shrine, type: Shrine, segments: [[132701, Enter], [133818, Main], [134191, Leave]]}
+  - {frame: [173229, 173264], label: N59, type: Korok Seed}
+  - {frame: [174491, 174524], label: N58, type: Korok Seed}
+  - {frame: [175543, 175576], label: N49, type: Korok Seed}
+  - {frame: [175743, 175777], label: N50, type: Korok Seed}
+  - {frame: [176502, 176510], label: Hateno Tower, type: Tower Activation}
+  - {frame: [179043, 179075], label: F06, type: Korok Seed}
+  - {frame: [179916, 179952], label: F09, type: Korok Seed}
+  - {frame: [180489, 180523], label: F08, type: Korok Seed}
+  - {frame: [181454, 181488], label: F12, type: Korok Seed}
+  - {frame: [182016, 182051], label: F11, type: Korok Seed}
+  - {frame: [200532, 200568], label: F26, type: Korok Seed}
+  - {frame: [203020, 203053], label: F41, type: Korok Seed}
+  - {frame: [203924, 205958], label: Shai Utoh Shrine, type: Shrine, segments: [[204237, Enter], [205715, Main], [205958, Leave]]}
+  - {frame: [206091, 206791], label: Ta'loh Naeg Shrine, type: Warp}
+  - {frame: [211431, 211464], label: D21, type: Korok Seed}
+  - {frame: [214434, 214469], label: D20, type: Korok Seed}
+  - {frame: [215049, 215068], label: D19, type: Korok Seed}
+  - {frame: [215488, 215521], label: D18, type: Korok Seed}
+  - {frame: [215604, 216277], label: Kaya Wan Shrine, type: Warp}
+  - {frame: [220682, 220719], label: Z37, type: Korok Seed}
+  - {frame: [222280, 222313], label: Z38, type: Korok Seed}
+  - {frame: [223097, 223117], label: Z39, type: Korok Seed}
+  - {frame: [223536, 223554], label: Z40, type: Korok Seed}
+  - {frame: [225864, 226515], label: Mogg Latan Shrine, type: Warp}
+  - {frame: [227840, 227872], label: G19, type: Korok Seed}
+  - {frame: [228658, 228691], label: G13, type: Korok Seed}
+  - {frame: [229705, 229739], label: G10, type: Korok Seed}
+  - {frame: [230636, 230669], label: G12, type: Korok Seed}
+  - {frame: [231998, 234141], label: Kuh Takkar Shrine, type: Shrine, segments: [[232281, Enter], [233912, Main], [234141, Leave]]}
+  - {frame: [237428, 237436], label: Gerudo Tower, type: Tower Activation}
+  - {frame: [240877, 240909], label: W29, type: Korok Seed}
+  - {frame: [252312, 252345], label: W47, type: Korok Seed}
+  - {frame: [252947, 252981], label: W36, type: Korok Seed}
+  - {frame: [254367, 254399], label: W28, type: Korok Seed}
+  - {frame: [254472, 255097], label: Kuh Takkar Shrine, type: Warp}
+  - {frame: [264132, 264164], label: Thunder Helm, type: Thunder Helm}
+  - {frame: [265645, 266277], label: Daqo Chisay Shrine, type: Warp}
+  - {frame: [266507, 268007], label: Daqo Chisay Shrine, type: Shrine, segments: [[266767, Enter], [267757, Main], [268007, Leave]]}
+  - {frame: [276323, 285718], label: Vah Naboris, type: Naboris, segments: [[278737, T1], [279420, T2], [279912, T3], [280387, T4], [282593, T5], [283012, To Blight], [284080, Blight], [285718, Leave]]}
+  - {frame: [293030, 293634], label: Vah Naboris (Tamed), type: Warp}
+  - {frame: [294248, 294285], label: W33, type: Korok Seed}
+  - {frame: [294834, 294871], label: W32, type: Korok Seed}
+  - {frame: [295204, 295237], label: W31, type: Korok Seed}
+  - {frame: [295863, 295871], label: Wasteland Tower, type: Tower Activation}
+  - {frame: [298241, 298278], label: W24, type: Korok Seed}
+  - {frame: [298531, 298566], label: W23, type: Korok Seed}
+  - {frame: [300110, 300146], label: W11, type: Korok Seed}
+  - {frame: [300570, 300606], label: W12, type: Korok Seed}
+  - {frame: [301382, 301415], label: W16, type: Korok Seed}
+  - {frame: [302929, 302964], label: W34, type: Korok Seed}
+  - {frame: [303739, 303774], label: W39, type: Korok Seed}
+  - {frame: [304368, 304405], label: W38, type: Korok Seed}
+  - {frame: [305859, 305895], label: W50, type: Korok Seed}
+  - {frame: [306827, 306862], label: W58, type: Korok Seed}
+  - {frame: [307755, 309321], label: Dila Maag Shrine, type: Shrine, segments: [[308031, Enter], [309109, Main], [309321, Leave]]}
+  - {frame: [310398, 310433], label: W54, type: Korok Seed}
+  - {frame: [311142, 311176], label: W59, type: Korok Seed}
+  - {frame: [312012, 312044], label: W64, type: Korok Seed}
+  - {frame: [312690, 312723], label: W60, type: Korok Seed}
+  - {frame: [314902, 316250], label: Suma Sahma Shrine, type: Shrine, segments: [[315170, Enter], [316022, Main], [316250, Leave]]}
+  - {frame: [316777, 316809], label: W53, type: Korok Seed}
+  - {frame: [317435, 317469], label: W41, type: Korok Seed}
+  - {frame: [318098, 318131], label: W46, type: Korok Seed}
+  - {frame: [318793, 318825], label: W45, type: Korok Seed}
+  - {frame: [319584, 319619], label: W49, type: Korok Seed}
+  - {frame: [320229, 320261], label: W48, type: Korok Seed}
+  - {frame: [321303, 321340], label: W52, type: Korok Seed}
+  - {frame: [322421, 322457], label: W63, type: Korok Seed}
+  - {frame: [322939, 322971], label: W68, type: Korok Seed}
+  - {frame: [324293, 325616], label: Misae Suma Shrine, type: Shrine, segments: [[324556, Enter], [325417, Main], [325616, Leave]]}
+  - {frame: [326303, 326335], label: W62, type: Korok Seed}
+  - {frame: [326941, 326976], label: W67, type: Korok Seed}
+  - {frame: [327100, 327780], label: Hateno Ancient Tech Lab, type: Warp}
+  - {frame: [329082, 329116], label: N44, type: Korok Seed}
+  - {frame: [332863, 332899], label: N24, type: Korok Seed}
+  - {frame: [334211, 334244], label: N31, type: Korok Seed}
+  - {frame: [335120, 335154], label: N39, type: Korok Seed}
+  - {frame: [336718, 336751], label: N21, type: Korok Seed}
+  - {frame: [337800, 337832], label: N22, type: Korok Seed}
+  - {frame: [338904, 338936], label: N29, type: Korok Seed}
+  - {frame: [339918, 339953], label: N30, type: Korok Seed}
+  - {frame: [343918, 345316], label: Jitan Sa'mi Shrine, type: Shrine, segments: [[344226, Enter], [345085, Main], [345316, Leave]]}
+  - {frame: [347135, 347170], label: N18, type: Korok Seed}
+  - {frame: [349285, 349319], label: N19, type: Korok Seed}
+  - {frame: [351437, 351470], label: N17, type: Korok Seed}
+  - {frame: [351941, 351976], label: N23, type: Korok Seed}
+  - {frame: [353424, 354059], label: Memory 11, type: Memory}
+  - {frame: [356511, 356547], label: N13, type: Korok Seed}
+  - {frame: [360372, 360405], label: N20, type: Korok Seed}
+  - {frame: [362062, 362094], label: N11, type: Korok Seed}
+  - {frame: [365172, 365208], label: N15, type: Korok Seed}
+  - {frame: [366121, 366153], label: N16, type: Korok Seed}
+  - {frame: [368245, 370380], label: Dow Na'eh Shrine, type: Shrine, segments: [[368500, Enter], [370165, Main], [370380, Leave]]}
+  - {frame: [371665, 371700], label: N05, type: Korok Seed}
+  - {frame: [374568, 374601], label: N04, type: Korok Seed}
+  - {frame: [375120, 375152], label: N02, type: Korok Seed}
+  - {frame: [375888, 375923], label: N03, type: Korok Seed}
+  - {frame: [376182, 378044], label: Mezza Lo Shrine, type: Shrine, segments: [[376464, Enter], [377794, Main], [378044, Leave]]}
+  - {frame: [378570, 378605], label: Z42, type: Korok Seed}
+  - {frame: [380087, 380121], label: Z43, type: Korok Seed}
+  - {frame: [380763, 380797], label: N06, type: Korok Seed}
+  - {frame: [381406, 381438], label: Z44, type: Korok Seed}
+  - {frame: [382926, 382944], label: Zora Monument 06, type: Zora Monument}
+  - {frame: [383672, 383691], label: Zora Monument 07, type: Zora Monument}
+  - {frame: [384051, 384071], label: Z33, type: Korok Seed}
+  - {frame: [384890, 384906], label: Zora Monument 04, type: Zora Monument}
+  - {frame: [385578, 385613], label: Z32, type: Korok Seed}
+  - {frame: [386342, 386361], label: Zora Monument 03, type: Zora Monument}
+  - {frame: [386842, 386856], label: Zora Monument 08, type: Zora Monument}
+  - {frame: [387401, 387436], label: Z25, type: Korok Seed}
+  - {frame: [393089, 394673], label: Ne'ez Yohma Shrine, type: Shrine, segments: [[393402, Enter], [394406, Main], [394673, Leave]]}
+  - {frame: [399216, 399251], label: Z18, type: Korok Seed}
+  - {frame: [399705, 399738], label: Z26, type: Korok Seed}
+  - {frame: [404715, 413239], label: Vah Ruta, type: Ruta, segments: [[406119, T1], [408356, T2], [409318, T3], [409968, T4], [410545, T5], [410952, To Blight], [411673, Blight], [413239, Leave]]}
+  - {frame: [413653, 413686], label: Z17, type: Korok Seed}
+  - {frame: [419002, 419018], label: Zora Monument 10, type: Zora Monument}
+  - {frame: [420751, 422158], label: Dagah Keek Shrine, type: Shrine, segments: [[421046, Enter], [421908, Main], [422158, Leave]]}
+  - {frame: [424596, 424629], label: Z24, type: Korok Seed}
+  - {frame: [425171, 425203], label: Z34, type: Korok Seed}
+  - {frame: [426961, 426997], label: Z27, type: Korok Seed}
+  - {frame: [428087, 428119], label: Z19, type: Korok Seed}
+  - {frame: [428633, 428666], label: Z20, type: Korok Seed}
+  - {frame: [429344, 429377], label: Z08, type: Korok Seed}
+  - {frame: [430552, 430570], label: Zora Monument 09, type: Zora Monument}
+  - {frame: [431341, 431374], label: Z16, type: Korok Seed}
+  - {frame: [432906, 432941], label: Z05, type: Korok Seed}
+  - {frame: [433690, 433722], label: Z04, type: Korok Seed}
+  - {frame: [434726, 434733], label: Akkala Tower, type: Tower Activation}
+  - {frame: [438058, 438093], label: E12, type: Korok Seed}
+  - {frame: [438936, 438971], label: A25, type: Korok Seed}
+  - {frame: [439591, 439623], label: A30, type: Korok Seed}
+  - {frame: [440278, 440312], label: A31, type: Korok Seed}
+  - {frame: [440993, 441026], label: A32, type: Korok Seed}
+  - {frame: [441873, 441909], label: A37, type: Korok Seed}
+  - {frame: [444974, 445006], label: A49, type: Korok Seed}
+  - {frame: [445551, 447757], label: Dah Hesho Shrine, type: Shrine, segments: [[445896, Enter], [447502, Main], [447757, Leave]]}
+  - {frame: [448195, 448228], label: A47, type: Korok Seed}
+  - {frame: [449375, 449409], label: A51, type: Korok Seed}
+  - {frame: [450445, 450479], label: A52, type: Korok Seed}
+  - {frame: [453375, 453408], label: E39, type: Korok Seed}
+  - {frame: [454182, 455751], label: Sah Dahaj Shrine, type: Shrine, segments: [[454481, Enter], [455519, Main], [455751, Leave]]}
+  - {frame: [456754, 456788], label: E34, type: Korok Seed}
+  - {frame: [457900, 457933], label: E30, type: Korok Seed}
+  - {frame: [458583, 458617], label: E29, type: Korok Seed}
+  - {frame: [459330, 459362], label: E32, type: Korok Seed}
+  - {frame: [460060, 460093], label: E33, type: Korok Seed}
+  - {frame: [461152, 461161], label: Eldin Tower, type: Tower Activation}
+  - {frame: [463278, 463312], label: E27, type: Korok Seed}
+  - {frame: [464806, 464841], label: E26, type: Korok Seed}
+  - {frame: [465955, 465990], label: E31, type: Korok Seed}
+  - {frame: [466402, 467033], label: Memory 05, type: Memory}
+  - {frame: [468596, 468628], label: E24, type: Korok Seed}
+  - {frame: [469265, 469297], label: E25, type: Korok Seed}
+  - {frame: [473099, 473134], label: E19, type: Korok Seed}
+  - {frame: [474446, 474479], label: E18, type: Korok Seed}
+  - {frame: [476281, 476315], label: E14, type: Korok Seed}
+  - {frame: [476753, 476786], label: E13, type: Korok Seed}
+  - {frame: [477355, 477389], label: E15, type: Korok Seed}
+  - {frame: [479345, 481385], label: Shae Mo'sah Shrine, type: Shrine, segments: [[479644, Enter], [481145, Main], [481385, Leave]]}
+  - {frame: [483040, 483073], label: E08, type: Korok Seed}
+  - {frame: [484030, 484052], label: E10, type: Korok Seed}
+  - {frame: [485022, 485055], label: E11, type: Korok Seed}
+  - {frame: [485828, 485860], label: E09, type: Korok Seed}
+  - {frame: [487766, 487801], label: E06, type: Korok Seed}
+  - {frame: [489124, 490667], label: Shora Hah Shrine, type: Shrine, segments: [[489406, Enter], [490444, Main], [490667, Leave]]}
+  - {frame: [491455, 491487], label: E07, type: Korok Seed}
+  - {frame: [493562, 493598], label: K08, type: Korok Seed}
+  - {frame: [494405, 494437], label: K07, type: Korok Seed}
+  - {frame: [494928, 494961], label: K06, type: Korok Seed}
+  - {frame: [496568, 496604], label: K11, type: Korok Seed}
+  - {frame: [498450, 498483], label: H22, type: Korok Seed}
+  - {frame: [498834, 498868], label: H15, type: Korok Seed}
+  - {frame: [499806, 501325], label: Qaza Tokki Shrine, type: Shrine, segments: [[500065, Enter], [501111, Main], [501325, Leave]]}
+  - {frame: [502429, 502461], label: H16, type: Korok Seed}
+  - {frame: [503454, 503489], label: K05, type: Korok Seed}
+  - {frame: [508766, 510127], label: Ketoh Wawai Shrine, type: Shrine, segments: [[509047, Enter], [509893, Main], [510127, Leave]]}
+  - {frame: [512131, 512163], label: K04, type: Korok Seed}
+  - {frame: [513140, 513174], label: K01, type: Korok Seed}
+  - {frame: [513951, 513984], label: K02, type: Korok Seed}
+  - {frame: [518674, 518706], label: K03, type: Korok Seed}
+  - {frame: [520651, 520686], label: E01, type: Korok Seed}
+  - {frame: [522292, 522326], label: E02, type: Korok Seed}
+  - {frame: [522880, 522914], label: E03, type: Korok Seed}
+  - {frame: [523935, 523968], label: E04, type: Korok Seed}
+  - {frame: [524740, 524772], label: E05, type: Korok Seed}
+  - {frame: [526752, 528107], label: Gorae Torr Shrine, type: Shrine, segments: [[527037, Enter], [527889, Main], [528107, Leave]]}
+  - {frame: [529822, 529856], label: A01, type: Korok Seed}
+  - {frame: [530827, 530859], label: A03, type: Korok Seed}
+  - {frame: [531691, 531725], label: A02, type: Korok Seed}
+  - {frame: [532152, 533491], label: Zuna Kai Shrine, type: Shrine, segments: [[532421, Enter], [533269, Main], [533491, Leave]]}
+  - {frame: [535586, 535620], label: A05, type: Korok Seed}
+  - {frame: [536571, 536604], label: A10, type: Korok Seed}
+  - {frame: [537452, 537486], label: A11, type: Korok Seed}
+  - {frame: [537976, 538008], label: A12, type: Korok Seed}
+  - {frame: [538832, 538864], label: A06, type: Korok Seed}
+  - {frame: [540582, 540615], label: A04, type: Korok Seed}
+  - {frame: [544309, 544341], label: A07, type: Korok Seed}
+  - {frame: [545031, 545066], label: A13, type: Korok Seed}
+  - {frame: [547765, 547800], label: A14, type: Korok Seed}
+  - {frame: [548295, 548327], label: A15, type: Korok Seed}
+  - {frame: [550943, 550978], label: A16, type: Korok Seed}
+  - {frame: [552431, 554030], label: Tu Ka'loh Shrine, type: Shrine, segments: [[552710, Enter], [553813, Main], [554030, Leave]]}
+  - {frame: [554815, 554849], label: A08, type: Korok Seed}
+  - {frame: [555498, 555517], label: A09, type: Korok Seed}
+  - {frame: [556377, 556410], label: A17, type: Korok Seed}
+  - {frame: [557372, 557409], label: A24, type: Korok Seed}
+  - {frame: [558113, 558150], label: A29, type: Korok Seed}
+  - {frame: [559049, 559082], label: A28, type: Korok Seed}
+  - {frame: [560333, 560369], label: A23, type: Korok Seed}
+  - {frame: [560824, 562322], label: Katosa Aug Shrine, type: Shrine, segments: [[561111, Enter], [562086, Main], [562322, Leave]]}
+  - {frame: [564608, 564642], label: A19, type: Korok Seed}
+  - {frame: [565202, 565235], label: A22, type: Korok Seed}
+  - {frame: [566153, 566185], label: A18, type: Korok Seed}
+  - {frame: [566778, 566810], label: A21, type: Korok Seed}
+  - {frame: [567291, 567926], label: Memory 09, type: Memory}
+  - {frame: [569777, 571711], label: Tutsuwa Nima Shrine, type: Shrine, segments: [[570050, Enter], [571488, Main], [571711, Leave]]}
+  - {frame: [572545, 572577], label: A26, type: Korok Seed}
+  - {frame: [573469, 573501], label: A20, type: Korok Seed}
+  - {frame: [574193, 574227], label: A27, type: Korok Seed}
+  - {frame: [575665, 576367], label: Shae Mo'sah Shrine, type: Warp}
+  - {frame: [578912, 578946], label: E16, type: Korok Seed}
+  - {frame: [579832, 579867], label: E17, type: Korok Seed}
+  - {frame: [581079, 582515], label: Daqa Koh Shrine, type: Shrine, segments: [[581325, Enter], [582252, Main], [582515, Leave]]}
+  - {frame: [596256, 605548], label: Vah Rudania, type: Rudania, segments: [[597703, T1], [600337, T2], [601626, T3], [602180, T4], [602786, T5], [603033, To Blight], [604007, Blight], [605548, Leave]]}
+  - {frame: [614415, 616029], label: Kayra Mah Shrine, type: Shrine, segments: [[614709, Enter], [615812, Main], [616029, Leave]]}
+  - {frame: [616992, 617025], label: E20, type: Korok Seed}
+  - {frame: [618735, 618767], label: E21, type: Korok Seed}
+  - {frame: [620112, 620144], label: E22, type: Korok Seed}
+  - {frame: [620905, 620940], label: E23, type: Korok Seed}
+  - {frame: [621822, 621856], label: E28, type: Korok Seed}
+  - {frame: [622886, 624744], label: Qua Raym Shrine, type: Shrine, segments: [[623154, Enter], [624520, Main], [624744, Leave]]}
+  - {frame: [625930, 625967], label: E35, type: Korok Seed}
+  - {frame: [627134, 627169], label: K32, type: Korok Seed}
+  - {frame: [627661, 627695], label: K31, type: Korok Seed}
+  - {frame: [628324, 628332], label: Woodland Tower, type: Tower Activation}
+  - {frame: [652150, 653499], label: Daag Chokah Shrine, type: Shrine, segments: [[652469, Enter], [653273, Main], [653499, Leave]]}
+  - {frame: [654918, 656341], label: Keo Ruug Shrine, type: Shrine, segments: [[655190, Enter], [656103, Main], [656341, Leave]]}
+  - {frame: [658724, 660075], label: Maag Halan Shrine, type: Shrine, segments: [[658995, Enter], [659839, Main], [660075, Leave]]}
+  - {frame: [664105, 665456], label: Kuhn Sidajj Shrine, type: Shrine, segments: [[664376, Enter], [665227, Main], [665456, Leave]]}
+  - {frame: [667148, 667184], label: X06, type: Korok Seed}
+  - {frame: [667592, 667624], label: X05, type: Korok Seed}
+  - {frame: [668381, 668416], label: X10, type: Korok Seed}
+  - {frame: [669086, 669124], label: X07, type: Korok Seed}
+  - {frame: [678990, 679024], label: X03, type: Korok Seed}
+  - {frame: [679878, 679909], label: X02, type: Korok Seed}
+  - {frame: [680891, 680925], label: K30, type: Korok Seed}
+  - {frame: [682053, 682086], label: X11, type: Korok Seed}
+  - {frame: [686331, 688404], label: Saas Ko'sah Shrine, type: Shrine, segments: [[686614, Enter], [688132, Main], [688404, Leave]]}
+  - {frame: [690335, 690367], label: X01, type: Korok Seed}
+  - {frame: [691100, 691132], label: X04, type: Korok Seed}
+  - {frame: [694748, 694782], label: X13, type: Korok Seed}
+  - {frame: [695462, 695497], label: X08, type: Korok Seed}
+  - {frame: [697594, 698229], label: Memory 08, type: Memory}
+  - {frame: [699019, 699054], label: X09, type: Korok Seed}
+  - {frame: [699827, 699861], label: X14, type: Korok Seed}
+  - {frame: [700393, 700425], label: X17, type: Korok Seed}
+  - {frame: [701244, 701276], label: X16, type: Korok Seed}
+  - {frame: [702127, 702162], label: X12, type: Korok Seed}
+  - {frame: [704116, 704148], label: X15, type: Korok Seed}
+  - {frame: [706141, 706174], label: X19, type: Korok Seed}
+  - {frame: [707701, 707734], label: X18, type: Korok Seed}
+  - {frame: [708463, 708498], label: X23, type: Korok Seed}
+  - {frame: [708787, 708819], label: X21, type: Korok Seed}
+  - {frame: [709278, 709310], label: X22, type: Korok Seed}
+  - {frame: [709912, 709947], label: X20, type: Korok Seed}
+  - {frame: [710655, 710689], label: X24, type: Korok Seed}
+  - {frame: [711055, 711089], label: C16, type: Korok Seed}
+  - {frame: [712181, 712215], label: X25, type: Korok Seed}
+  - {frame: [713425, 713461], label: C33, type: Korok Seed}
+  - {frame: [713985, 714018], label: C35, type: Korok Seed}
+  - {frame: [714481, 715111], label: Memory 01, type: Memory}
+  - {frame: [716055, 716090], label: C42, type: Korok Seed}
+  - {frame: [716505, 716537], label: C43, type: Korok Seed}
+  - {frame: [717199, 717231], label: C41, type: Korok Seed}
+  - {frame: [717494, 717530], label: C40, type: Korok Seed}
+  - {frame: [718122, 718155], label: C39, type: Korok Seed}
+  - {frame: [719046, 719081], label: C38, type: Korok Seed}
+  - {frame: [723184, 723218], label: C36, type: Korok Seed}
+  - {frame: [725289, 725323], label: R49, type: Korok Seed}
+  - {frame: [725751, 725783], label: R48, type: Korok Seed}
+  - {frame: [726689, 726722], label: R41, type: Korok Seed}
+  - {frame: [729343, 730935], label: Sheem Dagoze Shrine, type: Shrine, segments: [[729665, Enter], [730677, Main], [730935, Leave]]}
+  - {frame: [731546, 731581], label: R38, type: Korok Seed}
+  - {frame: [732254, 732287], label: R47, type: Korok Seed}
+  - {frame: [732848, 732880], label: R37, type: Korok Seed}
+  - {frame: [736148, 738218], label: Mijah Rokee Shrine, type: Shrine, segments: [[736428, Enter], [737971, Main], [738218, Leave]]}
+  - {frame: [740913, 740950], label: R46, type: Korok Seed}
+  - {frame: [741861, 741894], label: R36, type: Korok Seed}
+  - {frame: [742794, 742826], label: R35, type: Korok Seed}
+  - {frame: [743068, 743102], label: R34, type: Korok Seed}
+  - {frame: [743778, 743816], label: R33, type: Korok Seed}
+  - {frame: [745832, 745865], label: R32, type: Korok Seed}
+  - {frame: [746611, 748700], label: Kah Okeo Shrine, type: Shrine, segments: [[746910, Enter], [748479, Main], [748700, Leave]]}
+  - {frame: [749407, 749444], label: T36, type: Korok Seed}
+  - {frame: [750543, 750578], label: T32, type: Korok Seed}
+  - {frame: [751384, 751421], label: T27, type: Korok Seed}
+  - {frame: [752022, 752058], label: T26, type: Korok Seed}
+  - {frame: [752940, 752977], label: T23, type: Korok Seed}
+  - {frame: [754630, 754662], label: T28, type: Korok Seed}
+  - {frame: [754969, 755005], label: T29, type: Korok Seed}
+  - {frame: [755726, 755762], label: T30, type: Korok Seed}
+  - {frame: [756521, 756553], label: T24, type: Korok Seed}
+  - {frame: [758074, 758083], label: Tabantha Tower, type: Tower Activation}
+  - {frame: [762607, 762643], label: T33, type: Korok Seed}
+  - {frame: [763157, 765806], label: Tena Ko'sah Shrine, type: Shrine, segments: [[763436, Enter], [765550, Main], [765806, Leave]]}
+  - {frame: [766345, 766983], label: Memory 03, type: Memory}
+  - {frame: [767515, 767548], label: T35, type: Korok Seed}
+  - {frame: [768318, 768351], label: T37, type: Korok Seed}
+  - {frame: [769210, 769245], label: T31, type: Korok Seed}
+  - {frame: [771302, 771336], label: T25, type: Korok Seed}
+  - {frame: [773115, 773149], label: R04, type: Korok Seed}
+  - {frame: [774395, 774430], label: H73, type: Korok Seed}
+  - {frame: [774799, 776321], label: Dunba Taag Shrine, type: Shrine, segments: [[775081, Enter], [776105, Main], [776321, Leave]]}
+  - {frame: [776468, 777228], label: Shrine of Resurrection, type: Warp}
+  - {frame: [777626, 777662], label: P09, type: Korok Seed}
+  - {frame: [779196, 779232], label: P11, type: Korok Seed}
+  - {frame: [780101, 780135], label: P18, type: Korok Seed}
+  - {frame: [781118, 781150], label: P10, type: Korok Seed}
+  - {frame: [782490, 782524], label: P04, type: Korok Seed}
+  - {frame: [783043, 783078], label: P06, type: Korok Seed}
+  - {frame: [783719, 783751], label: P05, type: Korok Seed}
+  - {frame: [784423, 784456], label: P02, type: Korok Seed}
+  - {frame: [784782, 784815], label: P01, type: Korok Seed}
+  - {frame: [785618, 785651], label: C81, type: Korok Seed}
+  - {frame: [786337, 786358], label: C82, type: Korok Seed}
+  - {frame: [787174, 787815], label: Memory 02, type: Memory}
+  - {frame: [788834, 788867], label: C83, type: Korok Seed}
+  - {frame: [789804, 789840], label: C76, type: Korok Seed}
+  - {frame: [790376, 790411], label: C75, type: Korok Seed}
+  - {frame: [791341, 791376], label: C69, type: Korok Seed}
+  - {frame: [792159, 792181], label: C63, type: Korok Seed}
+  - {frame: [792835, 792870], label: C62, type: Korok Seed}
+  - {frame: [793367, 794904], label: Kaam Ya'tak Shrine, type: Shrine, segments: [[793704, Enter], [794650, Main], [794904, Leave]]}
+  - {frame: [795566, 795603], label: C61, type: Korok Seed}
+  - {frame: [796162, 796195], label: C60, type: Korok Seed}
+  - {frame: [796776, 796809], label: C57, type: Korok Seed}
+  - {frame: [797565, 797601], label: C58, type: Korok Seed}
+  - {frame: [798861, 798896], label: C59, type: Korok Seed}
+  - {frame: [799323, 799357], label: R74, type: Korok Seed}
+  - {frame: [800146, 800779], label: Memory 10, type: Memory}
+  - {frame: [802556, 802590], label: R79, type: Korok Seed}
+  - {frame: [806946, 806979], label: C78, type: Korok Seed}
+  - {frame: [807539, 807573], label: C72, type: Korok Seed}
+  - {frame: [808102, 809724], label: Rota Ooh Shrine, type: Shrine, segments: [[808434, Enter], [809444, Main], [809724, Leave]]}
+  - {frame: [810515, 810547], label: C85, type: Korok Seed}
+  - {frame: [811040, 811073], label: R80, type: Korok Seed}
+  - {frame: [811559, 811595], label: C86, type: Korok Seed}
+  - {frame: [812186, 812219], label: G29, type: Korok Seed}
+  - {frame: [812895, 812931], label: C87, type: Korok Seed}
+  - {frame: [813761, 813796], label: C89, type: Korok Seed}
+  - {frame: [814408, 816530], label: Dah Kaso Shrine, type: Shrine, segments: [[814690, Enter], [816302, Main], [816530, Leave]]}
+  - {frame: [817538, 817570], label: C88, type: Korok Seed}
+  - {frame: [821886, 821922], label: W07, type: Korok Seed}
+  - {frame: [827533, 830153], label: Joloo Nah Shrine, type: Shrine, segments: [[827813, Enter], [829916, Main], [830153, Leave]]}
+  - {frame: [831844, 831876], label: W08, type: Korok Seed}
+  - {frame: [832154, 832186], label: G32, type: Korok Seed}
+  - {frame: [832684, 832718], label: W10, type: Korok Seed}
+  - {frame: [834570, 834603], label: G35, type: Korok Seed}
+  - {frame: [837130, 837163], label: G34, type: Korok Seed}
+  - {frame: [837698, 839252], label: Dako Tah Shrine, type: Shrine, segments: [[837991, Enter], [839016, Main], [839252, Leave]]}
+  - {frame: [841223, 841855], label: Memory 04, type: Memory}
+  - {frame: [844604, 844636], label: W17, type: Korok Seed}
+  - {frame: [846800, 849150], label: Sasa Kai Shrine, type: Shrine, segments: [[847070, Enter], [848923, Main], [849150, Leave]]}
+  - {frame: [850252, 850289], label: G31, type: Korok Seed}
+  - {frame: [850992, 851025], label: G30, type: Korok Seed}
+  - {frame: [852466, 852499], label: G21, type: Korok Seed}
+  - {frame: [854138, 855939], label: Sho Dantu Shrine, type: Shrine, segments: [[854399, Enter], [855718, Main], [855939, Leave]]}
+  - {frame: [856688, 856720], label: W01, type: Korok Seed}
+  - {frame: [857421, 857456], label: G16, type: Korok Seed}
+  - {frame: [858454, 858487], label: G20, type: Korok Seed}
+  - {frame: [858890, 858925], label: G15, type: Korok Seed}
+  - {frame: [859746, 859779], label: G11, type: Korok Seed}
+  - {frame: [861369, 861403], label: G07, type: Korok Seed}
+  - {frame: [861785, 863763], label: Kema Kosassa Shrine, type: Shrine, segments: [[862033, Enter], [863556, Main], [863763, Leave]]}
+  - {frame: [865470, 865503], label: G08, type: Korok Seed}
+  - {frame: [866548, 866582], label: G04, type: Korok Seed}
+  - {frame: [867706, 867740], label: G05, type: Korok Seed}
+  - {frame: [869529, 869561], label: G01, type: Korok Seed}
+  - {frame: [870678, 870713], label: G02, type: Korok Seed}
+  - {frame: [872345, 872377], label: G03, type: Korok Seed}
+  - {frame: [873300, 873335], label: G06, type: Korok Seed}
+  - {frame: [874784, 876161], label: Keeha Yoog Shrine, type: Shrine, segments: [[875061, Enter], [875918, Main], [876161, Leave]]}
+  - {frame: [877042, 877077], label: G09, type: Korok Seed}
+  - {frame: [880374, 880406], label: G26, type: Korok Seed}
+  - {frame: [881585, 881619], label: W02, type: Korok Seed}
+  - {frame: [882447, 882479], label: G25, type: Korok Seed}
+  - {frame: [883542, 883574], label: W04, type: Korok Seed}
+  - {frame: [884136, 884168], label: W05, type: Korok Seed}
+  - {frame: [884841, 884875], label: W03, type: Korok Seed}
+  - {frame: [885785, 885820], label: W06, type: Korok Seed}
+  - {frame: [886664, 886697], label: G33, type: Korok Seed}
+  - {frame: [887865, 887899], label: W09, type: Korok Seed}
+  - {frame: [888236, 889652], label: Kema Zoos Shrine, type: Shrine, segments: [[888472, Enter], [889446, Main], [889652, Leave]]}
+  - {frame: [890278, 890310], label: W13, type: Korok Seed}
+  - {frame: [890878, 890912], label: W18, type: Korok Seed}
+  - {frame: [891670, 891706], label: W25, type: Korok Seed}
+  - {frame: [893884, 895198], label: Tho Kayu Shrine, type: Shrine, segments: [[894138, Enter], [894988, Main], [895198, Leave]]}
+  - {frame: [897023, 897061], label: W51, type: Korok Seed}
+  - {frame: [897994, 898030], label: W65, type: Korok Seed}
+  - {frame: [900468, 904419], label: Hawa Koth Shrine, type: Shrine, segments: [[900724, Enter], [904221, Main], [904419, Leave]]}
+  - {frame: [906112, 906149], label: W55, type: Korok Seed}
+  - {frame: [906809, 906842], label: W61, type: Korok Seed}
+  - {frame: [907511, 907545], label: W66, type: Korok Seed}
+  - {frame: [909487, 909521], label: W57, type: Korok Seed}
+  - {frame: [910012, 910045], label: W56, type: Korok Seed}
+  - {frame: [916676, 918003], label: Raqa Zunzo Shrine, type: Shrine, segments: [[916923, Enter], [917777, Main], [918003, Leave]]}
+  - {frame: [921519, 921555], label: W42, type: Korok Seed}
+  - {frame: [928349, 928384], label: W43, type: Korok Seed}
+  - {frame: [929251, 929283], label: W37, type: Korok Seed}
+  - {frame: [930625, 930658], label: W44, type: Korok Seed}
+  - {frame: [932497, 932533], label: W35, type: Korok Seed}
+  - {frame: [934249, 935575], label: Korsh O'hu Shrine, type: Shrine, segments: [[934515, Enter], [935370, Main], [935575, Leave]]}
+  - {frame: [936246, 936278], label: W40, type: Korok Seed}
+  - {frame: [937177, 937216], label: W30, type: Korok Seed}
+  - {frame: [937891, 937926], label: W19, type: Korok Seed}
+  - {frame: [938268, 940146], label: Kay Noh Shrine, type: Shrine, segments: [[938545, Enter], [939889, Main], [940146, Leave]]}
+  - {frame: [940619, 940651], label: W15, type: Korok Seed}
+  - {frame: [942126, 942705], label: Kuh Takkar Shrine, type: Warp}
+  - {frame: [945295, 945330], label: G22, type: Korok Seed}
+  - {frame: [945939, 945974], label: G17, type: Korok Seed}
+  - {frame: [947392, 947426], label: G18, type: Korok Seed}
+  - {frame: [948061, 948094], label: G23, type: Korok Seed}
+  - {frame: [948813, 948845], label: G27, type: Korok Seed}
+  - {frame: [949625, 949659], label: G28, type: Korok Seed}
+  - {frame: [950669, 950703], label: G24, type: Korok Seed}
+  - {frame: [954247, 954279], label: W14, type: Korok Seed}
+  - {frame: [955725, 955759], label: W26, type: Korok Seed}
+  - {frame: [956036, 957600], label: Jee Noh Shrine, type: Shrine, segments: [[956340, Enter], [957374, Main], [957600, Leave]]}
+  - {frame: [958182, 958214], label: G36, type: Korok Seed}
+  - {frame: [958740, 958772], label: W21, type: Korok Seed}
+  - {frame: [959083, 959116], label: W20, type: Korok Seed}
+  - {frame: [959826, 959862], label: W27, type: Korok Seed}
+  - {frame: [960602, 960634], label: W22, type: Korok Seed}
+  - {frame: [961524, 961560], label: L21, type: Korok Seed}
+  - {frame: [962033, 962068], label: L22, type: Korok Seed}
+  - {frame: [963095, 963127], label: L36, type: Korok Seed}
+  - {frame: [965211, 965243], label: L62, type: Korok Seed}
+  - {frame: [971066, 971102], label: L64, type: Korok Seed}
+  - {frame: [971894, 971928], label: L63, type: Korok Seed}
+  - {frame: [972890, 972925], label: L47, type: Korok Seed}
+  - {frame: [973807, 973839], label: L38, type: Korok Seed}
+  - {frame: [974452, 974484], label: L24, type: Korok Seed}
+  - {frame: [975333, 975367], label: L08, type: Korok Seed}
+  - {frame: [975886, 975920], label: L25, type: Korok Seed}
+  - {frame: [976354, 978014], label: Ya Naga Shrine, type: Shrine, segments: [[976664, Enter], [977805, Main], [978014, Leave]]}
+  - {frame: [979254, 979286], label: L26, type: Korok Seed}
+  - {frame: [979694, 979727], label: L15, type: Korok Seed}
+  - {frame: [980215, 980247], label: L14, type: Korok Seed}
+  - {frame: [981201, 981234], label: D54, type: Korok Seed}
+  - {frame: [981912, 981946], label: L09, type: Korok Seed}
+  - {frame: [982542, 982577], label: L27, type: Korok Seed}
+  - {frame: [983365, 983400], label: L30, type: Korok Seed}
+  - {frame: [983835, 983868], label: L31, type: Korok Seed}
+  - {frame: [984678, 984713], label: L32, type: Korok Seed}
+  - {frame: [985380, 985415], label: L33, type: Korok Seed}
+  - {frame: [986288, 986324], label: L39, type: Korok Seed}
+  - {frame: [986862, 986897], label: L40, type: Korok Seed}
+  - {frame: [987502, 987534], label: L44, type: Korok Seed}
+  - {frame: [988067, 988100], label: L42, type: Korok Seed}
+  - {frame: [988418, 988453], label: L43, type: Korok Seed}
+  - {frame: [989276, 989298], label: L51, type: Korok Seed}
+  - {frame: [991486, 991494], label: Lake Tower, type: Tower Activation}
+  - {frame: [994223, 994258], label: L48, type: Korok Seed}
+  - {frame: [994891, 994923], label: L49, type: Korok Seed}
+  - {frame: [996251, 996284], label: L50, type: Korok Seed}
+  - {frame: [996692, 996724], label: L59, type: Korok Seed}
+  - {frame: [997317, 997352], label: L60, type: Korok Seed}
+  - {frame: [998131, 998167], label: L52, type: Korok Seed}
+  - {frame: [998714, 1000795], label: Pumaag Nitae Shrine, type: Shrine, segments: [[999025, Enter], [1000530, Main], [1000795, Leave]]}
+  - {frame: [1001239, 1001273], label: L53, type: Korok Seed}
+  - {frame: [1002152, 1002184], label: L55, type: Korok Seed}
+  - {frame: [1003093, 1003127], label: L61, type: Korok Seed}
+  - {frame: [1003632, 1003665], label: L66, type: Korok Seed}
+  - {frame: [1004937, 1004971], label: L72, type: Korok Seed}
+  - {frame: [1006108, 1006142], label: F38, type: Korok Seed}
+  - {frame: [1007090, 1007122], label: L79, type: Korok Seed}
+  - {frame: [1008014, 1008046], label: L92, type: Korok Seed}
+  - {frame: [1009046, 1009078], label: L78, type: Korok Seed}
+  - {frame: [1011596, 1011632], label: L77, type: Korok Seed}
+  - {frame: [1012258, 1012292], label: L75, type: Korok Seed}
+  - {frame: [1014428, 1015986], label: Ka'o Makagh Shrine, type: Shrine, segments: [[1014742, Enter], [1015708, Main], [1015986, Leave]]}
+  - {frame: [1025503, 1025537], label: L65, type: Korok Seed}
+  - {frame: [1026079, 1026112], label: L70, type: Korok Seed}
+  - {frame: [1026717, 1026749], label: L71, type: Korok Seed}
+  - {frame: [1027612, 1027646], label: L73, type: Korok Seed}
+  - {frame: [1028486, 1028522], label: L74, type: Korok Seed}
+  - {frame: [1029454, 1029487], label: L76, type: Korok Seed}
+  - {frame: [1030097, 1030132], label: L91, type: Korok Seed}
+  - {frame: [1030810, 1030845], label: L90, type: Korok Seed}
+  - {frame: [1031305, 1031340], label: L89, type: Korok Seed}
+  - {frame: [1031807, 1031840], label: L88, type: Korok Seed}
+  - {frame: [1032413, 1032448], label: L87, type: Korok Seed}
+  - {frame: [1034831, 1036854], label: Shoqa Tatone Shrine, type: Shrine, segments: [[1035104, Enter], [1036627, Main], [1036854, Leave]]}
+  - {frame: [1038031, 1038066], label: L86, type: Korok Seed}
+  - {frame: [1046917, 1046949], label: L85, type: Korok Seed}
+  - {frame: [1047403, 1047438], label: L83, type: Korok Seed}
+  - {frame: [1047799, 1047834], label: L82, type: Korok Seed}
+  - {frame: [1048081, 1048113], label: L84, type: Korok Seed}
+  - {frame: [1048611, 1048644], label: L81, type: Korok Seed}
+  - {frame: [1049450, 1049482], label: L80, type: Korok Seed}
+  - {frame: [1050811, 1050846], label: L68, type: Korok Seed}
+  - {frame: [1052136, 1052168], label: L67, type: Korok Seed}
+  - {frame: [1052618, 1054493], label: Ishto Soh Shrine, type: Shrine, segments: [[1052913, Enter], [1054259, Main], [1054493, Leave]]}
+  - {frame: [1055205, 1055239], label: L69, type: Korok Seed}
+  - {frame: [1057825, 1057859], label: L41, type: Korok Seed}
+  - {frame: [1058496, 1058529], label: L37, type: Korok Seed}
+  - {frame: [1059259, 1059294], label: L23, type: Korok Seed}
+  - {frame: [1059868, 1059905], label: P17, type: Korok Seed}
+  - {frame: [1060304, 1060336], label: P16, type: Korok Seed}
+  - {frame: [1061255, 1061292], label: P15, type: Korok Seed}
+  - {frame: [1061959, 1061991], label: P14, type: Korok Seed}
+  - {frame: [1063077, 1063111], label: P07, type: Korok Seed}
+  - {frame: [1063763, 1063785], label: P08, type: Korok Seed}
+  - {frame: [1064587, 1064620], label: P03, type: Korok Seed}
+  - {frame: [1065636, 1065669], label: C80, type: Korok Seed}
+  - {frame: [1065833, 1065867], label: C79, type: Korok Seed}
+  - {frame: [1066437, 1066472], label: C74, type: Korok Seed}
+  - {frame: [1067457, 1067489], label: C73, type: Korok Seed}
+  - {frame: [1067984, 1068016], label: C68, type: Korok Seed}
+  - {frame: [1068568, 1068601], label: C67, type: Korok Seed}
+  - {frame: [1069467, 1069500], label: C66, type: Korok Seed}
+  - {frame: [1070120, 1070152], label: C52, type: Korok Seed}
+  - {frame: [1070990, 1071026], label: C53, type: Korok Seed}
+  - {frame: [1071654, 1071661], label: Central Tower, type: Tower Activation}
+  - {frame: [1073489, 1073523], label: C48, type: Korok Seed}
+  - {frame: [1074337, 1074371], label: C54, type: Korok Seed}
+  - {frame: [1074787, 1074821], label: C49, type: Korok Seed}
+  - {frame: [1075423, 1075459], label: C55, type: Korok Seed}
+  - {frame: [1076340, 1076372], label: C64, type: Korok Seed}
+  - {frame: [1077485, 1077520], label: C70, type: Korok Seed}
+  - {frame: [1078223, 1078255], label: C71, type: Korok Seed}
+  - {frame: [1078865, 1078900], label: C65, type: Korok Seed}
+  - {frame: [1079388, 1080975], label: Wahgo Katta Shrine, type: Shrine, segments: [[1079735, Enter], [1080718, Main], [1080975, Leave]]}
+  - {frame: [1082795, 1082829], label: C77, type: Korok Seed}
+  - {frame: [1083067, 1083101], label: D14, type: Korok Seed}
+  - {frame: [1083629, 1083662], label: D22, type: Korok Seed}
+  - {frame: [1084601, 1084634], label: C84, type: Korok Seed}
+  - {frame: [1085104, 1085140], label: D26, type: Korok Seed}
+  - {frame: [1085509, 1087237], label: Bosh Kala Shrine, type: Shrine, segments: [[1085807, Enter], [1086942, Main], [1087237, Leave]]}
+  - {frame: [1087787, 1087822], label: D27, type: Korok Seed}
+  - {frame: [1088251, 1088285], label: D34, type: Korok Seed}
+  - {frame: [1088689, 1088724], label: D33, type: Korok Seed}
+  - {frame: [1089375, 1089410], label: D32, type: Korok Seed}
+  - {frame: [1089980, 1090014], label: D31, type: Korok Seed}
+  - {frame: [1090465, 1090504], label: D44, type: Korok Seed}
+  - {frame: [1091295, 1091328], label: P12, type: Korok Seed}
+  - {frame: [1091684, 1091718], label: P13, type: Korok Seed}
+  - {frame: [1093706, 1093742], label: D43, type: Korok Seed}
+  - {frame: [1095831, 1095866], label: L03, type: Korok Seed}
+  - {frame: [1096603, 1096636], label: L10, type: Korok Seed}
+  - {frame: [1097465, 1097497], label: L11, type: Korok Seed}
+  - {frame: [1098369, 1098405], label: L16, type: Korok Seed}
+  - {frame: [1099474, 1099510], label: L05, type: Korok Seed}
+  - {frame: [1099891, 1099925], label: L06, type: Korok Seed}
+  - {frame: [1100438, 1100471], label: L02, type: Korok Seed}
+  - {frame: [1101188, 1101223], label: L01, type: Korok Seed}
+  - {frame: [1101856, 1101889], label: L04, type: Korok Seed}
+  - {frame: [1102565, 1103195], label: Memory 07, type: Memory}
+  - {frame: [1103639, 1103675], label: D45, type: Korok Seed}
+  - {frame: [1104623, 1104658], label: D35, type: Korok Seed}
+  - {frame: [1105560, 1105592], label: D36, type: Korok Seed}
+  - {frame: [1106105, 1106138], label: D46, type: Korok Seed}
+  - {frame: [1106776, 1106808], label: D37, type: Korok Seed}
+  - {frame: [1107339, 1107371], label: D38, type: Korok Seed}
+  - {frame: [1108289, 1108321], label: D47, type: Korok Seed}
+  - {frame: [1109044, 1109077], label: D39, type: Korok Seed}
+  - {frame: [1109778, 1111339], label: Ree Dahee Shrine, type: Shrine, segments: [[1110099, Enter], [1111097, Main], [1111339, Leave]]}
+  - {frame: [1111886, 1113390], label: Shee Venath Shrine, type: Shrine, segments: [[1112130, Enter], [1113103, Main], [1113390, Leave]]}
+  - {frame: [1113869, 1115370], label: Shee Vaneer Shrine, type: Shrine, segments: [[1114130, Enter], [1115090, Main], [1115370, Leave]]}
+  - {frame: [1116282, 1116320], label: D49, type: Korok Seed}
+  - {frame: [1116674, 1116706], label: D41, type: Korok Seed}
+  - {frame: [1117044, 1117078], label: D40, type: Korok Seed}
+  - {frame: [1117821, 1117853], label: D30, type: Korok Seed}
+  - {frame: [1119003, 1119035], label: D17, type: Korok Seed}
+  - {frame: [1119874, 1119883], label: Dueling Peaks Tower, type: Tower Activation}
+  - {frame: [1121678, 1121711], label: D48, type: Korok Seed}
+  - {frame: [1122434, 1122466], label: D50, type: Korok Seed}
+  - {frame: [1123507, 1123539], label: L07, type: Korok Seed}
+  - {frame: [1124067, 1124103], label: L19, type: Korok Seed}
+  - {frame: [1125473, 1125505], label: L20, type: Korok Seed}
+  - {frame: [1126708, 1128094], label: Shae Katha Shrine, type: Shrine, segments: [[1127014, Enter], [1127862, Main], [1128094, Leave]]}
+  - {frame: [1128689, 1128722], label: L13, type: Korok Seed}
+  - {frame: [1129313, 1129347], label: L18, type: Korok Seed}
+  - {frame: [1129557, 1129589], label: L17, type: Korok Seed}
+  - {frame: [1130184, 1130217], label: L12, type: Korok Seed}
+  - {frame: [1130924, 1130956], label: L28, type: Korok Seed}
+  - {frame: [1131454, 1131487], label: L29, type: Korok Seed}
+  - {frame: [1133476, 1133508], label: L34, type: Korok Seed}
+  - {frame: [1134150, 1134185], label: L35, type: Korok Seed}
+  - {frame: [1134732, 1134768], label: L45, type: Korok Seed}
+  - {frame: [1135180, 1135215], label: L54, type: Korok Seed}
+  - {frame: [1136388, 1136420], label: L56, type: Korok Seed}
+  - {frame: [1137628, 1137660], label: L57, type: Korok Seed}
+  - {frame: [1138275, 1138310], label: F24, type: Korok Seed}
+  - {frame: [1138735, 1138768], label: F23, type: Korok Seed}
+  - {frame: [1139308, 1139342], label: L58, type: Korok Seed}
+  - {frame: [1139998, 1140030], label: L46, type: Korok Seed}
+  - {frame: [1141535, 1141567], label: F02, type: Korok Seed}
+  - {frame: [1143280, 1143316], label: F05, type: Korok Seed}
+  - {frame: [1143870, 1143906], label: F01, type: Korok Seed}
+  - {frame: [1145199, 1145231], label: F04, type: Korok Seed}
+  - {frame: [1145695, 1145727], label: F03, type: Korok Seed}
+  - {frame: [1147096, 1147131], label: F10, type: Korok Seed}
+  - {frame: [1147879, 1147913], label: F16, type: Korok Seed}
+  - {frame: [1148422, 1148454], label: F15, type: Korok Seed}
+  - {frame: [1149735, 1149767], label: F25, type: Korok Seed}
+  - {frame: [1150374, 1150381], label: Faron Tower, type: Tower Activation}
+  - {frame: [1152444, 1152479], label: F39, type: Korok Seed}
+  - {frame: [1152874, 1152908], label: F40, type: Korok Seed}
+  - {frame: [1153804, 1153837], label: F48, type: Korok Seed}
+  - {frame: [1154511, 1154546], label: F55, type: Korok Seed}
+  - {frame: [1155218, 1155253], label: F54, type: Korok Seed}
+  - {frame: [1155944, 1155979], label: F53, type: Korok Seed}
+  - {frame: [1156764, 1156799], label: F56, type: Korok Seed}
+  - {frame: [1160851, 1160883], label: F43, type: Korok Seed}
+  - {frame: [1161671, 1161706], label: F30, type: Korok Seed}
+  - {frame: [1163138, 1163171], label: F35, type: Korok Seed}
+  - {frame: [1166146, 1166180], label: F46, type: Korok Seed}
+  - {frame: [1166768, 1166800], label: F42, type: Korok Seed}
+  - {frame: [1170078, 1170113], label: F34, type: Korok Seed}
+  - {frame: [1172030, 1172063], label: F28, type: Korok Seed}
+  - {frame: [1172683, 1172718], label: F27, type: Korok Seed}
+  - {frame: [1173297, 1175355], label: Shoda Sah Shrine, type: Shrine, segments: [[1173614, Enter], [1175111, Main], [1175355, Leave]]}
+  - {frame: [1176441, 1176474], label: F19, type: Korok Seed}
+  - {frame: [1177543, 1177575], label: F17, type: Korok Seed}
+  - {frame: [1178261, 1178294], label: F20, type: Korok Seed}
+  - {frame: [1179237, 1179271], label: F21, type: Korok Seed}
+  - {frame: [1180635, 1180667], label: F29, type: Korok Seed}
+  - {frame: [1183988, 1185486], label: Qukah Nata Shrine, type: Shrine, segments: [[1184285, Enter], [1185243, Main], [1185486, Leave]]}
+  - {frame: [1186394, 1186426], label: F47, type: Korok Seed}
+  - {frame: [1189778, 1189812], label: F57, type: Korok Seed}
+  - {frame: [1192804, 1192836], label: F49, type: Korok Seed}
+  - {frame: [1193709, 1193743], label: F50, type: Korok Seed}
+  - {frame: [1194328, 1194364], label: F58, type: Korok Seed}
+  - {frame: [1195361, 1195394], label: F51, type: Korok Seed}
+  - {frame: [1196298, 1196332], label: F52, type: Korok Seed}
+  - {frame: [1200595, 1202152], label: Kah Yah Shrine, type: Shrine, segments: [[1200872, Enter], [1201935, Main], [1202152, Leave]]}
+  - {frame: [1202751, 1202787], label: F37, type: Korok Seed}
+  - {frame: [1204174, 1204209], label: F45, type: Korok Seed}
+  - {frame: [1206563, 1206595], label: F44, type: Korok Seed}
+  - {frame: [1208122, 1208157], label: F36, type: Korok Seed}
+  - {frame: [1208566, 1210414], label: Yah Rin Shrine, type: Shrine, segments: [[1208834, Enter], [1210174, Main], [1210414, Leave]]}
+  - {frame: [1211072, 1211107], label: F31, type: Korok Seed}
+  - {frame: [1211188, 1211797], label: Dueling Peaks Tower, type: Warp}
+  - {frame: [1213035, 1213068], label: D16, type: Korok Seed}
+  - {frame: [1214470, 1214505], label: D25, type: Korok Seed}
+  - {frame: [1215012, 1215046], label: D29, type: Korok Seed}
+  - {frame: [1215621, 1215655], label: D28, type: Korok Seed}
+  - {frame: [1216402, 1216437], label: D23, type: Korok Seed}
+  - {frame: [1217139, 1217172], label: D24, type: Korok Seed}
+  - {frame: [1217971, 1218003], label: D15, type: Korok Seed}
+  - {frame: [1219270, 1219302], label: D13, type: Korok Seed}
+  - {frame: [1220140, 1221806], label: Hila Rao Shrine, type: Shrine, segments: [[1220456, Enter], [1221564, Main], [1221806, Leave]]}
+  - {frame: [1222855, 1222888], label: D01, type: Korok Seed}
+  - {frame: [1223758, 1223791], label: Z47, type: Korok Seed}
+  - {frame: [1224275, 1224309], label: Z48, type: Korok Seed}
+  - {frame: [1224940, 1224973], label: Z49, type: Korok Seed}
+  - {frame: [1225650, 1225683], label: Z50, type: Korok Seed}
+  - {frame: [1226549, 1226583], label: Z60, type: Korok Seed}
+  - {frame: [1228085, 1228119], label: N01, type: Korok Seed}
+  - {frame: [1229573, 1229606], label: Z41, type: Korok Seed}
+  - {frame: [1231038, 1231070], label: Z22, type: Korok Seed}
+  - {frame: [1231992, 1232024], label: Z31, type: Korok Seed}
+  - {frame: [1233046, 1233066], label: Zora Monument 05, type: Zora Monument}
+  - {frame: [1233945, 1233963], label: Zora Monument 01, type: Zora Monument}
+  - {frame: [1234430, 1234449], label: Zora Monument 02, type: Zora Monument}
+  - {frame: [1236094, 1236127], label: Z23, type: Korok Seed}
+  - {frame: [1241057, 1242654], label: Sheh Rata Shrine, type: Shrine, segments: [[1241394, Enter], [1242407, Main], [1242654, Leave]]}
+  - {frame: [1243509, 1243547], label: Z30, type: Korok Seed}
+  - {frame: [1244205, 1244239], label: Z29, type: Korok Seed}
+  - {frame: [1244945, 1244978], label: C46, type: Korok Seed}
+  - {frame: [1246077, 1246112], label: C51, type: Korok Seed}
+  - {frame: [1246876, 1247516], label: Memory 12, type: Memory}
+  - {frame: [1249250, 1249285], label: C56, type: Korok Seed}
+  - {frame: [1250191, 1250227], label: C50, type: Korok Seed}
+  - {frame: [1250912, 1250948], label: C44, type: Korok Seed}
+  - {frame: [1251941, 1251975], label: C45, type: Korok Seed}
+  - {frame: [1252674, 1252707], label: C34, type: Korok Seed}
+  - {frame: [1254759, 1254795], label: Z21, type: Korok Seed}
+  - {frame: [1255324, 1255358], label: Z11, type: Korok Seed}
+  - {frame: [1257406, 1257441], label: C13, type: Korok Seed}
+  - {frame: [1258564, 1258597], label: K35, type: Korok Seed}
+  - {frame: [1259715, 1259748], label: Z02, type: Korok Seed}
+  - {frame: [1260013, 1260046], label: Z03, type: Korok Seed}
+  - {frame: [1260742, 1260778], label: K34, type: Korok Seed}
+  - {frame: [1263455, 1263491], label: K33, type: Korok Seed}
+  - {frame: [1263840, 1266042], label: Mirro Shaz Shrine, type: Shrine, segments: [[1264162, Enter], [1265793, Main], [1266042, Leave]]}
+  - {frame: [1267985, 1268021], label: C02, type: Korok Seed}
+  - {frame: [1269198, 1271804], label: Namika Ozz Shrine, type: Shrine, segments: [[1269504, Enter], [1271501, Main], [1271804, Leave]]}
+  - {frame: [1272316, 1272349], label: C09, type: Korok Seed}
+  - {frame: [1272895, 1272932], label: C11, type: Korok Seed}
+  - {frame: [1273555, 1273588], label: C12, type: Korok Seed}
+  - {frame: [1274452, 1274487], label: C19, type: Korok Seed}
+  - {frame: [1275039, 1275072], label: C23, type: Korok Seed}
+  - {frame: [1275559, 1275591], label: C18, type: Korok Seed}
+  - {frame: [1276405, 1276437], label: C10, type: Korok Seed}
+  - {frame: [1277521, 1277556], label: C06, type: Korok Seed}
+  - {frame: [1278273, 1278308], label: C05, type: Korok Seed}
+  - {frame: [1279232, 1279269], label: C04, type: Korok Seed}
+  - {frame: [1280370, 1280402], label: C17, type: Korok Seed}
+  - {frame: [1281489, 1281522], label: C27, type: Korok Seed}
+  - {frame: [1282557, 1282589], label: C31, type: Korok Seed}
+  - {frame: [1283027, 1286764], label: Katah Chuki Shrine, type: Shrine, segments: [[1283343, Enter], [1286450, Main], [1286764, Leave]]}
+  - {frame: [1287315, 1287349], label: C26, type: Korok Seed}
+  - {frame: [1288095, 1288131], label: C22, type: Korok Seed}
+  - {frame: [1289393, 1289427], label: C25, type: Korok Seed}
+  - {frame: [1290277, 1290312], label: C21, type: Korok Seed}
+  - {frame: [1290712, 1290745], label: C20, type: Korok Seed}
+  - {frame: [1292106, 1292141], label: C15, type: Korok Seed}
+  - {frame: [1292907, 1292942], label: C08, type: Korok Seed}
+  - {frame: [1293736, 1293771], label: C03, type: Korok Seed}
+  - {frame: [1294235, 1294267], label: C01, type: Korok Seed}
+  - {frame: [1295005, 1295038], label: R11, type: Korok Seed}
+  - {frame: [1295702, 1295737], label: C07, type: Korok Seed}
+  - {frame: [1296303, 1296336], label: C14, type: Korok Seed}
+  - {frame: [1296841, 1298986], label: Noya Neha Shrine, type: Shrine, segments: [[1297146, Enter], [1298680, Main], [1298986, Leave]]}
+  - {frame: [1300240, 1300273], label: R19, type: Korok Seed}
+  - {frame: [1300617, 1300652], label: R16, type: Korok Seed}
+  - {frame: [1301638, 1301672], label: R10, type: Korok Seed}
+  - {frame: [1302543, 1303168], label: Memory 06, type: Memory}
+  - {frame: [1303992, 1304027], label: R07, type: Korok Seed}
+  - {frame: [1305840, 1305873], label: K29, type: Korok Seed}
+  - {frame: [1306789, 1306824], label: K27, type: Korok Seed}
+  - {frame: [1307274, 1307307], label: K28, type: Korok Seed}
+  - {frame: [1309072, 1309106], label: K19, type: Korok Seed}
+  - {frame: [1309581, 1309616], label: K16, type: Korok Seed}
+  - {frame: [1310086, 1310120], label: K18, type: Korok Seed}
+  - {frame: [1310867, 1310902], label: K26, type: Korok Seed}
+  - {frame: [1311514, 1311547], label: K24, type: Korok Seed}
+  - {frame: [1312295, 1314082], label: Monya Toma Shrine, type: Shrine, segments: [[1312592, Enter], [1313819, Main], [1314082, Leave]]}
+  - {frame: [1315039, 1316397], label: Maag No'rah Shrine, type: Shrine, segments: [[1315317, Enter], [1316152, Main], [1316397, Leave]]}
+  - {frame: [1317144, 1317180], label: R03, type: Korok Seed}
+  - {frame: [1317850, 1317883], label: H71, type: Korok Seed}
+  - {frame: [1318704, 1318736], label: R02, type: Korok Seed}
+  - {frame: [1319422, 1319459], label: R06, type: Korok Seed}
+  - {frame: [1320082, 1320114], label: R09, type: Korok Seed}
+  - {frame: [1320890, 1320899], label: Ridgeland Tower, type: Tower Activation}
+  - {frame: [1323739, 1323775], label: R15, type: Korok Seed}
+  - {frame: [1325621, 1325652], label: R08, type: Korok Seed}
+  - {frame: [1328149, 1329705], label: Toh Yahsa Shrine, type: Shrine, segments: [[1328435, Enter], [1329471, Main], [1329705, Leave]]}
+  - {frame: [1330270, 1330301], label: R14, type: Korok Seed}
+  - {frame: [1331209, 1331244], label: R24, type: Korok Seed}
+  - {frame: [1331652, 1331684], label: R23, type: Korok Seed}
+  - {frame: [1332410, 1332445], label: R18, type: Korok Seed}
+  - {frame: [1333079, 1333114], label: R39, type: Korok Seed}
+  - {frame: [1334125, 1334159], label: R40, type: Korok Seed}
+  - {frame: [1335210, 1335244], label: R25, type: Korok Seed}
+  - {frame: [1335721, 1337189], label: Zalta Wa Shrine, type: Shrine, segments: [[1335989, Enter], [1336965, Main], [1337189, Leave]]}
+  - {frame: [1337959, 1337994], label: C24, type: Korok Seed}
+  - {frame: [1338624, 1338656], label: R26, type: Korok Seed}
+  - {frame: [1338926, 1338962], label: R27, type: Korok Seed}
+  - {frame: [1339544, 1339579], label: R43, type: Korok Seed}
+  - {frame: [1340046, 1340080], label: R44, type: Korok Seed}
+  - {frame: [1341249, 1341281], label: R45, type: Korok Seed}
+  - {frame: [1341891, 1341924], label: R42, type: Korok Seed}
+  - {frame: [1343947, 1343981], label: C47, type: Korok Seed}
+  - {frame: [1344884, 1344920], label: C37, type: Korok Seed}
+  - {frame: [1345417, 1345452], label: R58, type: Korok Seed}
+  - {frame: [1346436, 1346468], label: R57, type: Korok Seed}
+  - {frame: [1346941, 1346976], label: R56, type: Korok Seed}
+  - {frame: [1347664, 1347700], label: R55, type: Korok Seed}
+  - {frame: [1348387, 1348423], label: R54, type: Korok Seed}
+  - {frame: [1350305, 1350339], label: R62, type: Korok Seed}
+  - {frame: [1350872, 1350908], label: R53, type: Korok Seed}
+  - {frame: [1351616, 1351649], label: R52, type: Korok Seed}
+  - {frame: [1352211, 1352245], label: R61, type: Korok Seed}
+  - {frame: [1353387, 1353420], label: R68, type: Korok Seed}
+  - {frame: [1353936, 1353968], label: R69, type: Korok Seed}
+  - {frame: [1354930, 1354962], label: R78, type: Korok Seed}
+  - {frame: [1355491, 1355525], label: R77, type: Korok Seed}
+  - {frame: [1356106, 1356138], label: R75, type: Korok Seed}
+  - {frame: [1356356, 1356389], label: R76, type: Korok Seed}
+  - {frame: [1357078, 1357112], label: G14, type: Korok Seed}
+  - {frame: [1357988, 1358020], label: R70, type: Korok Seed}
+  - {frame: [1358917, 1358951], label: R73, type: Korok Seed}
+  - {frame: [1360258, 1360292], label: R67, type: Korok Seed}
+  - {frame: [1360965, 1360999], label: R66, type: Korok Seed}
+  - {frame: [1361611, 1361645], label: R65, type: Korok Seed}
+  - {frame: [1362067, 1362103], label: R64, type: Korok Seed}
+  - {frame: [1362716, 1362750], label: R51, type: Korok Seed}
+  - {frame: [1363421, 1363453], label: R63, type: Korok Seed}
+  - {frame: [1364132, 1364167], label: R72, type: Korok Seed}
+  - {frame: [1364814, 1364848], label: R50, type: Korok Seed}
+  - {frame: [1365254, 1365289], label: R59, type: Korok Seed}
+  - {frame: [1366026, 1366060], label: R71, type: Korok Seed}
+  - {frame: [1366185, 1366882], label: Dah Hesho Shrine, type: Warp}
+  - {frame: [1369096, 1369128], label: A38, type: Korok Seed}
+  - {frame: [1369256, 1369961], label: Akh Va'quot Shrine, type: Warp}
+  - {frame: [1371103, 1371137], label: T10, type: Korok Seed}
+  - {frame: [1373799, 1373832], label: T17, type: Korok Seed}
+  - {frame: [1375763, 1377200], label: Bareeda Naag Shrine, type: Shrine, segments: [[1376019, Enter], [1376943, Main], [1377200, Leave]]}
+  - {frame: [1377930, 1377963], label: T15, type: Korok Seed}
+  - {frame: [1378112, 1378147], label: T14, type: Korok Seed}
+  - {frame: [1383416, 1383451], label: T05, type: Korok Seed}
+  - {frame: [1384874, 1384908], label: T04, type: Korok Seed}
+  - {frame: [1385344, 1387170], label: Sha Warvo Shrine, type: Shrine, segments: [[1385650, Enter], [1386888, Main], [1387170, Leave]]}
+  - {frame: [1388223, 1388257], label: T13, type: Korok Seed}
+  - {frame: [1391070, 1393263], label: Voo Lota Shrine, type: Shrine, segments: [[1391323, Enter], [1393034, Main], [1393263, Leave]]}
+  - {frame: [1394096, 1394130], label: T16, type: Korok Seed}
+  - {frame: [1394672, 1394704], label: T12, type: Korok Seed}
+  - {frame: [1395552, 1395585], label: T09, type: Korok Seed}
+  - {frame: [1397507, 1397545], label: H54, type: Korok Seed}
+  - {frame: [1398446, 1398479], label: H55, type: Korok Seed}
+  - {frame: [1399113, 1399148], label: H43, type: Korok Seed}
+  - {frame: [1400075, 1400109], label: H27, type: Korok Seed}
+  - {frame: [1400794, 1402389], label: Shada Naw Shrine, type: Shrine, segments: [[1401099, Enter], [1402170, Main], [1402389, Leave]]}
+  - {frame: [1402900, 1402933], label: H20, type: Korok Seed}
+  - {frame: [1404043, 1404076], label: H28, type: Korok Seed}
+  - {frame: [1404812, 1406741], label: Goma Asaagh Shrine, type: Shrine, segments: [[1405080, Enter], [1406495, Main], [1406741, Leave]]}
+  - {frame: [1407227, 1407261], label: H35, type: Korok Seed}
+  - {frame: [1409058, 1409094], label: H36, type: Korok Seed}
+  - {frame: [1409837, 1409871], label: H29, type: Korok Seed}
+  - {frame: [1410811, 1410844], label: H31, type: Korok Seed}
+  - {frame: [1412488, 1412521], label: H30, type: Korok Seed}
+  - {frame: [1413099, 1414639], label: Rok Uwog Shrine, type: Shrine, segments: [[1413349, Enter], [1414402, Main], [1414639, Leave]]}
+  - {frame: [1415476, 1415510], label: H13, type: Korok Seed}
+  - {frame: [1416508, 1416540], label: H05, type: Korok Seed}
+  - {frame: [1417090, 1418825], label: Sha Gehma Shrine, type: Shrine, segments: [[1417325, Enter], [1418609, Main], [1418825, Leave]]}
+  - {frame: [1419614, 1419646], label: H06, type: Korok Seed}
+  - {frame: [1420157, 1420192], label: H14, type: Korok Seed}
+  - {frame: [1421250, 1421284], label: H37, type: Korok Seed}
+  - {frame: [1423039, 1424612], label: Rin Oyaa Shrine, type: Shrine, segments: [[1423322, Enter], [1424342, Main], [1424612, Leave]]}
+  - {frame: [1426075, 1426109], label: H52, type: Korok Seed}
+  - {frame: [1426833, 1426869], label: H58, type: Korok Seed}
+  - {frame: [1427911, 1427946], label: H62, type: Korok Seed}
+  - {frame: [1430793, 1430826], label: K12, type: Korok Seed}
+  - {frame: [1431777, 1431812], label: H59, type: Korok Seed}
+  - {frame: [1432612, 1432648], label: H38, type: Korok Seed}
+  - {frame: [1433753, 1433787], label: K10, type: Korok Seed}
+  - {frame: [1433874, 1434444], label: Shada Naw Shrine, type: Warp}
+  - {frame: [1435684, 1435718], label: H10, type: Korok Seed}
+  - {frame: [1436282, 1436314], label: H11, type: Korok Seed}
+  - {frame: [1436988, 1437025], label: H09, type: Korok Seed}
+  - {frame: [1438395, 1438429], label: H04, type: Korok Seed}
+  - {frame: [1440362, 1440395], label: H01, type: Korok Seed}
+  - {frame: [1440696, 1442655], label: Hia Miu Shrine, type: Shrine, segments: [[1440945, Enter], [1442458, Main], [1442655, Leave]]}
+  - {frame: [1443859, 1443892], label: H23, type: Korok Seed}
+  - {frame: [1445259, 1445293], label: H07, type: Korok Seed}
+  - {frame: [1446034, 1446068], label: H08, type: Korok Seed}
+  - {frame: [1447014, 1447050], label: H02, type: Korok Seed}
+  - {frame: [1448874, 1448906], label: H03, type: Korok Seed}
+  - {frame: [1449294, 1450611], label: To Quomo Shrine, type: Shrine, segments: [[1449551, Enter], [1450404, Main], [1450611, Leave]]}
+  - {frame: [1450843, 1451358], label: Shada Naw Shrine, type: Warp}
+  - {frame: [1452347, 1452380], label: H21, type: Korok Seed}
+  - {frame: [1453538, 1453572], label: H12, type: Korok Seed}
+  - {frame: [1453646, 1454146], label: Shada Naw Shrine, type: Warp}
+  - {frame: [1455617, 1457603], label: Mozo Shenno Shrine, type: Shrine, segments: [[1455873, Enter], [1457379, Main], [1457603, Leave]]}
+  - {frame: [1458448, 1458485], label: H26, type: Korok Seed}
+  - {frame: [1459355, 1459389], label: H19, type: Korok Seed}
+  - {frame: [1459971, 1460005], label: H18, type: Korok Seed}
+  - {frame: [1460893, 1460927], label: H17, type: Korok Seed}
+  - {frame: [1462127, 1462160], label: H24, type: Korok Seed}
+  - {frame: [1462960, 1462993], label: H25, type: Korok Seed}
+  - {frame: [1464185, 1464222], label: H32, type: Korok Seed}
+  - {frame: [1464784, 1464818], label: H40, type: Korok Seed}
+  - {frame: [1466521, 1466556], label: H53, type: Korok Seed}
+  - {frame: [1467464, 1467499], label: H60, type: Korok Seed}
+  - {frame: [1467916, 1467950], label: T08, type: Korok Seed}
+  - {frame: [1468382, 1468415], label: T06, type: Korok Seed}
+  - {frame: [1469834, 1469868], label: T07, type: Korok Seed}
+  - {frame: [1470822, 1470855], label: T01, type: Korok Seed}
+  - {frame: [1472609, 1472643], label: H39, type: Korok Seed}
+  - {frame: [1473857, 1473890], label: H41, type: Korok Seed}
+  - {frame: [1474379, 1474414], label: H42, type: Korok Seed}
+  - {frame: [1475444, 1476959], label: Maka Rah Shrine, type: Shrine, segments: [[1475717, Enter], [1476748, Main], [1476959, Leave]]}
+  - {frame: [1477189, 1477706], label: Shada Naw Shrine, type: Warp}
+  - {frame: [1479864, 1479882], label: H33, type: Korok Seed}
+  - {frame: [1480462, 1480496], label: H34, type: Korok Seed}
+  - {frame: [1481503, 1481525], label: H46, type: Korok Seed}
+  - {frame: [1481992, 1482029], label: H48, type: Korok Seed}
+  - {frame: [1482833, 1482866], label: H49, type: Korok Seed}
+  - {frame: [1483153, 1483185], label: H50, type: Korok Seed}
+  - {frame: [1483450, 1483471], label: H47, type: Korok Seed}
+  - {frame: [1484717, 1484751], label: H44, type: Korok Seed}
+  - {frame: [1485280, 1485312], label: H45, type: Korok Seed}
+  - {frame: [1486673, 1486705], label: H56, type: Korok Seed}
+  - {frame: [1487275, 1487308], label: H51, type: Korok Seed}
+  - {frame: [1491341, 1493043], label: Gee Ha'rah Shrine, type: Shrine, segments: [[1491614, Enter], [1492819, Main], [1493043, Leave]]}
+  - {frame: [1494365, 1494401], label: H57, type: Korok Seed}
+  - {frame: [1495249, 1496659], label: Lanno Kooh Shrine, type: Shrine, segments: [[1495529, Enter], [1496381, Main], [1496659, Leave]]}
+  - {frame: [1496985, 1497018], label: H64, type: Korok Seed}
+  - {frame: [1498011, 1498044], label: H61, type: Korok Seed}
+  - {frame: [1498592, 1498599], label: Hebra Tower, type: Tower Activation}
+  - {frame: [1502626, 1502660], label: H67, type: Korok Seed}
+  - {frame: [1503264, 1503300], label: H70, type: Korok Seed}
+  - {frame: [1503784, 1503820], label: H69, type: Korok Seed}
+  - {frame: [1504450, 1504484], label: H72, type: Korok Seed}
+  - {frame: [1504898, 1504930], label: T18, type: Korok Seed}
+  - {frame: [1505953, 1505987], label: H65, type: Korok Seed}
+  - {frame: [1506564, 1506599], label: H66, type: Korok Seed}
+  - {frame: [1507205, 1507237], label: T03, type: Korok Seed}
+  - {frame: [1508180, 1508212], label: T11, type: Korok Seed}
+  - {frame: [1510503, 1510536], label: T21, type: Korok Seed}
+  - {frame: [1511274, 1511307], label: T20, type: Korok Seed}
+  - {frame: [1512221, 1512254], label: T22, type: Korok Seed}
+  - {frame: [1515123, 1515157], label: R05, type: Korok Seed}
+  - {frame: [1516080, 1516112], label: R13, type: Korok Seed}
+  - {frame: [1517106, 1517141], label: R17, type: Korok Seed}
+  - {frame: [1518190, 1518222], label: R22, type: Korok Seed}
+  - {frame: [1518896, 1518927], label: R31, type: Korok Seed}
+  - {frame: [1519375, 1519410], label: R30, type: Korok Seed}
+  - {frame: [1519887, 1519926], label: R21, type: Korok Seed}
+  - {frame: [1520573, 1522146], label: Shae Loya Shrine, type: Shrine, segments: [[1520895, Enter], [1521896, Main], [1522146, Leave]]}
+  - {frame: [1525102, 1525135], label: T34, type: Korok Seed}
+  - {frame: [1525920, 1525952], label: R28, type: Korok Seed}
+  - {frame: [1526773, 1526807], label: R20, type: Korok Seed}
+  - {frame: [1527343, 1527375], label: R29, type: Korok Seed}
+  - {frame: [1529016, 1529048], label: R12, type: Korok Seed}
+  - {frame: [1529184, 1529844], label: Dah Hesho Shrine, type: Warp}
+  - {frame: [1531049, 1531739], label: Ne'ez Yohma Shrine, type: Warp}
+  - {frame: [1537860, 1537898], label: Z15, type: Korok Seed}
+  - {frame: [1538623, 1538655], label: Z14, type: Korok Seed}
+  - {frame: [1539425, 1539432], label: Lanayru Tower, type: Tower Activation}
+  - {frame: [1541592, 1543741], label: Soh Kofi Shrine, type: Shrine, segments: [[1541911, Enter], [1543446, Main], [1543741, Leave]]}
+  - {frame: [1544967, 1545002], label: Z13, type: Korok Seed}
+  - {frame: [1545950, 1545988], label: Z12, type: Korok Seed}
+  - {frame: [1547048, 1547085], label: E45, type: Korok Seed}
+  - {frame: [1547725, 1549248], label: Tah Muhl Shrine, type: Shrine, segments: [[1548018, Enter], [1549016, Main], [1549248, Leave]]}
+  - {frame: [1549986, 1550020], label: E44, type: Korok Seed}
+  - {frame: [1550495, 1552035], label: Mo'a Keet Shrine, type: Shrine, segments: [[1550785, Enter], [1551747, Main], [1552035, Leave]]}
+  - {frame: [1553456, 1553490], label: E41, type: Korok Seed}
+  - {frame: [1553635, 1553669], label: E42, type: Korok Seed}
+  - {frame: [1554974, 1555007], label: E43, type: Korok Seed}
+  - {frame: [1556199, 1556231], label: E37, type: Korok Seed}
+  - {frame: [1556709, 1556743], label: E36, type: Korok Seed}
+  - {frame: [1558470, 1558504], label: E38, type: Korok Seed}
+  - {frame: [1559024, 1559059], label: E40, type: Korok Seed}
+  - {frame: [1560204, 1560236], label: A50, type: Korok Seed}
+  - {frame: [1561209, 1561242], label: A45, type: Korok Seed}
+  - {frame: [1562215, 1562247], label: A46, type: Korok Seed}
+  - {frame: [1563182, 1563215], label: A43, type: Korok Seed}
+  - {frame: [1563755, 1563790], label: A42, type: Korok Seed}
+  - {frame: [1564411, 1564443], label: A41, type: Korok Seed}
+  - {frame: [1565020, 1565054], label: A40, type: Korok Seed}
+  - {frame: [1565420, 1565453], label: A39, type: Korok Seed}
+  - {frame: [1566082, 1567691], label: Ze Kasho Shrine, type: Shrine, segments: [[1566386, Enter], [1567424, Main], [1567691, Leave]]}
+  - {frame: [1572184, 1572216], label: A34, type: Korok Seed}
+  - {frame: [1573159, 1573193], label: A44, type: Korok Seed}
+  - {frame: [1574305, 1574337], label: A35, type: Korok Seed}
+  - {frame: [1574891, 1574927], label: A36, type: Korok Seed}
+  - {frame: [1577215, 1578579], label: Ritaag Zumo Shrine, type: Shrine, segments: [[1577508, Enter], [1578359, Main], [1578579, Leave]]}
+  - {frame: [1579489, 1579523], label: A33, type: Korok Seed}
+  - {frame: [1580672, 1581396], label: Hateno Tower, type: Warp}
+  - {frame: [1582530, 1582562], label: D53, type: Korok Seed}
+  - {frame: [1583706, 1583740], label: D58, type: Korok Seed}
+  - {frame: [1584254, 1584290], label: D57, type: Korok Seed}
+  - {frame: [1584893, 1584925], label: F07, type: Korok Seed}
+  - {frame: [1585737, 1585770], label: F13, type: Korok Seed}
+  - {frame: [1590039, 1590074], label: F14, type: Korok Seed}
+  - {frame: [1596320, 1597758], label: Tawa Jinn Shrine, type: Shrine, segments: [[1596638, Enter], [1597499, Main], [1597758, Leave]]}
+  - {frame: [1599053, 1599088], label: F22, type: Korok Seed}
+  - {frame: [1599718, 1599750], label: F18, type: Korok Seed}
+  - {frame: [1600452, 1600485], label: N64, type: Korok Seed}
+  - {frame: [1601487, 1601524], label: F32, type: Korok Seed}
+  - {frame: [1602387, 1604445], label: Muwo Jeem Shrine, type: Shrine, segments: [[1602665, Enter], [1604213, Main], [1604445, Leave]]}
+  - {frame: [1604862, 1604899], label: F33, type: Korok Seed}
+  - {frame: [1605790, 1605823], label: N65, type: Korok Seed}
+  - {frame: [1606801, 1606835], label: N61, type: Korok Seed}
+  - {frame: [1609256, 1609288], label: N60, type: Korok Seed}
+  - {frame: [1610721, 1610755], label: N62, type: Korok Seed}
+  - {frame: [1612512, 1612550], label: N54, type: Korok Seed}
+  - {frame: [1613289, 1613323], label: N56, type: Korok Seed}
+  - {frame: [1614665, 1614698], label: N63, type: Korok Seed}
+  - {frame: [1615611, 1615644], label: N57, type: Korok Seed}
+  - {frame: [1616264, 1616299], label: N55, type: Korok Seed}
+  - {frame: [1617459, 1619528], label: Chaas Qeta Shrine, type: Shrine, segments: [[1617718, Enter], [1619324, Main], [1619528, Leave]]}
+  - {frame: [1620098, 1620130], label: N66, type: Korok Seed}
+  - {frame: [1628632, 1629951], label: Korgu Chideh Shrine, type: Shrine, segments: [[1628881, Enter], [1629739, Main], [1629951, Leave]]}
+  - {frame: [1630117, 1630831], label: Ta'loh Naeg Shrine, type: Warp}
+  - {frame: [1631066, 1633373], label: Ta'loh Naeg Shrine, type: Shrine, segments: [[1631348, Enter], [1633065, Main], [1633373, Leave]]}
+  - {frame: [1651507, 1651542], label: D03, type: Korok Seed}
+  - {frame: [1652055, 1652088], label: D02, type: Korok Seed}
+  - {frame: [1652693, 1652725], label: D05, type: Korok Seed}
+  - {frame: [1652890, 1652926], label: D04, type: Korok Seed}
+  - {frame: [1654027, 1654063], label: D12, type: Korok Seed}
+  - {frame: [1655095, 1655127], label: D08, type: Korok Seed}
+  - {frame: [1656232, 1656265], label: N07, type: Korok Seed}
+  - {frame: [1656776, 1656810], label: N08, type: Korok Seed}
+  - {frame: [1657727, 1657760], label: N10, type: Korok Seed}
+  - {frame: [1659057, 1659092], label: N09, type: Korok Seed}
+  - {frame: [1659768, 1659801], label: D07, type: Korok Seed}
+  - {frame: [1660365, 1660398], label: D11, type: Korok Seed}
+  - {frame: [1660953, 1660987], label: D10, type: Korok Seed}
+  - {frame: [1661469, 1661502], label: D09, type: Korok Seed}
+  - {frame: [1666318, 1667767], label: Lakna Rokee Shrine, type: Shrine, segments: [[1666640, Enter], [1667493, Main], [1667767, Leave]]}
+  - {frame: [1668381, 1668414], label: D06, type: Korok Seed}
+  - {frame: [1669865, 1669898], label: N28, type: Korok Seed}
+  - {frame: [1671021, 1672544], label: Kam Urog Shrine, type: Shrine, segments: [[1671294, Enter], [1672315, Main], [1672544, Leave]]}
+  - {frame: [1675903, 1675937], label: D59, type: Korok Seed}
+  - {frame: [1676531, 1678041], label: Toto Sah Shrine, type: Shrine, segments: [[1676821, Enter], [1677806, Main], [1678041, Leave]]}
+  - {frame: [1678525, 1678559], label: D56, type: Korok Seed}
+  - {frame: [1679117, 1679153], label: D55, type: Korok Seed}
+  - {frame: [1679795, 1681619], label: Ha Dahamar Shrine, type: Shrine, segments: [[1680069, Enter], [1681344, Main], [1681619, Leave]]}
+  - {frame: [1682043, 1682078], label: D42, type: Korok Seed}
+  - {frame: [1682695, 1682731], label: D51, type: Korok Seed}
+  - {frame: [1683521, 1683556], label: D52, type: Korok Seed}
+  - {frame: [1686062, 1686097], label: N33, type: Korok Seed}
+  - {frame: [1686751, 1686786], label: N34, type: Korok Seed}
+  - {frame: [1687411, 1687446], label: N27, type: Korok Seed}
+  - {frame: [1688175, 1688211], label: N26, type: Korok Seed}
+  - {frame: [1688894, 1688929], label: N35, type: Korok Seed}
+  - {frame: [1689689, 1689725], label: N36, type: Korok Seed}
+  - {frame: [1691062, 1691097], label: N37, type: Korok Seed}
+  - {frame: [1692240, 1692276], label: N38, type: Korok Seed}
+  - {frame: [1693098, 1693131], label: N41, type: Korok Seed}
+  - {frame: [1694822, 1694859], label: N45, type: Korok Seed}
+  - {frame: [1695296, 1695332], label: N46, type: Korok Seed}
+  - {frame: [1696022, 1696055], label: N51, type: Korok Seed}
+  - {frame: [1696700, 1696734], label: N52, type: Korok Seed}
+  - {frame: [1697447, 1697483], label: N53, type: Korok Seed}
+  - {frame: [1712399, 1712432], label: N47, type: Korok Seed}
+  - {frame: [1713595, 1713629], label: N32, type: Korok Seed}
+  - {frame: [1714140, 1715516], label: Tahno O'ah Shrine, type: Shrine, segments: [[1714446, Enter], [1715300, Main], [1715516, Leave]]}
+  - {frame: [1717278, 1717313], label: N40, type: Korok Seed}
+  - {frame: [1718385, 1718419], label: N25, type: Korok Seed}
+  - {frame: [1720171, 1720203], label: Z62, type: Korok Seed}
+  - {frame: [1720736, 1720769], label: Z61, type: Korok Seed}
+  - {frame: [1723069, 1723103], label: Z59, type: Korok Seed}
+  - {frame: [1723821, 1723857], label: Z58, type: Korok Seed}
+  - {frame: [1726971, 1727007], label: Z56, type: Korok Seed}
+  - {frame: [1728239, 1728271], label: Z57, type: Korok Seed}
+  - {frame: [1729324, 1729358], label: N12, type: Korok Seed}
+  - {frame: [1730186, 1730219], label: Z55, type: Korok Seed}
+  - {frame: [1730726, 1730759], label: Z54, type: Korok Seed}
+  - {frame: [1731738, 1731775], label: N14, type: Korok Seed}
+  - {frame: [1732771, 1732803], label: Z51, type: Korok Seed}
+  - {frame: [1733804, 1735340], label: Rucco Maag Shrine, type: Shrine, segments: [[1734080, Enter], [1735100, Main], [1735340, Leave]]}
+  - {frame: [1736357, 1736391], label: Z53, type: Korok Seed}
+  - {frame: [1736714, 1736752], label: Z52, type: Korok Seed}
+  - {frame: [1737571, 1737607], label: Z45, type: Korok Seed}
+  - {frame: [1740027, 1741329], label: Shai Yota Shrine, type: Shrine, segments: [[1740269, Enter], [1741121, Main], [1741329, Leave]]}
+  - {frame: [1742050, 1742084], label: Z46, type: Korok Seed}
+  - {frame: [1742757, 1742791], label: Z36, type: Korok Seed}
+  - {frame: [1743754, 1743786], label: Z35, type: Korok Seed}
+  - {frame: [1744605, 1744637], label: Z28, type: Korok Seed}
+  - {frame: [1745754, 1745788], label: Z10, type: Korok Seed}
+  - {frame: [1746170, 1746203], label: Z09, type: Korok Seed}
+  - {frame: [1747018, 1747050], label: A56, type: Korok Seed}
+  - {frame: [1747791, 1747823], label: A57, type: Korok Seed}
+  - {frame: [1748425, 1750421], label: Ke'nai Shakah Shrine, type: Shrine, segments: [[1748701, Enter], [1750199, Main], [1750421, Leave]]}
+  - {frame: [1751303, 1751339], label: A55, type: Korok Seed}
+  - {frame: [1752358, 1752391], label: A54, type: Korok Seed}
+  - {frame: [1753261, 1753297], label: A53, type: Korok Seed}
+  - {frame: [1754064, 1754101], label: Z07, type: Korok Seed}
+  - {frame: [1754985, 1755021], label: Z06, type: Korok Seed}
+  - {frame: [1755926, 1755962], label: Z01, type: Korok Seed}
+  - {frame: [1756465, 1757931], label: Kah Mael Shrine, type: Shrine, segments: [[1756701, Enter], [1757721, Main], [1757931, Leave]]}
+  - {frame: [1758094, 1758728], label: Monya Toma Shrine, type: Warp}
+  - {frame: [1760285, 1760303], label: K23, type: Korok Seed}
+  - {frame: [1761645, 1761680], label: K25, type: Korok Seed}
+  - {frame: [1762746, 1762781], label: K17, type: Korok Seed}
+  - {frame: [1765935, 1765968], label: R01, type: Korok Seed}
+  - {frame: [1767088, 1767124], label: H68, type: Korok Seed}
+  - {frame: [1767709, 1767746], label: K22, type: Korok Seed}
+  - {frame: [1768768, 1768805], label: K20, type: Korok Seed}
+  - {frame: [1769422, 1769459], label: K21, type: Korok Seed}
+  - {frame: [1770178, 1770212], label: K15, type: Korok Seed}
+  - {frame: [1770665, 1770698], label: H63, type: Korok Seed}
+  - {frame: [1771281, 1771317], label: K13, type: Korok Seed}
+  - {frame: [1771923, 1771955], label: K14, type: Korok Seed}
+  - {frame: [1773386, 1775627], label: Rona Kachta Shrine, type: Shrine, segments: [[1773657, Enter], [1775400, Main], [1775627, Leave]]}
+  - {frame: [1776731, 1776764], label: K09, type: Korok Seed}
+  - {frame: [1776868, 1777544], label: Kay Noh Shrine, type: Warp}
+  - {frame: [1780040, 1780727], label: Dah Hesho Shrine, type: Warp}
+  - {frame: [1793473, 1793505], label: A48, type: Korok Seed}
+  - {frame: [1801235, 1801869], label: Keo Ruug Shrine, type: Warp}
+  - {frame: [1810601, 1811291], label: Ha Dahamar Shrine, type: Warp}
+  - {frame: [1815230, 1815230], label: Memory Final, type: GG}
