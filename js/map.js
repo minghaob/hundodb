@@ -254,13 +254,13 @@ function AdjustPositionAfterDivineBeast(label)
 	// link warps automatically after a divine beast
 	// adjust the starting position of the next movement accordingly
 	if (label == 'Vah Medoh')
-		return [1802.698, -3590.5625];
+		return L.latLng(1802.698, -3590.5625);
 	else if (label == 'Vah Naboris')
-		return [-2861.727, -3782.125];
+		return L.latLng(-2861.727, -3782.125);
 	else if (label == 'Vah Ruta')
-		return [430.644, 3283.5];
+		return L.latLng(430.644, 3283.5);
 	else if (label == 'Vah Rudania')
-		return [2424.264, 1583.75];
+		return L.latLng(2424.264, 1583.75);
 
 	return g_markerMapping[label].marker.getLatLng();
 }
