@@ -150,7 +150,7 @@ function createHTMLContentForMovePopup(from, to, moves) {
 	for (let i = 0; i < moves.length; i++) {
 		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame[1];
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
-		let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(moves[i].numFrame) + '</a>';
+		let link = '<a href = "' + videoLink + '" target = "_blank">' + (i > 0 ? '+' + frameIdxToTime(moves[i].numFrame - moves[0].numFrame) : frameIdxToTime(moves[i].numFrame)) + '</a>';
 		htmlContent += '<tr runUID="' + moves[i].runUID + '" ' + (moves[i].runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '><td>'
 			+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)">' + moves[i].runUID + "</a></td></tr>";
 		if (compareLinkParam) {
@@ -177,12 +177,20 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 	let htmlContent = '';
 	let mergedCompareLinkParam = '';
 	let mergedSegmentCompareLinkParam = new Array(moves.segNames.length).fill('');
+
+	let segFastestRecordIndex = new Array(moves.segNames.length).fill(0);
+	for (let i = 1; i < moves.records.length; i++) {
+		for (let j = 0; j < moves.records[i].segFrames.length; j++) {
+			if (moves.records[i].segFrames[j] < moves.records[segFastestRecordIndex[j]].segFrames[j])
+				segFastestRecordIndex[j] = i;
+		}
+	}
 	for (let i = 0; i < moves.records.length; i++) {
 		let record = moves.records[i];
 		{
 			let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
 			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
-			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(record.numFrame) + '</a>';
+			let link = '<a href = "' + videoLink + '" target = "_blank">' + (i > 0 ? '+' + frameIdxToTime(record.numFrame - moves.records[0].numFrame) : frameIdxToTime(record.numFrame)) + '</a>';
 			htmlContent += '<tr runUID="' + record.runUID + '" ' + (record.runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '"><td>'
 				+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)">' + record.runUID + "</a></td>";
 			if (compareLinkParam) {
@@ -195,7 +203,9 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 			let segFrame = record.segFrames[j];
 			let frame = j == 0 ? g_runs[record.runUID].events[record.eventIdx].frame[0] : g_runs[record.runUID].events[record.eventIdx].segments[j - 1][0];
 			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
-			let link = '<a href = "' + videoLink + '" target = "_blank">' + frameIdxToTime(segFrame) + '</a>';
+			let text = (i != segFastestRecordIndex[j] ? '+' + frameIdxToTime(segFrame - moves.records[segFastestRecordIndex[j]].segFrames[j]): frameIdxToTime(segFrame));
+			let colorText = (i != segFastestRecordIndex[j] ? '' : ' style = "color: peru;"');
+			let link = '<a href = "' + videoLink + '" target = "_blank"' + colorText + '>' + text + '</a>';
 			htmlContent += '<td>' + link + '</td>';
 			if (compareLinkParam) {
 				if (mergedSegmentCompareLinkParam[j].length)
@@ -342,6 +352,8 @@ function highlightMovesInRun(runUID) {
 				g_movePaths[cur][last].setStyle(colors[curColorIdx]);
 				g_movePaths[cur][last].bringToFront();
 			}
+			if (cur.startsWith('Vah') && !cur.endsWith('(Tamed)'))
+				curColorIdx = (curColorIdx + 1) % colors.length;
 		}
 	}
 }
@@ -403,7 +415,7 @@ async function addMovesToMap() {
 	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
 		g_markerMapping[label].marker.on('click', function(e) {
 			let htmlContent = createHTMLContentForSingleLabelMovePopup(label, moves);
-			L.popup(g_markerMapping[label].marker.getLatLng(), {content: htmlContent, maxWidth: 500}).openOn(g_map);
+			L.popup(g_markerMapping[label].marker.getLatLng(), {content: htmlContent, maxWidth: 600}).openOn(g_map);
 		});
 
 	}
