@@ -64,6 +64,11 @@ function initMap() {
 		iconSize:     [16, 16],
 		iconAnchor:   [8, 8],
 	});
+	var npcIcon = L.icon({
+		iconUrl: 'icons/npc.png',
+		iconSize:     [20, 20],
+		iconAnchor:   [10, 10],
+	});
 
 	g_map.createPane('movesPane').style.zIndex = 450;
 	g_map.createPane('markerFrontPane').style.zIndex = 500;
@@ -126,6 +131,10 @@ function initMap() {
 			}
 			else if (k == 'Paraglider' || k == 'Thunder Helm') {
 				icon = starIcon;
+				zOffset = -1000;
+			}
+			else if (k.startsWith('Kass')) {
+				icon = npcIcon;
 				zOffset = -1000;
 			}
 			else
