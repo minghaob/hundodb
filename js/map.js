@@ -7,7 +7,7 @@ let g_highlightedRun;				// uid of the run being highlighted
 function initMap() {
 	g_map = L.map('map', {
 		minZoom: -3,
-		maxZoom: 4,
+		maxZoom: 5,
 		center: [0, 0],
 		zoom: -3,
 		maxBoundsViscosity: 1,
