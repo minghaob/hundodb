@@ -1105,6 +1105,7 @@ events:
   - {frame: [1649775, 1649809], label: K18, type: Korok Seed}
   - {frame: [1651156, 1651188], label: K25, type: Korok Seed}
   - {frame: [1652308, 1652345], label: K17, type: Korok Seed}
+  - {frame: [1654020, 1654026], label: Leviathan Bros, type: Dialog, dialogId: Leviathan Bros}
   - {frame: [1655161, 1655196], label: R01, type: Korok Seed}
   - {frame: [1655770, 1655805], label: H68, type: Korok Seed}
   - {frame: [1657090, 1657125], label: K22, type: Korok Seed}

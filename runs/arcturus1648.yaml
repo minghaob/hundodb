@@ -43,6 +43,7 @@ events:
   - {frame: [179888, 188998], label: Vah Medoh, type: Medoh, segments: [[181608, T1], [183283, T2], [184161, T3], [185168, T4], [186292, T5], [186872, To Blight], [187505, Blight], [188998, Leave]]}
   - {frame: [190377, 190412], label: T10, type: Korok Seed}
   - {frame: [191246, 191283], label: T13, type: Korok Seed}
+  - {frame: [191602, 191607], label: Kheel, type: Dialog, dialogId: Kheel}
   - {frame: [192509, 192545], label: T04, type: Korok Seed}
   - {frame: [192975, 194763], label: Sha Warvo Shrine, type: Shrine, segments: [[193252, Enter], [194483, Main], [194763, Leave]]}
   - {frame: [195733, 195768], label: T05, type: Korok Seed}
@@ -60,8 +61,10 @@ events:
   - {frame: [212479, 212514], label: G12, type: Korok Seed}
   - {frame: [213943, 216592], label: Kuh Takkar Shrine, type: Shrine, segments: [[214212, Enter], [216363, Main], [216592, Leave]]}
   - {frame: [218505, 218515], label: Gerudo Tower, type: Tower Activation}
+  - {frame: [220923, 220932], label: Kass 5, type: Dialog, dialogId: Kass 5}
   - {frame: [222040, 222080], label: W29, type: Korok Seed}
   - {frame: [222941, 224438], label: Daqo Chisay Shrine, type: Shrine, segments: [[223228, Enter], [224184, Main], [224438, Leave]]}
+  - {frame: [227119, 227131], label: Vilia, type: Dialog, dialogId: Vilia}
   - {frame: [231954, 231993], label: W47, type: Korok Seed}
   - {frame: [232986, 233023], label: W36, type: Korok Seed}
   - {frame: [234352, 234389], label: W28, type: Korok Seed}
@@ -71,6 +74,8 @@ events:
   - {frame: [254400, 265310], label: Vah Naboris, type: Naboris, segments: [[256902, T1], [257650, T2], [258291, T3], [258785, T4], [261779, T5], [262914, To Blight], [263746, Blight], [265310, Leave]]}
   - {frame: [273841, 275546], label: Dako Tah Shrine, type: Shrine, segments: [[274125, Enter], [275315, Main], [275546, Leave]]}
   - {frame: [276600, 276635], label: G34, type: Korok Seed}
+  - {frame: [277723, 277734], label: Sesami, type: Dialog, dialogId: Sesami 1}
+  - {frame: [279065, 279074], label: Pirou, type: Dialog, dialogId: Pirou}
   - {frame: [279150, 279714], label: Vah Naboris (Tamed), type: Warp}
   - {frame: [280203, 280241], label: W33, type: Korok Seed}
   - {frame: [280823, 280858], label: W31, type: Korok Seed}
@@ -118,7 +123,7 @@ events:
   - {frame: [330293, 331672], label: Jitan Sa'mi Shrine, type: Shrine, segments: [[330593, Enter], [331430, Main], [331672, Leave]]}
   - {frame: [339175, 339213], label: N19, type: Korok Seed}
   - {frame: [342472, 342511], label: N17, type: Korok Seed}
-  - {frame: [344015, 344648], label: Memory 11, type: Memory}
+  - {frame: [344015, 344650], label: Memory 11, type: Memory}
   - {frame: [347216, 347253], label: N13, type: Korok Seed}
   - {frame: [347788, 347826], label: N15, type: Korok Seed}
   - {frame: [349032, 349069], label: N16, type: Korok Seed}
@@ -126,6 +131,7 @@ events:
   - {frame: [353149, 353186], label: N20, type: Korok Seed}
   - {frame: [354704, 354742], label: N11, type: Korok Seed}
   - {frame: [355508, 355544], label: N05, type: Korok Seed}
+  - {frame: [357589, 357815], label: Kass 3, type: Dialog, dialogId: Kass 3}
   - {frame: [358402, 358441], label: N04, type: Korok Seed}
   - {frame: [358956, 358994], label: N02, type: Korok Seed}
   - {frame: [359654, 359689], label: N03, type: Korok Seed}
@@ -250,7 +256,7 @@ events:
   - {frame: [548203, 548242], label: A22, type: Korok Seed}
   - {frame: [549003, 549040], label: A18, type: Korok Seed}
   - {frame: [549820, 549855], label: A21, type: Korok Seed}
-  - {frame: [550371, 551002], label: Memory 09, type: Memory}
+  - {frame: [550371, 551003], label: Memory 09, type: Memory}
   - {frame: [552593, 554603], label: Tutsuwa Nima Shrine, type: Shrine, segments: [[552863, Enter], [554378, Main], [554603, Leave]]}
   - {frame: [555663, 555699], label: A26, type: Korok Seed}
   - {frame: [556382, 556419], label: A20, type: Korok Seed}
@@ -260,6 +266,7 @@ events:
   - {frame: [563655, 563691], label: E17, type: Korok Seed}
   - {frame: [565238, 566732], label: Daqa Koh Shrine, type: Shrine, segments: [[565502, Enter], [566462, Main], [566732, Leave]]}
   - {frame: [579595, 589923], label: Vah Rudania, type: Rudania, segments: [[581158, T1], [583853, T2], [585168, T3], [585907, T4], [586570, T5], [586793, To Blight], [588354, Blight], [589923, Leave]]}
+  - {frame: [593923, 593929], label: Dugby, type: Dialog, dialogId: Dugby}
   - {frame: [598953, 600778], label: Kayra Mah Shrine, type: Shrine, segments: [[599239, Enter], [600538, Main], [600778, Leave]]}
   - {frame: [601783, 601822], label: E20, type: Korok Seed}
   - {frame: [602829, 602866], label: E21, type: Korok Seed}
@@ -289,7 +296,7 @@ events:
   - {frame: [680323, 680359], label: X04, type: Korok Seed}
   - {frame: [683025, 683062], label: X13, type: Korok Seed}
   - {frame: [683788, 683825], label: X08, type: Korok Seed}
-  - {frame: [685552, 686183], label: Memory 08, type: Memory}
+  - {frame: [685552, 686184], label: Memory 08, type: Memory}
   - {frame: [686920, 686960], label: X09, type: Korok Seed}
   - {frame: [687769, 687804], label: X14, type: Korok Seed}
   - {frame: [688526, 688564], label: X17, type: Korok Seed}
@@ -307,7 +314,7 @@ events:
   - {frame: [700469, 700508], label: X25, type: Korok Seed}
   - {frame: [701782, 701818], label: C33, type: Korok Seed}
   - {frame: [702714, 702750], label: C35, type: Korok Seed}
-  - {frame: [703248, 703884], label: Memory 01, type: Memory}
+  - {frame: [703248, 703885], label: Memory 01, type: Memory}
   - {frame: [704748, 704782], label: C42, type: Korok Seed}
   - {frame: [705457, 705492], label: C43, type: Korok Seed}
   - {frame: [706080, 706119], label: C41, type: Korok Seed}
@@ -320,10 +327,12 @@ events:
   - {frame: [711785, 711822], label: R40, type: Korok Seed}
   - {frame: [712853, 712888], label: R39, type: Korok Seed}
   - {frame: [713707, 713744], label: R41, type: Korok Seed}
+  - {frame: [714346, 714827], label: Kass 2, type: Dialog, dialogId: Kass 2}
   - {frame: [716266, 717867], label: Sheem Dagoze Shrine, type: Shrine, segments: [[716577, Enter], [717630, Main], [717867, Leave]]}
   - {frame: [718506, 718544], label: R38, type: Korok Seed}
   - {frame: [719241, 719277], label: R47, type: Korok Seed}
   - {frame: [719813, 719850], label: R37, type: Korok Seed}
+  - {frame: [721049, 721282], label: Kass 1, type: Dialog, dialogId: Kass 1}
   - {frame: [723750, 725897], label: Mijah Rokee Shrine, type: Shrine, segments: [[724027, Enter], [725653, Main], [725897, Leave]]}
   - {frame: [727018, 727055], label: R72, type: Korok Seed}
   - {frame: [727992, 728030], label: R71, type: Korok Seed}
@@ -353,7 +362,7 @@ events:
   - {frame: [749256, 749291], label: C58, type: Korok Seed}
   - {frame: [749985, 750022], label: C59, type: Korok Seed}
   - {frame: [750397, 750432], label: R74, type: Korok Seed}
-  - {frame: [751690, 752327], label: Memory 10, type: Memory}
+  - {frame: [751690, 752328], label: Memory 10, type: Memory}
   - {frame: [754291, 754327], label: R79, type: Korok Seed}
   - {frame: [758669, 758707], label: C78, type: Korok Seed}
   - {frame: [759235, 759273], label: C72, type: Korok Seed}
@@ -366,8 +375,13 @@ events:
   - {frame: [765435, 765473], label: C89, type: Korok Seed}
   - {frame: [766039, 768193], label: Dah Kaso Shrine, type: Shrine, segments: [[766312, Enter], [767960, Main], [768193, Leave]]}
   - {frame: [769592, 769630], label: C88, type: Korok Seed}
+  - {frame: [772915, 772926], label: Zyle, type: Dialog, dialogId: Zyle}
+  - {frame: [773787, 773798], label: Palme, type: Dialog, dialogId: Palme}
   - {frame: [774810, 774846], label: W07, type: Korok Seed}
+  - {frame: [775479, 775490], label: Oliff, type: Dialog, dialogId: Oliff}
   - {frame: [781540, 783910], label: Joloo Nah Shrine, type: Shrine, segments: [[781819, Enter], [783680, Main], [783910, Leave]]}
+  - {frame: [785134, 785145], label: Flaxel, type: Dialog, dialogId: Flaxel}
+  - {frame: [785562, 785568], label: Canolo, type: Dialog, dialogId: Canolo}
   - {frame: [786313, 786349], label: W08, type: Korok Seed}
   - {frame: [786636, 786671], label: G32, type: Korok Seed}
   - {frame: [787104, 787143], label: W10, type: Korok Seed}
@@ -429,6 +443,7 @@ events:
   - {frame: [894910, 894947], label: W19, type: Korok Seed}
   - {frame: [895280, 897293], label: Kay Noh Shrine, type: Shrine, segments: [[895553, Enter], [897032, Main], [897293, Leave]]}
   - {frame: [897749, 897785], label: W15, type: Korok Seed}
+  - {frame: [898220, 898227], label: Sesami, type: Dialog, dialogId: Sesami 2}
   - {frame: [898311, 898861], label: Kuh Takkar Shrine, type: Warp}
   - {frame: [900081, 900116], label: G22, type: Korok Seed}
   - {frame: [900710, 900747], label: G17, type: Korok Seed}
@@ -449,6 +464,7 @@ events:
   - {frame: [914622, 914657], label: L22, type: Korok Seed}
   - {frame: [915704, 915740], label: L36, type: Korok Seed}
   - {frame: [917433, 917468], label: L62, type: Korok Seed}
+  - {frame: [920435, 920449], label: Straia, type: Dialog, dialogId: Straia}
   - {frame: [921819, 921855], label: L64, type: Korok Seed}
   - {frame: [922722, 922759], label: L63, type: Korok Seed}
   - {frame: [923417, 923455], label: L47, type: Korok Seed}
@@ -506,6 +522,7 @@ events:
   - {frame: [984975, 987113], label: Shoqa Tatone Shrine, type: Shrine, segments: [[985243, Enter], [986882, Main], [987113, Leave]]}
   - {frame: [988147, 988182], label: L86, type: Korok Seed}
   - {frame: [988745, 988780], label: L87, type: Korok Seed}
+  - {frame: [996507, 996521], label: Jini, type: Dialog, dialogId: Jini}
   - {frame: [997921, 997960], label: L85, type: Korok Seed}
   - {frame: [998471, 998508], label: L83, type: Korok Seed}
   - {frame: [998875, 998910], label: L82, type: Korok Seed}
@@ -604,6 +621,7 @@ events:
   - {frame: [1090059, 1090097], label: L45, type: Korok Seed}
   - {frame: [1090559, 1090597], label: L54, type: Korok Seed}
   - {frame: [1091700, 1091738], label: L56, type: Korok Seed}
+  - {frame: [1092223, 1092708], label: Kass 6, type: Dialog, dialogId: Kass 6}
   - {frame: [1093076, 1093118], label: L57, type: Korok Seed}
   - {frame: [1094132, 1094169], label: F24, type: Korok Seed}
   - {frame: [1094731, 1094770], label: F23, type: Korok Seed}
@@ -650,8 +668,10 @@ events:
   - {frame: [1141459, 1141497], label: F13, type: Korok Seed}
   - {frame: [1145013, 1145047], label: F21, type: Korok Seed}
   - {frame: [1146998, 1147035], label: F29, type: Korok Seed}
+  - {frame: [1147583, 1148034], label: Kass 7, type: Dialog, dialogId: Kass 7}
   - {frame: [1150003, 1151392], label: Qukah Nata Shrine, type: Shrine, segments: [[1150302, Enter], [1151152, Main], [1151392, Leave]]}
   - {frame: [1152804, 1152843], label: F47, type: Korok Seed}
+  - {frame: [1155622, 1155631], label: Perda, type: Dialog, dialogId: Perda}
   - {frame: [1156766, 1156801], label: F57, type: Korok Seed}
   - {frame: [1159652, 1159687], label: F49, type: Korok Seed}
   - {frame: [1160733, 1160769], label: F50, type: Korok Seed}
@@ -697,7 +717,7 @@ events:
   - {frame: [1212577, 1212612], label: Z29, type: Korok Seed}
   - {frame: [1213264, 1213299], label: C46, type: Korok Seed}
   - {frame: [1214280, 1214315], label: C51, type: Korok Seed}
-  - {frame: [1215143, 1215772], label: Memory 12, type: Memory}
+  - {frame: [1215143, 1215773], label: Memory 12, type: Memory}
   - {frame: [1217340, 1217377], label: C56, type: Korok Seed}
   - {frame: [1218522, 1218559], label: C50, type: Korok Seed}
   - {frame: [1219164, 1219203], label: C44, type: Korok Seed}
@@ -749,7 +769,7 @@ events:
   - {frame: [1269564, 1269602], label: R16, type: Korok Seed}
   - {frame: [1270722, 1270759], label: R10, type: Korok Seed}
   - {frame: [1271360, 1271398], label: R07, type: Korok Seed}
-  - {frame: [1271907, 1272546], label: Memory 06, type: Memory}
+  - {frame: [1271907, 1272547], label: Memory 06, type: Memory}
   - {frame: [1274118, 1274155], label: K29, type: Korok Seed}
   - {frame: [1275249, 1275288], label: K27, type: Korok Seed}
   - {frame: [1275686, 1275724], label: K28, type: Korok Seed}
@@ -972,6 +992,7 @@ events:
   - {frame: [1563695, 1563731], label: F33, type: Korok Seed}
   - {frame: [1564878, 1564916], label: N65, type: Korok Seed}
   - {frame: [1565896, 1565934], label: N61, type: Korok Seed}
+  - {frame: [1567072, 1567084], label: Kass 8, type: Dialog, dialogId: Kass 8}
   - {frame: [1568515, 1568550], label: N60, type: Korok Seed}
   - {frame: [1569921, 1569956], label: N62, type: Korok Seed}
   - {frame: [1571222, 1571261], label: N54, type: Korok Seed}
@@ -1032,6 +1053,7 @@ events:
   - {frame: [1681411, 1681448], label: Z61, type: Korok Seed}
   - {frame: [1682525, 1682561], label: Z59, type: Korok Seed}
   - {frame: [1683815, 1683850], label: Z58, type: Korok Seed}
+  - {frame: [1685042, 1685316], label: Kass 4, type: Dialog, dialogId: Kass 4}
   - {frame: [1686150, 1686188], label: Z56, type: Korok Seed}
   - {frame: [1688454, 1688489], label: Z45, type: Korok Seed}
   - {frame: [1689917, 1689954], label: Z53, type: Korok Seed}
@@ -1084,6 +1106,7 @@ events:
   - {frame: [1748736, 1748775], label: H38, type: Korok Seed}
   - {frame: [1749546, 1749583], label: K10, type: Korok Seed}
   - {frame: [1750652, 1750688], label: K12, type: Korok Seed}
+  - {frame: [1753938, 1753948], label: Leviathan Bros, type: Dialog, dialogId: Leviathan Bros}
   - {frame: [1755050, 1755085], label: R01, type: Korok Seed}
   - {frame: [1755728, 1755765], label: H68, type: Korok Seed}
   - {frame: [1756525, 1756561], label: K22, type: Korok Seed}
