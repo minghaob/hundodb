@@ -303,7 +303,7 @@ function highlightRun(runUID) {
 		g_highlightedRun = null;
 
 	let lightGrayHalfTransparent = {
-		color: 'grey',
+		color: 'dimgray',
 		opacity: 0.6,
 	};
 	let khakiOpaque = {
@@ -332,6 +332,7 @@ function highlightMovesInRun(runUID) {
 		{ color: 'white', opacity: 1, },
 		{ color: 'orange', opacity: 1, },
 		{ color: 'gold', opacity: 1, },
+		{ color: 'rgb(167, 132, 255)', opacity: 1},
 		{ color: 'black', opacity: 1, },
 	];
 	let curColorIdx = 0;
