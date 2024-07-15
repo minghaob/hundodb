@@ -750,7 +750,7 @@ events:
   - {frame: [1280370, 1280402], label: C17, type: Korok Seed}
   - {frame: [1281489, 1281522], label: C27, type: Korok Seed}
   - {frame: [1282557, 1282589], label: C31, type: Korok Seed}
-  - {frame: [1284566, 1286764], label: Katah Chuki Shrine, type: Shrine, segments: [[1284758, Enter], [1286450, Main], [1286764, Leave]]}
+  - {frame: [1283027, 1286764], label: Katah Chuki Shrine, type: Shrine, segments: [[1283343, Enter], [1286450, Main], [1286764, Leave]]}
   - {frame: [1287315, 1287349], label: C26, type: Korok Seed}
   - {frame: [1288095, 1288131], label: C22, type: Korok Seed}
   - {frame: [1289393, 1289427], label: C25, type: Korok Seed}
