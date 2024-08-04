@@ -90,12 +90,12 @@ function initMap() {
 						ulEle.innerHTML = '';
 						for (const runId in g_runs) {
 							var li = L.DomUtil.create('li', '', ulEle);
-							li.textContent = runId;
+							li.innerHTML = runId + ' (<span style="color: forestgreen;">' + g_runs[runId].route + '</span>)';
 							if (runId == g_highlightedRun){
 								li.classList.add("highlighted-row");
 							}
 							li.onclick = function(){
-								highlightRun(this.textContent);
+								highlightRun(this.textContent.split(' ')[0]);
 							};
 						}
 						dropdownContent.style.display = 'block';
