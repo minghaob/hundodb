@@ -88,7 +88,11 @@ function initMap() {
 					} else {
 						var ulEle = dropdownContent.querySelector('ul');
 						ulEle.innerHTML = '';
-						for (const runId in g_runs) {
+						var runIds = Object.keys(g_runs);
+						runIds.sort(function(a,b){
+							return g_runs[a].events.at(-1).frame[1] - g_runs[b].events.at(-1).frame[1];
+						});
+						for (const runId of runIds) {
 							var li = L.DomUtil.create('li', '', ulEle);
 							li.innerHTML = runId + ' (<span style="color: forestgreen;">' + g_runs[runId].route + '</span>)';
 							if (runId == g_highlightedRun){
