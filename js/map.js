@@ -11,7 +11,8 @@ function initMap() {
 		center: [0, 0],
 		zoom: -3,
 		maxBoundsViscosity: 1,
-		crs: L.CRS.Simple
+		crs: L.CRS.Simple,
+		zoomControl: false,
 	});
 
 	// Dimensions of the image
@@ -73,6 +74,40 @@ function initMap() {
 	g_map.createPane('movesPane').style.zIndex = 450;
 	g_map.createPane('markerFrontPane').style.zIndex = 500;
 	g_map.createPane('markerBackPane').style.zIndex = 400;
+
+	// create the dropdown run list
+	var selectRunButton = L.easyButton({
+		id: 'runlist-button',
+		states:[
+			{
+				icon: '<div>Select Run ▼</div>',
+				onClick: function(btn, map) { // callback on button click
+					var dropdownContent = L.DomUtil.get('runlist-dropdown');
+					if (dropdownContent.style.display === 'block') {
+						dropdownContent.style.display = 'none';
+					} else {
+						var ulEle = dropdownContent.querySelector('ul');
+						ulEle.innerHTML = '';
+						for (const runId in g_runs) {
+							var li = L.DomUtil.create('li', '', ulEle);
+							li.textContent = runId;
+							if (runId == g_highlightedRun){
+								li.classList.add("highlighted-row");
+							}
+							li.onclick = function(){
+								highlightRun(this.textContent);
+							};
+						}
+						dropdownContent.style.display = 'block';
+					}
+					g_map.closePopup();
+				}
+			}
+		]
+	});
+	selectRunButton.addTo(g_map);
+	// put the dropdown list under it
+	selectRunButton.button.parentNode.appendChild(L.DomUtil.get('runlist-dropdown'));
 
 	fetch('data/coords.json').then(response => {
 		if (response.ok)
@@ -144,6 +179,11 @@ function initMap() {
 			g_markerMapping[k] = {marker: marker, count: 0};
 		}
 
+		g_map.on('click', function(e) {
+			var dropdownContent = L.DomUtil.get('runlist-dropdown');
+			dropdownContent.style.display = 'none';
+		});
+		
 		fetchDB();
 	})
 	.catch(error => {
@@ -320,6 +360,9 @@ function highlightRun(runUID) {
 
 	if (g_highlightedRun)
 		highlightMovesInRun(runUID);
+
+	var runListButton = L.DomUtil.get('runlist-button');
+	runListButton.textContent = (g_highlightedRun == null ? 'Select Run' : 'Run: ' + g_highlightedRun) + ' ▼';
 }
 
 function highlightMovesInRun(runUID) {

@@ -69,3 +69,24 @@ body, html {
 .no-background-tooltip .leaflet-tooltip-content {
     padding: 0; /* Remove padding */
 }
+
+#runlist-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#runlist-dropdown ul li {
+    padding: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+    cursor: pointer;
+}
+
+#runlist-dropdown ul li:hover {
+    background-color: #f0f0f0;
+}
+
+#runlist-dropdown ul li.highlighted-row {
+    background-color: peachpuff;
+}
