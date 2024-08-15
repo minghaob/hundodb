@@ -307,6 +307,8 @@ function createMovePolyline(latLngs, from, to) {
 		// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 		// 	g_markerMapping[from].marker.closeTooltip();
 	});
+
+	g_map.getRenderer(path).options.padding = 1;
 	return path;
 }
 
