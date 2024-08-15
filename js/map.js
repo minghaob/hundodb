@@ -197,37 +197,35 @@ function initMap() {
 
 function createHTMLContentForMovePopup(from, to, moves) {
 	let htmlContent = '';
-	let mergedCompareLinkParam = '';
+	let linkParams = [];
 	for (let i = 0; i < moves.length; i++) {
 		let frame = moves[i].startEventIdx == -1 ? 0 : g_runs[moves[i].runUID].events[moves[i].startEventIdx].frame[1];
 		let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(moves[i].runUID, frame);
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + (i > 0 ? '+' + frameIdxToTime(moves[i].numFrame - moves[0].numFrame) : frameIdxToTime(moves[i].numFrame)) + '</a>';
-		htmlContent += '<tr runUID="' + moves[i].runUID + '" ' + (moves[i].runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '><td>'
-			+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)" onauxclick="onAuxClickRunCellText(event)">' + moves[i].runUID + "</a></td></tr>";
-		if (compareLinkParam) {
-			if (mergedCompareLinkParam.length)
-				mergedCompareLinkParam += '&';
-			mergedCompareLinkParam += compareLinkParam;
-		}
+		htmlContent += '<tr runUID="' + moves[i].runUID + '" ' + (moves[i].runUID == g_highlightedRun ? 'class = "highlighted-row"' : '')
+			+ '><td class = "rank-cell" onclick="onClickRankCell(event, this)" onauxclick="ignoreEvent(event)"><a href="#" onclick="onClickRankCell(event, this)" onauxclick="ignoreEvent(event)">'
+			+ (i + 1) + "</a></td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)" onauxclick=ignoreEvent(event)">' + moves[i].runUID + "</a></td></tr>";
+		linkParams.push(compareLinkParam ? compareLinkParam : '');
 	}
-	let compareLink = 'https://viewsync.net/watch?' + mergedCompareLinkParam;
 	htmlContent = 
 		`<div style = "font-weight: bold">` + from + ' --> ' + to + `</div>
 		<table class="move-table">
 			<thead><tr>
 				<th></th>
-				<th style="width:30px"><a href = "` + compareLink + `" target = "_blank" class="header">Time</a></th>
+				<th style="width:30px"><a target = "_blank" class="header" data-linkparams=` + JSON.stringify(linkParams) + `>Time</a></th>
 				<th>Run</th>
-			</tr></thead>`
+			</tr></thead>
+			<tbody>`
 		+ htmlContent
-		+ `</table>`;
+		+ `</tbody>
+		</table>`;
 	return htmlContent;
 }
 
 function createHTMLContentForSingleLabelMovePopup(label, moves) {
 	let htmlContent = '';
-	let mergedCompareLinkParam = '';
-	let mergedSegmentCompareLinkParam = new Array(moves.segNames.length).fill('');
+	let linkParams = [];
+	let segmentLinkParams = Array(moves.segNames.length).fill().map(() => []);
 
 	let segFastestRecordIndex = new Array(moves.segNames.length).fill(0);
 	for (let i = 1; i < moves.records.length; i++) {
@@ -242,13 +240,10 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 			let frame = g_runs[record.runUID].events[record.eventIdx].frame[0];
 			let [videoLink, compareLinkParam] = frameToVideoLinkAndCompareLinkParam(record.runUID, frame);
 			let link = '<a href = "' + videoLink + '" target = "_blank">' + (i > 0 ? '+' + frameIdxToTime(record.numFrame - moves.records[0].numFrame) : frameIdxToTime(record.numFrame)) + '</a>';
-			htmlContent += '<tr runUID="' + record.runUID + '" ' + (record.runUID == g_highlightedRun ? 'class = "highlighted-row"' : '') + '"><td>'
-				+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)" onauxclick="onAuxClickRunCellText(event)">' + record.runUID + "</a></td>";
-			if (compareLinkParam) {
-				if (mergedCompareLinkParam.length)
-					mergedCompareLinkParam += '&';
-				mergedCompareLinkParam += compareLinkParam;
-			}
+			htmlContent += '<tr runUID="' + record.runUID + '" ' + (record.runUID == g_highlightedRun ? 'class = "highlighted-row"' : '')
+				+ '"><td class = "rank-cell" onclick="onClickRankCell(event, this)" onauxclick="ignoreEvent(event)"><a href="#" onclick="onClickRankCell(event, this)" onauxclick="ignoreEvent(event)">'
+				+ (i + 1) + "</td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)" onauxclick="ignoreEvent(event)">' + record.runUID + "</a></td>";
+			linkParams.push(compareLinkParam ? compareLinkParam : '');
 		}
 		for (let j = 0; j < record.segFrames.length; j++) {
 			let segFrame = record.segFrames[j];
@@ -258,31 +253,27 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 			let colorText = (i != segFastestRecordIndex[j] ? '' : ' style = "color: peru;"');
 			let link = '<a href = "' + videoLink + '" target = "_blank"' + colorText + '>' + text + '</a>';
 			htmlContent += '<td>' + link + '</td>';
-			if (compareLinkParam) {
-				if (mergedSegmentCompareLinkParam[j].length)
-					mergedSegmentCompareLinkParam[j] += '&';
-				mergedSegmentCompareLinkParam[j] += compareLinkParam;
-			}			
+			segmentLinkParams[j].push(compareLinkParam ? compareLinkParam : '');
 		}
 		htmlContent += '</tr>';
 	}
 	let segmentsHeader = '';
 	for (let i = 0; i < moves.segNames.length; i++) {
-		let compareLink = 'https://viewsync.net/watch?' + mergedSegmentCompareLinkParam[i];
-		segmentsHeader += '<th><a href = "' + compareLink + '" target = "_blank" class="header">' +  moves.segNames[i] + '</a></th>';
+		segmentsHeader += '<th><a target = "_blank" class="header" data-linkparams=' + JSON.stringify(segmentLinkParams[i]) + '>' +  moves.segNames[i] + '</a></th>';
 	}
-	let compareLink = 'https://viewsync.net/watch?' + mergedCompareLinkParam;
 	htmlContent = 
 		`<div style = "font-weight: bold">` + label + `</div>
 		<table class="move-table">
 			<thead><tr>
 				<th></th>
-				<th><a href = "` + compareLink + `" target = "_blank" class="header">Time</a></th>
+				<th><a target="_blank" class="header" data-linkparams=` + JSON.stringify(linkParams) + `>Time</a></th>
 				<th>Run</th>`
 		+ segmentsHeader
-		+ `</tr></thead>`
+		+ `</tr></thead>
+			<tbody>`
 		+ htmlContent
-		+ `</table>`;
+		+ `</tbody
+		</table>`;
 	return htmlContent;
 }
 
@@ -342,8 +333,47 @@ function onClickRunCellText(event, cell) {
 	event.preventDefault();
 }
 
-function onAuxClickRunCellText(event) {
+function ignoreEvent(event) {
 	event.preventDefault();
+}
+
+function onClickRankCell(event, cell) {
+	if (cell.tagName !== 'TD')
+		cell = cell.parentNode;
+	cell.classList.toggle("selected-rank-cell");
+	let tbody = cell.parentNode.parentNode;
+	let selectedRows = [];
+	for (let i = 0; i < tbody.rows.length; i++)
+		if (tbody.rows[i].cells[0].classList.contains("selected-rank-cell"))
+			selectedRows.push(i);
+	let headrow = tbody.parentNode.querySelector('thead').rows[0];
+	for (let i = 0; i < headrow.cells.length; i++) {
+		let aNode = headrow.cells[i].querySelector('a');
+		if (aNode) {
+			let linkParamsJson = aNode.getAttribute('data-linkparams');
+			if (linkParamsJson) {
+				let linkParams = JSON.parse(linkParamsJson);
+				let mergedLinkParams = '';
+				for (let j = 0; j < selectedRows.length; j++) {
+					if (mergedLinkParams.length)
+						mergedLinkParams += '&';
+					mergedLinkParams += linkParams[selectedRows[j]];
+				}
+				if (mergedLinkParams.length) {
+					let link = 'https://viewsync.net/watch?' + mergedLinkParams;
+					aNode.href = link;
+					aNode.classList.add('header-clickable');
+				}
+				else {
+					aNode.removeAttribute('href');
+					aNode.classList.remove('header-clickable');
+				}
+			}
+		}
+	}
+
+	event.preventDefault();
+	event.stopPropagation();
 }
 
 function highlightRun(runUID) {

@@ -40,15 +40,26 @@ body, html {
 
 .move-table a.header {
     color: inherit;
+}
+
+.move-table a.header-clickable {
     text-decoration: underline;
 }
 
-.move-table a:hover {
+.move-table tbody a:hover {
     text-decoration: underline;
 }
 
 .move-table tr.highlighted-row {
     background-color: peachpuff;
+}
+
+.move-table tr td.rank-cell {
+    cursor: pointer;
+}
+
+.move-table tr td.selected-rank-cell {
+    background-color: turquoise;
 }
 
 .no-background-tooltip {
