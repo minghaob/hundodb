@@ -1,14 +1,11 @@
 
 function frameIdxToTime(frameIdx) {
-	// sub-second part, use frame
-	let ret = (frameIdx % 30).toString().padStart(2, '0');
-	frameIdx = Math.floor(frameIdx / 30);
 
-	// second part
-	if (frameIdx < 60)		// less than 1 minute
-		return frameIdx.toString() + '.' + ret;
-	ret = (frameIdx % 60).toString().padStart(2, '0') + '.' + ret;
-	frameIdx = Math.floor(frameIdx / 60);
+	// second & subsecond part
+	if (frameIdx < 1800)
+		return (frameIdx / 30).toFixed(2);
+	ret = ((frameIdx % 1800) / 30).toFixed(2).padStart(5, '0');
+	frameIdx = Math.floor(frameIdx / 1800);
 
 	// minute part
 	if (frameIdx < 60)		// less then 1 hour
