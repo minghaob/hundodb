@@ -3,6 +3,7 @@ let g_markerMapping = {};			// A mapping from marker tooltip string to {marker, 
 let g_movePaths = {};				// from -> { to -> path }
 let g_warpMovePaths = {};			// from ->  path
 let g_highlightedRun;				// uid of the run being highlighted
+let g_sidebar;
 
 function initMap() {
 	g_map = L.map('map', {
@@ -80,7 +81,7 @@ function initMap() {
 		id: 'runlist-button',
 		states:[
 			{
-				icon: '<div>Select Run ▼</div>',
+				icon: '<div>Highlight Run ▼</div>',
 				onClick: function(btn, map) { // callback on button click
 					var dropdownContent = L.DomUtil.get('runlist-dropdown');
 					if (dropdownContent.style.display === 'block') {
@@ -187,6 +188,26 @@ function initMap() {
 			var dropdownContent = L.DomUtil.get('runlist-dropdown');
 			dropdownContent.style.display = 'none';
 		});
+
+		g_sidebar = L.control.sidebar({
+			autopan: false,       // whether to maintain the centered map point when opening the sidebar
+			closeButton: false,    // whether t add a close button to the panes
+			container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
+			position: 'left',     // left or right
+		}).addTo(g_map);
+		g_sidebar.addPanel({
+			id:   'compare',
+			tab:  '<i class="fa fa-database" style="font-size:18px"></i>',
+			title: 'Compare Runs',
+			pane: '<div></div>',
+		});
+		// add a tab with a click callback, initially disabled
+		g_sidebar.addPanel({
+			id:   'help',
+			tab:  '<i class="fa fa-question-circle" style="font-size:18px"></i>',
+			title: 'Help',
+			pane: '<div></div>',
+		});
 		
 		fetchDB();
 	})
@@ -263,7 +284,7 @@ function highlightRun(runUID) {
 		highlightMovesInRun(runUID);
 
 	var runListButton = L.DomUtil.get('runlist-button');
-	runListButton.textContent = (g_highlightedRun == null ? 'Select Run' : 'Run: ' + g_highlightedRun) + ' ▼';
+	runListButton.textContent = (g_highlightedRun == null ? 'Highlight Run' : 'Run: ' + g_highlightedRun) + ' ▼';
 }
 
 function highlightMovesInRun(runUID) {
