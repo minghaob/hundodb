@@ -7,7 +7,7 @@ function createHTMLContentForMovePopup(from, to, moves) {
 		let link = '<a href = "' + videoLink + '" target = "_blank">' + (i > 0 ? '+' + frameIdxToTime(moves[i].numFrame - moves[0].numFrame) : frameIdxToTime(moves[i].numFrame)) + '</a>';
 		htmlContent += '<tr runUID="' + moves[i].runUID + '" ' + (moves[i].runUID == g_highlightedRun ? 'class = "highlighted-row"' : '')
 			+ '><td class = "rank-cell" onclick="onClickRankCell(event, this)" onauxclick="ignoreEvent(event)"><a href="#" onclick="onClickRankCell(event, this)" onauxclick="ignoreEvent(event)">'
-			+ (i + 1) + "</a></td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)" onauxclick=ignoreEvent(event)">' + moves[i].runUID + "</a></td></tr>";
+			+ (i + 1) + "</a></td><td>" + link + '</td><td><a href="#" onclick="onClickRunCellText(event, this)" onauxclick="ignoreEvent(event)">' + moves[i].runUID + "</a></td></tr>";
 		linkParams.push(compareLinkParam ? compareLinkParam : '');
 	}
 	htmlContent = 
