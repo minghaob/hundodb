@@ -233,17 +233,9 @@ function createMovePolyline(latLngs, from, to) {
 	}).addTo(g_map);
 	path.on('mouseover', function(e) {
 		path.setStyle({weight: 5});
-		// if (to)
-		// 	g_markerMapping[to].marker.openTooltip();
-		// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
-		// 	g_markerMapping[from].marker.openTooltip();
 	});
 	path.on('mouseout', function(e) {
 		path.setStyle({weight: 3});
-		// if (to)
-		// 	g_markerMapping[to].marker.closeTooltip();
-		// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
-		// 	g_markerMapping[from].marker.closeTooltip();
 	});
 
 	g_map.getRenderer(path).options.padding = 1;
@@ -353,10 +345,6 @@ async function addMovesToMap() {
 				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
 	
-				// g_markerMapping[to].marker.openTooltip();
-				// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
-				// 	g_markerMapping[from].marker.openTooltip();
-
 				return htmlContent;
 			});
 			if (!g_movePaths[from])
@@ -382,11 +370,6 @@ async function addMovesToMap() {
 						htmlContent += '<br>';
 					htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
 				}
-
-				// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
-				// 	g_markerMapping[from].marker.openTooltip();
-				// for (const [to, moves] of Object.entries(tos))
-				// 	g_markerMapping[to].marker.openTooltip();
 
 				return htmlContent;
 			});
