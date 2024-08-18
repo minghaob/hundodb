@@ -353,9 +353,9 @@ async function addMovesToMap() {
 				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
 	
-				g_markerMapping[to].marker.openTooltip();
-				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
-					g_markerMapping[from].marker.openTooltip();
+				// g_markerMapping[to].marker.openTooltip();
+				// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
+				// 	g_markerMapping[from].marker.openTooltip();
 
 				return htmlContent;
 			});
@@ -383,10 +383,10 @@ async function addMovesToMap() {
 					htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
 				}
 
-				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
-					g_markerMapping[from].marker.openTooltip();
-				for (const [to, moves] of Object.entries(tos))
-					g_markerMapping[to].marker.openTooltip();
+				// if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
+				// 	g_markerMapping[from].marker.openTooltip();
+				// for (const [to, moves] of Object.entries(tos))
+				// 	g_markerMapping[to].marker.openTooltip();
 
 				return htmlContent;
 			});
