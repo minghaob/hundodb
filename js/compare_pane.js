@@ -88,13 +88,13 @@ function updateComparePaneTable() {
 					return bDif - aDif;
 				if (a.isFastest != b.isFastest)
 					return a.isFastest;
-				return b.origIdx - a.origIdx;
+				return a.origIdx - b.origIdx;
 			}
 			if (a.withFrame == 0 && b.withFrame != 0)
 				return 1;
 			if (a.withFrame != 0 && b.withFrame == 0)
 				return -1;
-			return b.origIdx - a.origIdx;
+			return a.origIdx - b.origIdx;
 		});
 	}
 
