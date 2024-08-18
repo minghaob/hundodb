@@ -195,12 +195,20 @@ function initMap() {
 			container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
 			position: 'left',     // left or right
 		}).addTo(g_map);
-		g_sidebar.addPanel({
-			id:   'compare',
-			tab:  '<i class="fa fa-database" style="font-size:18px"></i>',
-			title: 'Compare Runs',
-			pane: '<div></div>',
-		});
+
+		// add compare panel
+		{
+			g_sidebar.addPanel({
+				id:   'compare',
+				tab:  '<i class="fa fa-database" style="font-size:18px"></i>',
+				title: 'Compare Runs',
+				pane: '<div id="compare_pane_container"></div>',
+			});
+			let comparePaneContainer = L.DomUtil.get('compare_pane_container');
+			let comparePaneContent = L.DomUtil.get('compare_pane_content');
+			comparePaneContainer.appendChild(comparePaneContent);
+			comparePaneContent.style.display = 'block';
+		}
 		// add a tab with a click callback, initially disabled
 		g_sidebar.addPanel({
 			id:   'help',
@@ -340,15 +348,16 @@ async function addMovesToMap() {
 			let latLngs = [AdjustPositionAfterDivineBeast(from), g_markerMapping[to].marker.getLatLng()];
 			let path = createMovePolyline(latLngs, from, to);
 
-			path.on('click', function(e) {
+			path.bindPopup(function() {
 				let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
 				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
-				L.popup(e.latlng, {content: htmlContent}).openOn(g_map);
 	
 				g_markerMapping[to].marker.openTooltip();
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
+
+				return htmlContent;
 			});
 			if (!g_movePaths[from])
 				g_movePaths[from] = {};
@@ -366,19 +375,20 @@ async function addMovesToMap() {
 			path.setStyle({
 				dashArray: '10, 5'
 			});
-			path.on('click', function(e) {
+			path.bindPopup(function() {
 				let htmlContent = '';
 				for (const [to, moves] of Object.entries(tos)) {
 					if (htmlContent.length)
 						htmlContent += '<br>';
 					htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
 				}
-				L.popup(e.latlng, {content: htmlContent}).openOn(g_map);
 
 				if (!from.startsWith('Vah') || from.endsWith('(Tamed)'))
 					g_markerMapping[from].marker.openTooltip();
 				for (const [to, moves] of Object.entries(tos))
 					g_markerMapping[to].marker.openTooltip();
+
+				return htmlContent;
 			});
 			g_warpMovePaths[from] = path;
 		}
@@ -386,10 +396,9 @@ async function addMovesToMap() {
 
 	// single label movements (e.g. shrines, divine beasts)
 	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
-		g_markerMapping[label].marker.on('click', function(e) {
-			let htmlContent = createHTMLContentForSingleLabelMovePopup(label, moves);
-			L.popup(g_markerMapping[label].marker.getLatLng(), {content: htmlContent, maxWidth: 600}).openOn(g_map);
-		});
+		g_markerMapping[label].marker.bindPopup(function() {
+			return createHTMLContentForSingleLabelMovePopup(label, moves);
+		}, {maxWidth: 600});
 
 	}
 }

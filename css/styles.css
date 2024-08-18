@@ -101,3 +101,32 @@ body, html {
 #runlist-dropdown ul li.highlighted-row {
     background-color: peachpuff;
 }
+
+#compare_table tr td {
+	border: none;
+	font-size: 14px;
+	color: white;
+	padding: 0px;
+	font-weight: bold;
+}
+
+#compare_table tr td.movement span:hover {
+	text-decoration: underline;
+    cursor: pointer;
+}
+
+#compare_table td.fastest {
+	color: rgb(216, 175, 31);
+}
+
+#compare_table td.faster {
+	color: rgb(0, 204, 54);
+}
+
+#compare_table td.slower {
+	color: rgb(204, 18, 0);
+}
+
+#compare_table td.na {
+	color: white;
+}

@@ -41,7 +41,7 @@
   top: 0;
   bottom: 0;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.75); }
   .leaflet-sidebar-left .leaflet-sidebar-tabs {
     left: 0; }
   .leaflet-sidebar-right .leaflet-sidebar-tabs {
@@ -87,7 +87,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
   overflow-x: hidden;
   overflow-y: auto; }
   .leaflet-sidebar-left .leaflet-sidebar-content {
@@ -98,6 +98,18 @@
     right: 40px; }
   .leaflet-sidebar.collapsed > .leaflet-sidebar-content {
     overflow-y: hidden; }
+
+.leaflet-sidebar-content::-webkit-scrollbar {
+	background-color: transparent;
+	width: 12px;
+}
+.leaflet-sidebar-content::-webkit-scrollbar-button {
+    display: none;
+}
+.leaflet-sidebar-content::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+}
 
 .collapsed > .leaflet-sidebar-content {
   overflow-y: hidden; }

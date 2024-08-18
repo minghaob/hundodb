@@ -79,6 +79,11 @@ function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 	return [null, null];
 }
 
+function onDBFetched() {
+	addMovesToMap();
+	syncDBToComparePane();
+}
+
 function fetchDB() {
 	const hdbRunsURL = 'runs/';
 	fetch(hdbRunsURL + 'list.txt')
@@ -119,7 +124,7 @@ function fetchDB() {
 							numLoadedRuns++;
 							if (numProcessedRuns == numTotalRuns) {
 								console.log("Loaded " + numLoadedRuns + " runs from HundoDB");
-								addMovesToMap();
+								onDBFetched();
 							}
 						})
 						.catch(error => {
@@ -127,7 +132,7 @@ function fetchDB() {
 							numProcessedRuns++;
 							if (numProcessedRuns == numTotalRuns) {
 								console.log("Loaded " + numLoadedRuns + " runs from HundoDB");
-								addMovesToMap();
+								onDBFetched();
 							}
 						});
 				}
