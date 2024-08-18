@@ -37,6 +37,42 @@ function getCompareResultFromMoveRecords(compareRunUID, withRunUID, records) {
 	}
 }
 
+function labelToClass(label) {
+	if (label.endsWith('Shrine'))
+		return 'shrine';
+	else if (label.endsWith('Tower'))
+		return 'tower';
+	else if (label.startsWith('Vah'))
+		return 'divinebeast';
+	else if (label.startsWith('Memory'))
+		return 'memory';
+	else if (label.length == 3 && label[1] >= '0' && label[1] <= '9' && label[2] >= '0' && label[2] <= '9')
+		return 'korok';
+	else if (label.startsWith('Zora Monument'))
+		return 'monument';
+	else if (label.endsWith('Tech Lab'))
+		return 'keyitem';
+	else if (label == 'Shrine of Resurrection')
+		return 'keyitem';
+	else if (label == 'Paraglider')
+		return 'keyitem';
+	else if (label == 'Thunder Helm')
+		return 'keyitem';
+	else
+		return 'npc';
+}
+
+function labelToDivWithclass(label) {
+	return '<span class="' + labelToClass(label) + '">' + label + '</span>'
+}
+
+function onCompareRunChange() {
+	let compareRunUID = document.getElementById("compare_select").value;
+	if (g_highlightedRun != compareRunUID)
+		highlightRun(compareRunUID);
+	updateComparePaneTable();
+}
+
 function updateComparePaneTable() {
 	let compareRunUID = document.getElementById("compare_select").value;
 	let withRunUID = document.getElementById("with_select").value;
@@ -57,7 +93,7 @@ function updateComparePaneTable() {
 		
 		{
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, isWarp ? g_warpMoves[last][cur] : g_moves[last][cur]);
-			res.text = last + ' &#45;&gt; ' + cur;
+			res.text = labelToDivWithclass(last) + ' &#45;&gt; ' + labelToDivWithclass(cur);
 			res.origIdx = compareResults.length;
 			if (isWarp)
 				res.polyline = g_warpMovePaths[last];
@@ -72,7 +108,7 @@ function updateComparePaneTable() {
 
 		if (events[evtIdx].segments) {
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, g_singleLabelMoves[cur].records);
-			res.text = cur;
+			res.text = labelToDivWithclass(cur);
 			res.origIdx = compareResults.length;
 			res.marker = g_markerMapping[cur].marker;
 			compareResults.push(res);

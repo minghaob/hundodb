@@ -115,6 +115,38 @@ body, html {
     cursor: pointer;
 }
 
+#compare_table tr td.movement span span.shrine {
+	color: mediumpurple;
+}
+
+#compare_table tr td.movement span span.korok {
+	color: palegreen;
+}
+
+#compare_table tr td.movement span span.tower {
+	color: turquoise;
+}
+
+#compare_table tr td.movement span span.memory {
+	color: steelblue;
+}
+
+#compare_table tr td.movement span span.npc {
+	color: lightcyan;
+}
+
+#compare_table tr td.movement span span.divinebeast {
+	color: dodgerblue;
+}
+
+#compare_table tr td.movement span span.monument {
+	color: Gainsboro;
+}
+
+#compare_table tr td.movement span span.keyitem {
+	color: orange;
+}
+
 #compare_table td.fastest {
 	color: rgb(216, 175, 31);
 }
