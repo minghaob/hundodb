@@ -86,6 +86,7 @@ function updateComparePaneTable() {
 	let runDoc = g_runs[compareRunUID];
 	const events = runDoc.events;
 	let compareResults = [];
+	let branchIdx = 0;
 	for (let evtIdx = 0; evtIdx < events.length; evtIdx++) {
 		let last = evtIdx == 0 ? "Shrine of Resurrection" : events[evtIdx - 1].label;
 		let cur = events[evtIdx].label;
@@ -95,6 +96,7 @@ function updateComparePaneTable() {
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, isWarp ? g_warpMoves[last][cur] : g_moves[last][cur]);
 			res.text = labelToDivWithclass(last) + ' &#45;&gt; ' + labelToDivWithclass(cur);
 			res.origIdx = compareResults.length;
+			res.branchIdx = branchIdx;
 			if (isWarp)
 				res.polyline = g_warpMovePaths[last];
 			else {
@@ -110,9 +112,16 @@ function updateComparePaneTable() {
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, g_singleLabelMoves[cur].records);
 			res.text = labelToDivWithclass(cur);
 			res.origIdx = compareResults.length;
+			res.branchIdx = branchIdx;
 			res.marker = g_markerMapping[cur].marker;
 			compareResults.push(res);
 		}
+
+		if (isWarp)
+			branchIdx++;
+		else if (cur.startsWith('Vah') && !cur.endsWith('(Tamed)'))
+			branchIdx++;
+
 	}
 
 	if (document.getElementById("compare_sort").checked) {
@@ -137,11 +146,20 @@ function updateComparePaneTable() {
 	for (let idx = 0; idx < compareResults.length; idx++) {
 		let res = compareResults[idx];
 		let newRow = tableNode.insertRow(-1);
+
 		let cell0 = newRow.insertCell(-1);
-		cell0.innerHTML = '<span>' + res.text + '</span>';
-		cell0.style.textAlign = 'left';
-		cell0.classList.add("movement");
-		let span = cell0.querySelector('span');
+		cell0.style.backgroundColor = g_colorPalette[res.branchIdx % g_colorPalette.length].color;
+		cell0.style.width = '2px';
+		cell0.classList.add('divided-td');
+
+		let cell1 = newRow.insertCell(-1);
+		cell1.style.width = '5px';
+
+		let cell2 = newRow.insertCell(-1);
+		cell2.innerHTML = '<span>' + res.text + '</span>';
+		cell2.style.textAlign = 'left';
+		cell2.classList.add("movement");
+		let span = cell2.querySelector('span');
 		span.onclick = function () {
 			if (res.marker) {
 				res.marker.openPopup();
@@ -154,27 +172,27 @@ function updateComparePaneTable() {
 			}
 		}
 		
-		let cell1 = newRow.insertCell(-1);
-		cell1.style.textAlign = 'right';
+		let cell3 = newRow.insertCell(-1);
+		cell3.style.textAlign = 'right';
 		if (res.withFrame == 0) {
-			cell1.innerHTML = '-';
-			cell1.classList.add('na');
+			cell3.innerHTML = '-';
+			cell3.classList.add('na');
 		}
 		else if (res.compareFrame == res.withFrame) {
-			cell1.innerHTML = '0.00';
+			cell3.innerHTML = '0.00';
 			if (res.isFastest)
-				cell1.classList.add('fastest');	
+				cell3.classList.add('fastest');	
 		}
 		else if (res.compareFrame > res.withFrame) {
-			cell1.innerHTML = '+' + frameIdxToTime(res.compareFrame - res.withFrame);
-			cell1.classList.add('slower');
+			cell3.innerHTML = '+' + frameIdxToTime(res.compareFrame - res.withFrame);
+			cell3.classList.add('slower');
 		}
 		else {
-			cell1.innerHTML = '-' + frameIdxToTime(res.withFrame - res.compareFrame);
+			cell3.innerHTML = '-' + frameIdxToTime(res.withFrame - res.compareFrame);
 			if (res.isFastest)
-				cell1.classList.add('fastest');	
+				cell3.classList.add('fastest');	
 			else
-				cell1.classList.add('faster');
+				cell3.classList.add('faster');
 		}
 
 	}

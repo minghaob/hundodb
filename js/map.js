@@ -288,18 +288,6 @@ function highlightRun(runUID) {
 }
 
 function highlightMovesInRun(runUID) {
-	let colors = [
-		{ color: 'dodgerblue', opacity: 1, },
-		{ color: 'red', opacity: 1, },
-		{ color: 'magenta', opacity: 1, },
-		{ color: 'greenyellow', opacity: 1, },
-		{ color: 'aqua', opacity: 1, },
-		{ color: 'white', opacity: 1, },
-		{ color: 'orange', opacity: 1, },
-		{ color: 'gold', opacity: 1, },
-		{ color: 'rgb(167, 132, 255)', opacity: 1},
-		{ color: 'black', opacity: 1, },
-	];
 	let curColorIdx = 0;
 
 	if (!g_runs[runUID])
@@ -311,22 +299,22 @@ function highlightMovesInRun(runUID) {
 		let isWarp = events[evtIdx].type == 'Warp';
 		if (isWarp) {
 			if (g_warpMovePaths[last]) {
-				g_warpMovePaths[last].setStyle(colors[curColorIdx]);
+				g_warpMovePaths[last].setStyle(g_colorPalette[curColorIdx]);
 				g_warpMovePaths[last].bringToFront();
 			}
-			curColorIdx = (curColorIdx + 1) % colors.length;
+			curColorIdx = (curColorIdx + 1) % g_colorPalette.length;
 		}
 		else {
 			if (g_movePaths[last] && g_movePaths[last][cur]) {
-				g_movePaths[last][cur].setStyle(colors[curColorIdx]);
+				g_movePaths[last][cur].setStyle(g_colorPalette[curColorIdx]);
 				g_movePaths[last][cur].bringToFront();
 			}
 			else if (g_movePaths[cur] && g_movePaths[cur][last]) {
-				g_movePaths[cur][last].setStyle(colors[curColorIdx]);
+				g_movePaths[cur][last].setStyle(g_colorPalette[curColorIdx]);
 				g_movePaths[cur][last].bringToFront();
 			}
 			if (cur.startsWith('Vah') && !cur.endsWith('(Tamed)'))
-				curColorIdx = (curColorIdx + 1) % colors.length;
+				curColorIdx = (curColorIdx + 1) % g_colorPalette.length;
 		}
 	}
 }

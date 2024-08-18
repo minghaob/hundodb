@@ -1,3 +1,15 @@
+let g_colorPalette = [
+	{ color: 'dodgerblue', opacity: 1, },
+	{ color: 'red', opacity: 1, },
+	{ color: 'greenyellow', opacity: 1, },
+	{ color: 'magenta', opacity: 1, },
+	{ color: 'aqua', opacity: 1, },
+	{ color: 'white', opacity: 1, },
+	{ color: 'orange', opacity: 1, },
+	{ color: 'rgb(167, 132, 255)', opacity: 1},
+	{ color: 'gold', opacity: 1, },
+	//{ color: 'black', opacity: 1, },
+];
 
 function frameIdxToTime(frameIdx) {
 
