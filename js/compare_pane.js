@@ -68,7 +68,7 @@ function labelToDivWithclass(label) {
 
 function onCompareRunChange() {
 	let compareRunUID = document.getElementById("compare_select").value;
-	if (g_highlightedRun != compareRunUID)
+	if (compareRunUID && g_highlightedRun != compareRunUID)
 		highlightRun(compareRunUID);
 	updateComparePaneTable();
 }
