@@ -162,3 +162,24 @@ body, html {
 #compare_table td.na {
 	color: white;
 }
+
+#compare_table tr.selected td:nth-child(3) {
+	border-left: 1px solid lightgray;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	background-color: rgba(128,128,128,0.25);
+}
+
+#compare_table tr.selected td:nth-child(4),
+#compare_table tr.selected td:nth-child(5) {
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	background-color: rgba(128,128,128,0.25);
+}
+
+#compare_table tr.selected td:nth-child(6) {
+	border-right: 1px solid lightgray;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	background-color: rgba(128,128,128,0.25);
+}

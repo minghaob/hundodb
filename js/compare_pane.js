@@ -1,3 +1,5 @@
+let g_selectedCompareTableRow = -1;
+
 function syncDBToComparePane() {
 	let compareNode = document.getElementById("compare_select");
 	let withNode = document.getElementById("with_select");
@@ -153,13 +155,17 @@ function updateComparePaneTable() {
 		cell0.classList.add('divided-td');
 
 		let cell1 = newRow.insertCell(-1);
-		cell1.style.width = '5px';
+		cell1.style.width = '2px';
 
 		let cell2 = newRow.insertCell(-1);
-		cell2.innerHTML = '<span>' + res.text + '</span>';
-		cell2.style.textAlign = 'left';
-		cell2.classList.add("movement");
-		let span = cell2.querySelector('span');
+		cell2.style.width = '3px';
+
+		let cell3 = newRow.insertCell(-1);
+		cell3.innerHTML = '<span>' + res.text + '</span>';
+		cell3.style.textAlign = 'left';
+		cell3.classList.add("movement");
+
+		let span = cell3.querySelector('span');
 		span.onclick = function () {
 			if (res.marker) {
 				res.marker.openPopup();
@@ -168,32 +174,48 @@ function updateComparePaneTable() {
 			else if (res.polyline) {
 				res.polyline.openPopup();
 				g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
-				//g_map.panTo(res.polyline.getBounds().getCenter());
 			}
-		}
-		
-		let cell3 = newRow.insertCell(-1);
-		cell3.style.textAlign = 'right';
-		if (res.withFrame == 0) {
-			cell3.innerHTML = '-';
-			cell3.classList.add('na');
-		}
-		else if (res.compareFrame == res.withFrame) {
-			cell3.innerHTML = '0.00';
-			if (res.isFastest)
-				cell3.classList.add('fastest');	
-		}
-		else if (res.compareFrame > res.withFrame) {
-			cell3.innerHTML = '+' + frameIdxToTime(res.compareFrame - res.withFrame);
-			cell3.classList.add('slower');
-		}
-		else {
-			cell3.innerHTML = '-' + frameIdxToTime(res.withFrame - res.compareFrame);
-			if (res.isFastest)
-				cell3.classList.add('fastest');	
-			else
-				cell3.classList.add('faster');
+
+			onSelectCompareTableRow(idx);
 		}
 
+		let cell4 = newRow.insertCell(-1);
+		cell4.style.textAlign = 'right';
+		if (res.withFrame == 0) {
+			cell4.innerHTML = '-';
+			cell4.classList.add('na');
+		}
+		else if (res.compareFrame == res.withFrame) {
+			cell4.innerHTML = '0.00';
+			if (res.isFastest)
+				cell4.classList.add('fastest');	
+		}
+		else if (res.compareFrame > res.withFrame) {
+			cell4.innerHTML = '+' + frameIdxToTime(res.compareFrame - res.withFrame);
+			cell4.classList.add('slower');
+		}
+		else {
+			cell4.innerHTML = '-' + frameIdxToTime(res.withFrame - res.compareFrame);
+			if (res.isFastest)
+				cell4.classList.add('fastest');	
+			else
+				cell4.classList.add('faster');
+		}
+
+		let cell5 = newRow.insertCell(-1);
+		cell5.style.width = '3px';
+	}
+}
+
+function onSelectCompareTableRow(idx) {
+	let tableNode = document.getElementById("compare_table");
+
+	if (g_selectedCompareTableRow >=0 && g_selectedCompareTableRow < tableNode.rows.length) {
+		tableNode.rows[g_selectedCompareTableRow].classList.remove("selected");
+	}
+
+	if (idx >= 0 && idx < tableNode.rows.length) {
+		tableNode.rows[idx].classList.add("selected");
+		g_selectedCompareTableRow = idx;
 	}
 }
