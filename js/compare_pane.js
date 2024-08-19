@@ -185,6 +185,7 @@ function updateComparePaneTable() {
 
 		cell3.onmouseover = function () {
 			if (res.marker) {
+				res.marker.getElement().classList.add("marker-glow-effect");
 			}
 			else if (res.polyline) {
 				res.polyline.setStyle({weight: 7});
@@ -193,6 +194,7 @@ function updateComparePaneTable() {
 
 		cell3.onmouseout = function () {
 			if (res.marker) {
+				res.marker.getElement().classList.remove("marker-glow-effect");
 			}
 			else if (res.polyline) {
 				res.polyline.setStyle({weight: 3});

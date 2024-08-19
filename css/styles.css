@@ -183,3 +183,7 @@ body, html {
 	border-bottom: 1px solid lightgray;
 	background-color: rgba(128,128,128,0.25);
 }
+
+.marker-glow-effect {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */
+}
