@@ -165,8 +165,7 @@ function updateComparePaneTable() {
 		cell3.style.textAlign = 'left';
 		cell3.classList.add("movement");
 
-		let span = cell3.querySelector('span');
-		span.onclick = function () {
+		cell3.onclick = function () {
 			if (res.marker) {
 				res.marker.openPopup();
 				g_map.panTo(res.marker.getLatLng());
@@ -176,7 +175,28 @@ function updateComparePaneTable() {
 				g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
 			}
 
-			onSelectCompareTableRow(idx);
+			if (idx == g_selectedCompareTableRow) {
+				g_map.closePopup();
+				onSelectCompareTableRow(-1);
+			}
+			else
+				onSelectCompareTableRow(idx);
+		}
+
+		cell3.onmouseover = function () {
+			if (res.marker) {
+			}
+			else if (res.polyline) {
+				res.polyline.setStyle({weight: 7});
+			}
+		}
+
+		cell3.onmouseout = function () {
+			if (res.marker) {
+			}
+			else if (res.polyline) {
+				res.polyline.setStyle({weight: 3});
+			}
 		}
 
 		let cell4 = newRow.insertCell(-1);
@@ -216,6 +236,6 @@ function onSelectCompareTableRow(idx) {
 
 	if (idx >= 0 && idx < tableNode.rows.length) {
 		tableNode.rows[idx].classList.add("selected");
-		g_selectedCompareTableRow = idx;
 	}
+	g_selectedCompareTableRow = idx;
 }

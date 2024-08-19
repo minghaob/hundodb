@@ -110,7 +110,7 @@ body, html {
 	font-weight: bold;
 }
 
-#compare_table tr td.movement span:hover {
+#compare_table tr td.movement:hover {
 	text-decoration: underline;
     cursor: pointer;
 }
