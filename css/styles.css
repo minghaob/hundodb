@@ -20,6 +20,8 @@ body, html {
 	border: 1px solid #dddddd;
 	text-align: right;
 	padding: 3px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 	font-size: 12px;
 }
 .move-table th {

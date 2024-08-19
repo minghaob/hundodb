@@ -7,7 +7,7 @@ let g_sidebar;
 
 function initMap() {
 	g_map = L.map('map', {
-		minZoom: -3,
+		minZoom: -4,
 		maxZoom: 5,
 		center: [0, 0],
 		zoom: -3,
