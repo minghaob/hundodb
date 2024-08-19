@@ -189,13 +189,13 @@ function initMap() {
 			dropdownContent.style.display = 'none';
 		});
 
+		// add side bar
 		g_sidebar = L.control.sidebar({
 			autopan: false,       // whether to maintain the centered map point when opening the sidebar
 			closeButton: false,    // whether t add a close button to the panes
 			container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
 			position: 'left',     // left or right
 		}).addTo(g_map);
-
 		// add compare panel
 		{
 			g_sidebar.addPanel({
@@ -209,11 +209,11 @@ function initMap() {
 			comparePaneContainer.appendChild(comparePaneContent);
 			comparePaneContent.style.display = 'block';
 		}
-		// add a tab with a click callback, initially disabled
+		// add help panel
 		g_sidebar.addPanel({
 			id:   'help',
 			tab:  '<i class="fa fa-question-circle" style="font-size:18px"></i>',
-			title: 'Help',
+			title: 'How to Use',
 			pane: '<div></div>',
 		});
 		
@@ -233,9 +233,11 @@ function createMovePolyline(latLngs, from, to) {
 	}).addTo(g_map);
 	path.on('mouseover', function(e) {
 		path.setStyle({weight: 5});
+		path.getElement().classList.add("marker-glow-effect");
 	});
 	path.on('mouseout', function(e) {
 		path.setStyle({weight: 3});
+		path.getElement().classList.remove("marker-glow-effect");
 	});
 
 	g_map.getRenderer(path).options.padding = 1;

@@ -201,7 +201,8 @@ function updateComparePaneTable() {
 				res.marker.getElement().classList.add("marker-glow-effect");
 			}
 			else if (res.polyline) {
-				res.polyline.setStyle({weight: 7});
+				res.polyline.setStyle({weight: 5});
+				res.polyline.getElement().classList.add("marker-glow-effect");
 			}
 		}
 
@@ -211,6 +212,7 @@ function updateComparePaneTable() {
 			}
 			else if (res.polyline) {
 				res.polyline.setStyle({weight: 3});
+				res.polyline.getElement().classList.remove("marker-glow-effect");
 			}
 		}
 
