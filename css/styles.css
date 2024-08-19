@@ -104,6 +104,11 @@ body, html {
     background-color: peachpuff;
 }
 
+#compare_table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
 #compare_table tr td {
 	border: none;
 	font-size: 14px;
@@ -166,6 +171,8 @@ body, html {
 }
 
 #compare_table tr.selected td:nth-child(3) {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 	border-left: 1px solid lightgray;
 	border-top: 1px solid lightgray;
 	border-bottom: 1px solid lightgray;
@@ -180,6 +187,8 @@ body, html {
 }
 
 #compare_table tr.selected td:nth-child(6) {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 	border-right: 1px solid lightgray;
 	border-top: 1px solid lightgray;
 	border-bottom: 1px solid lightgray;
