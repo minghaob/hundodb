@@ -4,6 +4,7 @@ let g_colorPalette = [
 	{ color: 'greenyellow', opacity: 1, },
 	{ color: 'magenta', opacity: 1, },
 	{ color: 'aqua', opacity: 1, },
+	{ color: 'rgb(200,100,30)', opacity: 1, },
 	{ color: 'white', opacity: 1, },
 	{ color: 'orange', opacity: 1, },
 	{ color: 'rgb(167, 132, 255)', opacity: 1},
