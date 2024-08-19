@@ -328,6 +328,9 @@ async function addMovesToMap() {
 			let latLngs = [AdjustPositionAfterDivineBeast(from), g_markerMapping[to].marker.getLatLng()];
 			let path = createMovePolyline(latLngs, from, to);
 
+			path.on('click', function() {
+				syncCompareRunPaneTo(path);
+			});
 			path.bindPopup(function() {
 				let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
 				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
@@ -351,6 +354,9 @@ async function addMovesToMap() {
 			path.setStyle({
 				dashArray: '10, 5'
 			});
+			path.on('click', function() {
+				syncCompareRunPaneTo(path);
+			});
 			path.bindPopup(function() {
 				let htmlContent = '';
 				for (const [to, moves] of Object.entries(tos)) {
@@ -367,10 +373,12 @@ async function addMovesToMap() {
 
 	// single label movements (e.g. shrines, divine beasts)
 	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
+		g_markerMapping[label].marker.on('click', function() {
+			syncCompareRunPaneTo(g_markerMapping[label].marker);
+		});
 		g_markerMapping[label].marker.bindPopup(function() {
 			return createHTMLContentForSingleLabelMovePopup(label, moves);
 		}, {maxWidth: 600});
-
 	}
 }
 

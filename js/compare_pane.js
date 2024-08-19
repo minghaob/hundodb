@@ -1,4 +1,16 @@
+function getSidebarActiveTab() {
+    var sidebar = document.getElementById('sidebar'); // Replace 'sidebar' with your sidebar's ID
+    var tabs = sidebar.querySelectorAll('.leaflet-sidebar-tabs > ul > li');
+    for (var i = 0; i < tabs.length; i++) {
+        if (tabs[i].classList.contains('active')) {
+            return tabs[i].querySelector('a').getAttribute('href').slice(1); // Returns the ID of the active pane removing the '#'
+        }
+    }
+    return null; // No active tab found
+}
+
 let g_selectedCompareTableRow = -1;
+let g_compareResults = [];
 
 function syncDBToComparePane() {
 	let compareNode = document.getElementById("compare_select");
@@ -81,13 +93,13 @@ function updateComparePaneTable() {
 	let tableNode = document.getElementById("compare_table");
 
 	tableNode.innerHTML = '';
+	g_compareResults = [];
 
 	if (!compareRunUID || !withRunUID)
 		return;
 
 	let runDoc = g_runs[compareRunUID];
 	const events = runDoc.events;
-	let compareResults = [];
 	let branchIdx = 0;
 	for (let evtIdx = 0; evtIdx < events.length; evtIdx++) {
 		let last = evtIdx == 0 ? "Shrine of Resurrection" : events[evtIdx - 1].label;
@@ -97,7 +109,7 @@ function updateComparePaneTable() {
 		{
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, isWarp ? g_warpMoves[last][cur] : g_moves[last][cur]);
 			res.text = labelToDivWithclass(last) + ' &#45;&gt; ' + labelToDivWithclass(cur);
-			res.origIdx = compareResults.length;
+			res.origIdx = g_compareResults.length;
 			res.branchIdx = branchIdx;
 			if (isWarp)
 				res.polyline = g_warpMovePaths[last];
@@ -107,16 +119,16 @@ function updateComparePaneTable() {
 				else if (g_movePaths[cur] && g_movePaths[cur][last])
 					res.polyline = g_movePaths[cur][last];
 			}
-			compareResults.push(res);
+			g_compareResults.push(res);
 		}
 
 		if (events[evtIdx].segments) {
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, g_singleLabelMoves[cur].records);
 			res.text = labelToDivWithclass(cur);
-			res.origIdx = compareResults.length;
+			res.origIdx = g_compareResults.length;
 			res.branchIdx = branchIdx;
 			res.marker = g_markerMapping[cur].marker;
-			compareResults.push(res);
+			g_compareResults.push(res);
 		}
 
 		if (isWarp)
@@ -127,7 +139,7 @@ function updateComparePaneTable() {
 	}
 
 	if (document.getElementById("compare_sort").checked) {
-		compareResults.sort(function(a,b){
+		g_compareResults.sort(function(a,b){
 			if (a.withFrame != 0 && b.withFrame != 0) {
 				let aDif = a.compareFrame - a.withFrame;
 				let bDif = b.compareFrame - b.withFrame;
@@ -145,8 +157,8 @@ function updateComparePaneTable() {
 		});
 	}
 
-	for (let idx = 0; idx < compareResults.length; idx++) {
-		let res = compareResults[idx];
+	for (let idx = 0; idx < g_compareResults.length; idx++) {
+		let res = g_compareResults[idx];
 		let newRow = tableNode.insertRow(-1);
 
 		let cell0 = newRow.insertCell(-1);
@@ -240,4 +252,21 @@ function onSelectCompareTableRow(idx) {
 		tableNode.rows[idx].classList.add("selected");
 	}
 	g_selectedCompareTableRow = idx;
+}
+
+function syncCompareRunPaneTo(polylineOrMarker) {
+	var activeTabId = getSidebarActiveTab();
+	if (activeTabId != 'compare')
+		return;
+
+	let start = g_selectedCompareTableRow + 1;
+	for (let offset = 0; offset < g_compareResults.length; offset++) {
+		let rowIdx = (start + offset) % g_compareResults.length;
+		if (g_compareResults[rowIdx].marker == polylineOrMarker || g_compareResults[rowIdx].polyline == polylineOrMarker) {
+			onSelectCompareTableRow(rowIdx);
+			let tableNode = document.getElementById("compare_table");
+			tableNode.rows[rowIdx].scrollIntoView({behavior: 'smooth', block : 'nearest'});
+			return;
+		}
+	}
 }
