@@ -25,11 +25,11 @@ body, html {
 	font-size: 12px;
 }
 .move-table th {
-	background-color: #f2f2f2;
+	background-color: #e6e6e6;
 	font-size: 13px;
 }
 .move-table tr:nth-child(even) {
-	background-color: #f9f9f9;
+	background-color: #f0f0f0;
 }
 
 .move-table tr th:nth-child(3),td:nth-child(3) {
@@ -196,5 +196,5 @@ body, html {
 }
 
 .marker-glow-effect {
-    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */
+    filter: drop-shadow(0 0 2px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */
 }
