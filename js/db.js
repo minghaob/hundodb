@@ -82,7 +82,48 @@ function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 async function onDBFetched() {
 	addMovesToMap();
 	syncDBToComparePane();
-	g_sidebar.open("help");
+
+	if (window.location.hash) {
+		const parts = window.location.hash.split('/').map((e) => decodeURIComponent(e));
+		if (parts.length >= 1) {
+			if (parts[0] == '#view') {
+				if (parts.length >= 2) {
+					const ends = parts[1].split(',');
+					if (ends.length == 1) {
+						let at = ends[0];
+						if (g_markerMapping[at]) {
+							g_markerMapping[at].marker.openPopup();
+							g_map.setView(g_markerMapping[at].marker.getLatLng(), -1, {duration: 0, animate: false});
+						}
+					}
+					else if (ends.length == 2) {
+						if (ends[1] == 'warp') {
+							let at = ends[0];
+							if (g_warpMovePaths[at]) {
+								g_warpMovePaths[at].openPopup();
+								g_map.setView(g_warpMovePaths[at].getCenter(), -1, {duration: 0, animate: false});
+							}
+						}
+						else {
+							let from = ends[0], to = ends[1];
+							if (g_movePaths[from] && g_movePaths[from][to]) {
+								g_movePaths[from][to].openPopup();
+								g_map.fitBounds(g_movePaths[from][to].getBounds(), { maxZoom : -1, duration: 0, animate: false });
+							}
+						}
+					}
+				}
+			}
+			else if (parts[0] == '#compare') {
+				g_sidebar.open("compare");
+			}
+			else if (parts[0] == '#help') {
+				g_sidebar.open("help");
+			}
+		}
+	}
+	else
+		g_sidebar.open("help");
 }
 
 function fetchDB() {

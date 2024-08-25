@@ -165,28 +165,8 @@ function initMap() {
 			dropdownContent.style.display = 'none';
 		});
 
-		// add side bar
-		g_sidebar = L.control.sidebar({
-			autopan: false,       // whether to maintain the centered map point when opening the sidebar
-			closeButton: false,    // whether t add a close button to the panes
-			container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
-			position: 'left',     // left or right
-		}).addTo(g_map);
-		// add compare panel
-		{
-			g_sidebar.addPanel({
-				id:   'compare',
-				tab:  '<i class="fa fa-database" style="font-size:18px"></i>',
-				title: 'Compare Runs',
-				pane: '<div id="compare_panel_container"></div>',
-			});
-			let comparePaneContainer = L.DomUtil.get('compare_panel_container');
-			let comparePaneContent = L.DomUtil.get('compare_panel_content');
-			comparePaneContainer.appendChild(comparePaneContent);
-			comparePaneContent.style.display = 'block';
-		}
-		initHelpPanel();
-		
+		initSidebar();
+	
 		fetchDB();
 	})
 	.catch(error => {
@@ -334,6 +314,7 @@ function addMovesToMap() {
 
 			path.on('click', function() {
 				syncCompareRunPanelTo(path);
+				history.replaceState(null, '', '#view/' + from + ',' + to);
 			});
 			path.bindPopup(function() {
 				closeHighlightRunDropdownList();
@@ -361,6 +342,7 @@ function addMovesToMap() {
 			});
 			path.on('click', function() {
 				syncCompareRunPanelTo(path);
+				history.replaceState(null, '', '#view/' + from + ',warp');
 			});
 			path.bindPopup(function() {
 				closeHighlightRunDropdownList();
@@ -387,6 +369,7 @@ function addMovesToMap() {
 		});
 		g_markerMapping[label].marker.on('click', function() {
 			syncCompareRunPanelTo(g_markerMapping[label].marker);
+			history.replaceState(null, '', '#view/' + label);
 		});
 		g_markerMapping[label].marker.bindPopup(function() {
 			closeHighlightRunDropdownList();
