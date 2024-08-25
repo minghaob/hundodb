@@ -21,12 +21,16 @@ function initSidebar() {
 	}
 
 	g_sidebar.on('content', onSidebarContent);
+	g_sidebar.on('closing', () => history.replaceState(null, '', window.location.pathname));
 	
 	initHelpPanel();
 }
 
 function onSidebarContent(e) {
 	if (e.id == 'compare') {
-		history.replaceState(null, '', '#compare');
+		replaceURLWithCompare();
+	}
+	else if (e.id == 'help') {
+		history.replaceState(null, '', window.location.pathname);
 	}
 }

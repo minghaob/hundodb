@@ -116,6 +116,7 @@ async function onDBFetched() {
 			}
 			else if (parts[0] == '#compare') {
 				g_sidebar.open("compare");
+				updateComparePanelFromURLParameter(parts.slice(1));
 			}
 			else if (parts[0] == '#help') {
 				g_sidebar.open("help");

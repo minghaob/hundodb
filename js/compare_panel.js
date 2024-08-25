@@ -89,6 +89,8 @@ function onCompareRunChange() {
 }
 
 function updateComparePaneTable() {
+	replaceURLWithCompare();
+
 	let compareRunUID = document.getElementById("compare_select").value;
 	let withRunUID = document.getElementById("with_select").value;
 	let tableNode = document.getElementById("compare_table");
@@ -271,5 +273,32 @@ function syncCompareRunPanelTo(polylineOrMarker) {
 			tableNode.rows[rowIdx].scrollIntoView({behavior: 'smooth', block : 'nearest'});
 			return;
 		}
+	}
+}
+
+function replaceURLWithCompare() {
+	let compareRunUID = document.getElementById("compare_select").value;
+	let withRunUID = document.getElementById("with_select").value;
+
+	let bSort = document.getElementById("compare_sort").checked;
+
+	if (!compareRunUID || !withRunUID)
+		history.replaceState(null, '', '#compare');
+	else
+		history.replaceState(null, '', '#compare/' + compareRunUID + ',' + withRunUID + (bSort ? (',sorted') : ''));
+}
+
+function updateComparePanelFromURLParameter(params) {
+	if (params.length >= 1) {
+		let param0Parts = params[0].split(',');
+		if (param0Parts.length >= 2) {
+			document.getElementById("compare_select").value = param0Parts[0];
+			document.getElementById("with_select").value = param0Parts[1];
+		}
+		for (p of param0Parts.slice(2)) {
+			if (p == 'sorted')
+				document.getElementById("compare_sort").checked = true;
+		}
+		updateComparePaneTable();
 	}
 }
