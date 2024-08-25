@@ -257,7 +257,7 @@ function onSelectCompareTableRow(idx) {
 	g_selectedCompareTableRow = idx;
 }
 
-function syncCompareRunPaneTo(polylineOrMarker) {
+function syncCompareRunPanelTo(polylineOrMarker) {
 	var activeTabId = getSidebarActiveTab();
 	if (activeTabId != 'compare')
 		return;

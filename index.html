@@ -20,7 +20,7 @@
 	<div id="runlist-dropdown" style="display: none; z-index: 1000; background: white; opacity: 0.9;">
 		<ul></ul>
 	</div>
-	<div id="compare_pane_content" style="display: none">
+	<div id="compare_panel_content" style="display: none">
 		<table style="background-color: transparent; border: none">
 			<tbody>
 				<tr>
@@ -52,11 +52,27 @@
 		<table style="background-color: transparent; border: none; width: 100%" id="compare_table">
 		</table>
 	</div>
+	<div id="help_panel_content" style="display:none">
+		<br>
+		<ol style="color:white;">
+			<li class="h6"><span class="clickable" id="help_panel_selectarun">Select a run</span> to highlight. (optional)</li>
+			<li class="h6">Click a <span class="clickable" id="help_panel_movement">movement</span>, <span class="clickable" id="help_panel_shrine">shrine</span> or <span class="clickable" id="help_panel_divinebeast">divine beast</span> to see its time in the runs.</li>
+			<li class="h6">In the popup dialog:
+				<ul>
+					<li class="h6" style="padding-top: 8px;">Click any <span class="hoverable" id="help_panel_time">time</span> to open the corresponding video segment</li>
+					<li class="h6"><span class="hoverable" id="help_panel_selectrows">Select rows</span> to <span class="hoverable" id="help_panel_view">view</span> them side by side.</li>
+					<li class="h6">Clicking a <span class="hoverable" id="help_panel_run">run</span> highlights it.</li>
+				</ul>
+			</li>
+			<li class="h6">Compare runs with each other or against community best in the <span class="clickable" id="help_panel_comparepanel">compare panel</span>.</li>
+		</ol>
+	</div>
 	<script src="js/common.js"></script>
 	<script src="js/db.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/map_popup.js"></script>
-	<script src="js/compare_pane.js"></script>
+	<script src="js/compare_panel.js"></script>
+	<script src="js/help_panel.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

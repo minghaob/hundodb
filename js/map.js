@@ -82,31 +82,7 @@ function initMap() {
 		states:[
 			{
 				icon: '<div>Highlight Run ▼</div>',
-				onClick: function(btn, map) { // callback on button click
-					var dropdownContent = L.DomUtil.get('runlist-dropdown');
-					if (dropdownContent.style.display === 'block') {
-						dropdownContent.style.display = 'none';
-					} else {
-						var ulEle = dropdownContent.querySelector('ul');
-						ulEle.innerHTML = '';
-						var runIds = Object.keys(g_runs);
-						runIds.sort(function(a,b){
-							return g_runs[a].events.at(-1).frame[1] - g_runs[b].events.at(-1).frame[1];
-						});
-						for (const runId of runIds) {
-							var li = L.DomUtil.create('li', '', ulEle);
-							li.innerHTML = runId + ' (<span style="color: forestgreen;">' + g_runs[runId].route + '</span>)';
-							if (runId == g_highlightedRun){
-								li.classList.add("highlighted-row");
-							}
-							li.onclick = function(){
-								highlightRun(this.textContent.split(' ')[0]);
-							};
-						}
-						dropdownContent.style.display = 'block';
-					}
-					g_map.closePopup();
-				}
+				onClick: onClickHighlightRun,
 			}
 		]
 	});
@@ -202,26 +178,52 @@ function initMap() {
 				id:   'compare',
 				tab:  '<i class="fa fa-database" style="font-size:18px"></i>',
 				title: 'Compare Runs',
-				pane: '<div id="compare_pane_container"></div>',
+				pane: '<div id="compare_panel_container"></div>',
 			});
-			let comparePaneContainer = L.DomUtil.get('compare_pane_container');
-			let comparePaneContent = L.DomUtil.get('compare_pane_content');
+			let comparePaneContainer = L.DomUtil.get('compare_panel_container');
+			let comparePaneContent = L.DomUtil.get('compare_panel_content');
 			comparePaneContainer.appendChild(comparePaneContent);
 			comparePaneContent.style.display = 'block';
 		}
-		// add help panel
-		g_sidebar.addPanel({
-			id:   'help',
-			tab:  '<i class="fa fa-question-circle" style="font-size:18px"></i>',
-			title: 'How to Use',
-			pane: '<div></div>',
-		});
+		initHelpPanel();
 		
 		fetchDB();
 	})
 	.catch(error => {
 		console.log('Cannot load map elements' + error);
 	});
+}
+
+function onClickHighlightRun() {
+	var dropdownContent = L.DomUtil.get('runlist-dropdown');
+	if (dropdownContent.style.display === 'block') {
+		dropdownContent.style.display = 'none';
+	} else {
+		var ulEle = dropdownContent.querySelector('ul');
+		ulEle.innerHTML = '';
+		var runIds = Object.keys(g_runs);
+		runIds.sort(function(a,b){
+			return g_runs[a].events.at(-1).frame[1] - g_runs[b].events.at(-1).frame[1];
+		});
+		for (const runId of runIds) {
+			var li = L.DomUtil.create('li', '', ulEle);
+			li.innerHTML = runId + ' (<span style="color: forestgreen;">' + g_runs[runId].route + '</span>)';
+			if (runId == g_highlightedRun){
+				li.classList.add("highlighted-row");
+			}
+			li.onclick = function(){
+				highlightRun(this.textContent.split(' ')[0]);
+			};
+		}
+		dropdownContent.style.display = 'block';
+	}
+	g_map.closePopup();
+}
+
+function closeHighlightRunDropdownList() {
+	var dropdownContent = L.DomUtil.get('runlist-dropdown');
+	if (dropdownContent.style.display === 'block')
+		dropdownContent.style.display = 'none';
 }
 
 function createMovePolyline(latLngs, from, to) {
@@ -321,7 +323,7 @@ function highlightMovesInRun(runUID) {
 	}
 }
 
-async function addMovesToMap() {
+function addMovesToMap() {
 	// movements
 	for (const [from, tos] of Object.entries(g_moves)) {
 		for (const [to, moves] of Object.entries(tos)) {
@@ -331,9 +333,10 @@ async function addMovesToMap() {
 			let path = createMovePolyline(latLngs, from, to);
 
 			path.on('click', function() {
-				syncCompareRunPaneTo(path);
+				syncCompareRunPanelTo(path);
 			});
 			path.bindPopup(function() {
+				closeHighlightRunDropdownList();
 				let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
 				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
@@ -357,9 +360,10 @@ async function addMovesToMap() {
 				dashArray: '10, 5'
 			});
 			path.on('click', function() {
-				syncCompareRunPaneTo(path);
+				syncCompareRunPanelTo(path);
 			});
 			path.bindPopup(function() {
+				closeHighlightRunDropdownList();
 				let htmlContent = '';
 				for (const [to, moves] of Object.entries(tos)) {
 					if (htmlContent.length)
@@ -382,9 +386,10 @@ async function addMovesToMap() {
 			g_markerMapping[label].marker.getElement().classList.remove("marker-glow-effect");
 		});
 		g_markerMapping[label].marker.on('click', function() {
-			syncCompareRunPaneTo(g_markerMapping[label].marker);
+			syncCompareRunPanelTo(g_markerMapping[label].marker);
 		});
 		g_markerMapping[label].marker.bindPopup(function() {
+			closeHighlightRunDropdownList();
 			return createHTMLContentForSingleLabelMovePopup(label, moves);
 		}, {maxWidth: 600});
 	}

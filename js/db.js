@@ -79,9 +79,10 @@ function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 	return [null, null];
 }
 
-function onDBFetched() {
+async function onDBFetched() {
 	addMovesToMap();
 	syncDBToComparePane();
+	g_sidebar.open("help");
 }
 
 function fetchDB() {

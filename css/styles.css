@@ -13,6 +13,7 @@ body, html {
 .move-table {
 	width: 100%;
 	border-collapse: collapse;
+	border-spacing: 0;
 	user-select: none;
 	white-space: nowrap;
 }
@@ -24,7 +25,7 @@ body, html {
 	padding-bottom: 2px;
 	font-size: 12px;
 }
-.move-table th {
+.move-table thead {
 	background-color: #e6e6e6;
 	font-size: 13px;
 }
@@ -62,6 +63,16 @@ body, html {
 
 .move-table tr td.selected-rank-cell {
     background-color: turquoise;
+}
+
+@keyframes flashing {
+	0% { background-color: inherit; } /* White */
+	50% { background-color: SpringGreen; } /* Sky Blue */
+	100% { background-color: inherit; } /* White */
+}
+
+.move-table td.help-highlight, th.help-highlight {
+	animation: flashing 1.35s infinite;
 }
 
 .no-background-tooltip {
@@ -197,4 +208,27 @@ body, html {
 
 .marker-glow-effect {
     filter: drop-shadow(0 0 2px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */
+}
+
+#help_panel_content span.clickable {
+	color: DeepSkyBlue;
+	font-weight: bold;
+}
+
+#help_panel_content span.clickable:hover {
+    text-decoration: underline;
+	cursor:pointer;
+}
+
+#help_panel_content span.hoverable {
+	font-style: italic;
+	color: GreenYellow;
+}
+
+#help_panel_content span.hoverable:hover {
+    text-decoration: underline;
+}
+
+#help_panel_content ol li {
+	line-height: 1.35;
 }

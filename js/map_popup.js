@@ -104,6 +104,7 @@ function onClickRankCell(event, cell) {
 	for (let i = 0; i < tbody.rows.length; i++)
 		if (tbody.rows[i].cells[0].classList.contains("selected-rank-cell"))
 			selectedRows.push(i);
+	let color = window.getComputedStyle(tbody.rows[0].cells[0].getElementsByTagName('a')[0]).color;
 	let headrow = tbody.parentNode.querySelector('thead').rows[0];
 	for (let i = 0; i < headrow.cells.length; i++) {
 		let aNode = headrow.cells[i].querySelector('a');
@@ -121,10 +122,12 @@ function onClickRankCell(event, cell) {
 					let link = 'https://viewsync.net/watch?' + mergedLinkParams;
 					aNode.href = link;
 					aNode.classList.add('header-clickable');
+					aNode.style.color = color;
 				}
 				else {
 					aNode.removeAttribute('href');
 					aNode.classList.remove('header-clickable');
+					aNode.style.color = 'inherit';
 				}
 			}
 		}
