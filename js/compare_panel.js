@@ -34,8 +34,10 @@ function getCompareResultFromMoveRecords(compareRunUID, withRunUID, records) {
 			if (records[i].runUID == compareRunUID)
 				compareFrame = records[i].numFrame;
 			if (withCommunityBest) {
-				if (withFrame == 0 && records[i].runUID != compareRunUID)
+				if (withFrame == 0 && records[i].runUID != compareRunUID) {
 					withFrame = records[i].numFrame;
+					withRunUID = records[i].runUID;
+				}
 			}
 			else {
 				if (records[i].runUID == withRunUID)
@@ -47,6 +49,7 @@ function getCompareResultFromMoveRecords(compareRunUID, withRunUID, records) {
 	return {
 		compareFrame : compareFrame,
 		withFrame: withFrame,
+		withRunUID: withRunUID,
 		isFastest: compareFrame == records[0].numFrame,
 	}
 }
@@ -181,21 +184,22 @@ function updateComparePaneTable() {
 		cell3.classList.add("movement");
 
 		cell3.onclick = function () {
-			if (res.marker) {
-				res.marker.openPopup();
-				g_map.panTo(res.marker.getLatLng());
-			}
-			else if (res.polyline) {
-				res.polyline.openPopup();
-				g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
-			}
-
 			if (idx == g_selectedCompareTableRow) {
-				g_map.closePopup();
 				onSelectCompareTableRow(-1);
+				g_map.closePopup();
 			}
-			else
+			else {
 				onSelectCompareTableRow(idx);
+				if (res.marker) {
+					res.marker.openPopup();
+					g_map.panTo(res.marker.getLatLng());
+				}
+				else if (res.polyline) {
+					res.polyline.openPopup();
+					g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
+				}
+				selectRunsInPopup([compareRunUID, res.withRunUID]);
+			}
 		}
 
 		cell3.onmouseover = function () {
@@ -293,6 +297,8 @@ function updateComparePanelFromURLParameter(params) {
 		let param0Parts = params[0].split(',');
 		if (param0Parts.length >= 2) {
 			document.getElementById("compare_select").value = param0Parts[0];
+			if (param0Parts[0] && g_highlightedRun != param0Parts[0])
+				highlightRun(param0Parts[0]);
 			document.getElementById("with_select").value = param0Parts[1];
 		}
 		for (p of param0Parts.slice(2)) {

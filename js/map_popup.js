@@ -104,7 +104,7 @@ function onClickRankCell(event, cell) {
 	for (let i = 0; i < tbody.rows.length; i++)
 		if (tbody.rows[i].cells[0].classList.contains("selected-rank-cell"))
 			selectedRows.push(i);
-	let color = window.getComputedStyle(tbody.rows[0].cells[0].getElementsByTagName('a')[0]).color;
+	let color = window.getComputedStyle(tbody.rows[0].cells[0].getElementsByTagName('a')[0]).color;		// get link color
 	let headrow = tbody.parentNode.querySelector('thead').rows[0];
 	for (let i = 0; i < headrow.cells.length; i++) {
 		let aNode = headrow.cells[i].querySelector('a');
@@ -139,4 +139,15 @@ function onClickRankCell(event, cell) {
 
 function ignoreEvent(event) {
 	event.preventDefault();
+}
+
+function selectRunsInPopup(selection) {
+	let moveTables = document.getElementsByClassName("move-table");
+	for (table of moveTables) {
+		for (let i = 1; i < table.rows.length; i++) {
+			let rowRunUID = table.rows[i].getAttribute('runUID');
+			if (rowRunUID && selection.includes(rowRunUID) && !table.rows[i].cells[0].classList.contains("selected-rank-cell"))
+				table.rows[i].cells[0].click();
+		}
+	}
 }
