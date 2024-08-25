@@ -375,6 +375,12 @@ async function addMovesToMap() {
 
 	// single label movements (e.g. shrines, divine beasts)
 	for (const [label, moves] of Object.entries(g_singleLabelMoves)) {
+		g_markerMapping[label].marker.on('mouseover', function(e) {
+			g_markerMapping[label].marker.getElement().classList.add("marker-glow-effect");
+		});
+		g_markerMapping[label].marker.on('mouseout', function(e) {
+			g_markerMapping[label].marker.getElement().classList.remove("marker-glow-effect");
+		});
 		g_markerMapping[label].marker.on('click', function() {
 			syncCompareRunPaneTo(g_markerMapping[label].marker);
 		});
