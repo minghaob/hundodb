@@ -258,7 +258,7 @@ function onClickCompareTableRow(idx) {
 			g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
 		}
 		let compareRunUID = document.getElementById("compare_select").value;
-		selectRunsInPopup([compareRunUID, res.withRunUID]);
+		selectRunsInPopup([compareRunUID, res.withRunUID], { from: res.from, to: res.to, at: res.at});
 	}
 }
 
@@ -296,7 +296,7 @@ function syncCompareRunPanelTo(polylineOrMarker, latlng) {
 			polylineOrMarker.openPopup(latlng);
 			// select the runs in the popup
 			let compareRunUID = document.getElementById("compare_select").value;
-			selectRunsInPopup([compareRunUID, res.withRunUID]);
+			selectRunsInPopup([compareRunUID, res.withRunUID], { from: res.from, to: res.to, at: res.at });
 
 			return { bKeepHistory: true, bSkipPopup: true};
 		}

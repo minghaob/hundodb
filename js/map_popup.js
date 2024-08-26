@@ -12,7 +12,7 @@ function createHTMLContentForMovePopup(from, to, moves) {
 	}
 	htmlContent = 
 		`<div style = "font-weight: bold">` + from + ' --> ' + to + `</div>
-		<table class="move-table">
+		<table class="move-table" from="` + from + `" to="` + to + `">
 			<thead><tr>
 				<th></th>
 				<th style="width:30px"><a target = "_blank" class="header" data-linkparams=` + JSON.stringify(linkParams) + `>Time</a></th>
@@ -66,7 +66,7 @@ function createHTMLContentForSingleLabelMovePopup(label, moves) {
 	}
 	htmlContent = 
 		`<div style = "font-weight: bold">` + label + `</div>
-		<table class="move-table">
+		<table class="move-table" at="` + label + `">
 			<thead><tr>
 				<th></th>
 				<th><a target="_blank" class="header" data-linkparams=` + JSON.stringify(linkParams) + `>Time</a></th>
@@ -141,13 +141,15 @@ function ignoreEvent(event) {
 	event.preventDefault();
 }
 
-function selectRunsInPopup(selection) {
+function selectRunsInPopup(selection, movement) {
 	let moveTables = document.getElementsByClassName("move-table");
 	for (table of moveTables) {
-		for (let i = 1; i < table.rows.length; i++) {
-			let rowRunUID = table.rows[i].getAttribute('runUID');
-			if (rowRunUID && selection.includes(rowRunUID) && !table.rows[i].cells[0].classList.contains("selected-rank-cell"))
-				table.rows[i].cells[0].click();
+		if (table.getAttribute('from') == movement.from && table.getAttribute('to') == movement.to && table.getAttribute('at') == movement.at) {
+			for (let i = 1; i < table.rows.length; i++) {
+				let rowRunUID = table.rows[i].getAttribute('runUID');
+				if (rowRunUID && selection.includes(rowRunUID) && !table.rows[i].cells[0].classList.contains("selected-rank-cell"))
+					table.rows[i].cells[0].click();
+			}
 		}
 	}
 }
