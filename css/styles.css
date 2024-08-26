@@ -206,8 +206,15 @@ body, html {
 	background-color: rgba(128,128,128,0.25);
 }
 
+@keyframes glow-flashing {
+	0% { filter: drop-shadow(0 0 3px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */}
+	50% { filter: drop-shadow(0 0 1px rgba(255, 255, 0, 1)) brightness(1); /* Yellow glow */}
+	100% { filter: drop-shadow(0 0 3px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */}
+}
+
+
 .marker-glow-effect {
-    filter: drop-shadow(0 0 2px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */
+	animation: glow-flashing 1.35s infinite;
 }
 
 #help_panel_content span.clickable {
