@@ -11,7 +11,9 @@
     .leaflet-sidebar {
       top: 0px;
       bottom: 0px;
-      transition: width 500ms; } }
+      transition: width 500ms; }
+    .leaflet-sidebar.instant {
+      transition: width 0ms; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .leaflet-sidebar {
       width: 305px;

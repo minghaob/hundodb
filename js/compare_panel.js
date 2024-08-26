@@ -92,7 +92,6 @@ function onCompareRunChange() {
 }
 
 function updateComparePaneTable() {
-	replaceURLWithCompare();
 
 	let compareRunUID = document.getElementById("compare_select").value;
 	let withRunUID = document.getElementById("with_select").value;
@@ -100,6 +99,9 @@ function updateComparePaneTable() {
 
 	tableNode.innerHTML = '';
 	g_compareResults = [];
+	g_selectedCompareTableRow = -1;
+
+	replaceURLWithCompare();
 
 	if (!compareRunUID || !withRunUID)
 		return;
@@ -114,6 +116,9 @@ function updateComparePaneTable() {
 		
 		{
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, isWarp ? g_warpMoves[last][cur] : g_moves[last][cur]);
+			res.isWarp = isWarp;
+			res.from = last;
+			res.to = cur;
 			res.text = labelToDivWithclass(last) + ' &#45;&gt; ' + labelToDivWithclass(cur);
 			res.origIdx = g_compareResults.length;
 			res.branchIdx = branchIdx;
@@ -130,6 +135,7 @@ function updateComparePaneTable() {
 
 		if (events[evtIdx].segments) {
 			let res = getCompareResultFromMoveRecords(compareRunUID, withRunUID, g_singleLabelMoves[cur].records);
+			res.at = cur;
 			res.text = labelToDivWithclass(cur);
 			res.origIdx = g_compareResults.length;
 			res.branchIdx = branchIdx;
@@ -184,22 +190,7 @@ function updateComparePaneTable() {
 		cell3.classList.add("movement");
 
 		cell3.onclick = function () {
-			if (idx == g_selectedCompareTableRow) {
-				onSelectCompareTableRow(-1);
-				g_map.closePopup();
-			}
-			else {
-				onSelectCompareTableRow(idx);
-				if (res.marker) {
-					res.marker.openPopup();
-					g_map.panTo(res.marker.getLatLng());
-				}
-				else if (res.polyline) {
-					res.polyline.openPopup();
-					g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
-				}
-				selectRunsInPopup([compareRunUID, res.withRunUID]);
-			}
+			onClickCompareTableRow(idx);
 		}
 
 		cell3.onmouseover = function () {
@@ -250,6 +241,27 @@ function updateComparePaneTable() {
 	}
 }
 
+function onClickCompareTableRow(idx) {
+	if (idx == g_selectedCompareTableRow) {
+		onSelectCompareTableRow(-1);
+		g_map.closePopup();
+	}
+	else if (idx >= 0 && idx < g_compareResults.length) {
+		onSelectCompareTableRow(idx);
+		let res = g_compareResults[idx];
+		if (res.marker) {
+			res.marker.openPopup();
+			g_map.panTo(res.marker.getLatLng());
+		}
+		else if (res.polyline) {
+			res.polyline.openPopup();
+			g_map.fitBounds(res.polyline.getBounds(), { maxZoom : g_map.getZoom() });
+		}
+		let compareRunUID = document.getElementById("compare_select").value;
+		selectRunsInPopup([compareRunUID, res.withRunUID]);
+	}
+}
+
 function onSelectCompareTableRow(idx) {
 	let tableNode = document.getElementById("compare_table");
 
@@ -261,6 +273,8 @@ function onSelectCompareTableRow(idx) {
 		tableNode.rows[idx].classList.add("selected");
 	}
 	g_selectedCompareTableRow = idx;
+
+	replaceURLWithCompare();
 }
 
 function syncCompareRunPanelTo(polylineOrMarker, latlng) {
@@ -283,7 +297,7 @@ function syncCompareRunPanelTo(polylineOrMarker, latlng) {
 			// select the runs in the popup
 			let compareRunUID = document.getElementById("compare_select").value;
 			selectRunsInPopup([compareRunUID, res.withRunUID]);
-			
+
 			return { bKeepHistory: true, bSkipPopup: true};
 		}
 	}
@@ -298,8 +312,18 @@ function replaceURLWithCompare() {
 
 	if (!compareRunUID || !withRunUID)
 		history.replaceState(null, '', '#compare');
-	else
-		history.replaceState(null, '', '#compare/' + compareRunUID + ',' + withRunUID + (bSort ? (',sorted') : ''));
+	else {
+		let url = '#compare/' + compareRunUID + ',' + withRunUID + (bSort ? (',sorted') : '');
+		if (g_selectedCompareTableRow == -1)
+			history.replaceState(null, '', url);
+		else {
+			let res = g_compareResults[g_selectedCompareTableRow];
+			if (res.at)
+				history.replaceState(null, '', url + '/' + res.at);
+			else
+				history.replaceState(null, '', url + '/' + res.from + (res.isWarp ? ',warp' : '') + ',' + res.to);
+		}
+	}
 }
 
 function updateComparePanelFromURLParameter(params) {
@@ -316,5 +340,35 @@ function updateComparePanelFromURLParameter(params) {
 				document.getElementById("compare_sort").checked = true;
 		}
 		updateComparePaneTable();
+
+		if (params.length >= 2) {
+			let param1Parts = params[1].split(',');
+			let targetRow = -1;
+			if (param1Parts.length == 1) {
+				for (let i = 0; i < g_compareResults.length; i++) {
+					if (g_compareResults[i].at == param1Parts[0]) {
+						targetRow = i;
+						break;
+					}
+				}
+			}
+			else if (param1Parts.length == 2 || param1Parts.length == 3) {
+				let from = param1Parts[0];
+				let to = param1Parts.at(-1);
+				let isWarp = param1Parts.length == 3 && param1Parts[1] == 'warp';
+				for (let i = 0; i < g_compareResults.length; i++) {
+					if (g_compareResults[i].from == from && g_compareResults[i].to == to && g_compareResults[i].isWarp == isWarp) {
+						targetRow = i;
+						break;
+					}
+				}
+			}
+
+			if (targetRow != -1) {
+				let tableNode = document.getElementById("compare_table");
+				tableNode.rows[targetRow].scrollIntoView({behavior: 'instant', block : 'center'});
+				onClickCompareTableRow(targetRow);
+			}
+		}
 	}
 }

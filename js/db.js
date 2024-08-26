@@ -115,8 +115,10 @@ async function onDBFetched() {
 				}
 			}
 			else if (parts[0] == '#compare') {
+				g_sidebar._container.classList.add('instant');
 				g_sidebar.open("compare");
 				updateComparePanelFromURLParameter(parts.slice(1));
+				g_sidebar._container.classList.remove('instant');
 			}
 			else if (parts[0] == '#help') {
 				g_sidebar.open("help");
