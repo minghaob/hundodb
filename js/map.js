@@ -310,20 +310,24 @@ function addMovesToMap() {
 			if (g_moves[to] && g_moves[to][from] && to < from && !from.startsWith("Vah") && !to.startsWith("Vah"))
 				continue;
 			let latLngs = [AdjustPositionAfterDivineBeast(from), g_markerMapping[to].marker.getLatLng()];
-			let path = createMovePolyline(latLngs, from, to);
 
-			path.on('click', function() {
-				syncCompareRunPanelTo(path);
-				history.replaceState(null, '', '#view/' + from + ',' + to);
-			});
+			let path = createMovePolyline(latLngs, from, to);
 			path.bindPopup(function() {
 				closeHighlightRunDropdownList();
 				let htmlContent = createHTMLContentForMovePopup(from, to, g_moves[from][to]);
 				if (!from.startsWith("Vah") && !to.startsWith("Vah") && g_moves[to] && g_moves[to][from])
 					htmlContent += '<br>' + createHTMLContentForMovePopup(to, from, g_moves[to][from]);
-	
 				return htmlContent;
 			});
+			path.off('click');	// bindPopup() added a click listner, remove that
+			path.on('click', function(e) {
+				let ret = syncCompareRunPanelTo(path, e.latlng);
+				if (!ret || !ret.bKeepHistory)
+					history.replaceState(null, '', '#view/' + from + ',' + to);
+				if (!ret || !ret.bSkipPopup)
+					this.openPopup(e.latlng);
+			});
+
 			if (!g_movePaths[from])
 				g_movePaths[from] = {};
 			g_movePaths[from][to] = path;
@@ -340,10 +344,6 @@ function addMovesToMap() {
 			path.setStyle({
 				dashArray: '10, 5'
 			});
-			path.on('click', function() {
-				syncCompareRunPanelTo(path);
-				history.replaceState(null, '', '#view/' + from + ',warp');
-			});
 			path.bindPopup(function() {
 				closeHighlightRunDropdownList();
 				let htmlContent = '';
@@ -352,9 +352,17 @@ function addMovesToMap() {
 						htmlContent += '<br>';
 					htmlContent += createHTMLContentForMovePopup(from, to, g_warpMoves[from][to]);
 				}
-
 				return htmlContent;
 			});
+			path.off('click');	// bindPopup() added a click listner, remove that
+			path.on('click', function(e) {
+				let ret = syncCompareRunPanelTo(path, e.latlng);
+				if (!ret || !ret.bKeepHistory)
+					history.replaceState(null, '', '#view/' + from + ',warp');
+				if (!ret || !ret.bSkipPopup)
+					this.openPopup(e.latlng);
+			});
+
 			g_warpMovePaths[from] = path;
 		}
 	}
@@ -367,14 +375,19 @@ function addMovesToMap() {
 		g_markerMapping[label].marker.on('mouseout', function(e) {
 			g_markerMapping[label].marker.getElement().classList.remove("marker-glow-effect");
 		});
-		g_markerMapping[label].marker.on('click', function() {
-			syncCompareRunPanelTo(g_markerMapping[label].marker);
-			history.replaceState(null, '', '#view/' + label);
-		});
+
 		g_markerMapping[label].marker.bindPopup(function() {
 			closeHighlightRunDropdownList();
 			return createHTMLContentForSingleLabelMovePopup(label, moves);
 		}, {maxWidth: 600});
+		g_markerMapping[label].marker.off('click');		// bindPopup() added a click listner, remove that
+		g_markerMapping[label].marker.on('click', function(e) {
+			let ret = syncCompareRunPanelTo(g_markerMapping[label].marker, e.latlng);
+			if (!ret || !ret.bKeepHistory)
+				history.replaceState(null, '', '#view/' + label);
+			if (!ret || !ret.bSkipPopup)
+				this.openPopup(e.latlng);
+		});
 	}
 }
 

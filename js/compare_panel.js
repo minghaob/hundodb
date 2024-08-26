@@ -263,7 +263,7 @@ function onSelectCompareTableRow(idx) {
 	g_selectedCompareTableRow = idx;
 }
 
-function syncCompareRunPanelTo(polylineOrMarker) {
+function syncCompareRunPanelTo(polylineOrMarker, latlng) {
 	var activeTabId = getSidebarActiveTab();
 	if (activeTabId != 'compare')
 		return;
@@ -271,13 +271,23 @@ function syncCompareRunPanelTo(polylineOrMarker) {
 	let start = g_selectedCompareTableRow + 1;
 	for (let offset = 0; offset < g_compareResults.length; offset++) {
 		let rowIdx = (start + offset) % g_compareResults.length;
-		if (g_compareResults[rowIdx].marker == polylineOrMarker || g_compareResults[rowIdx].polyline == polylineOrMarker) {
+		let res = g_compareResults[rowIdx];
+		if (res.marker == polylineOrMarker || res.polyline == polylineOrMarker) {
+			// select row
 			onSelectCompareTableRow(rowIdx);
+			// scroll table to row
 			let tableNode = document.getElementById("compare_table");
 			tableNode.rows[rowIdx].scrollIntoView({behavior: 'smooth', block : 'nearest'});
-			return;
+			// open marker / polyline's popup
+			polylineOrMarker.openPopup(latlng);
+			// select the runs in the popup
+			let compareRunUID = document.getElementById("compare_select").value;
+			selectRunsInPopup([compareRunUID, res.withRunUID]);
+			
+			return { bKeepHistory: true, bSkipPopup: true};
 		}
 	}
+	return { bKeepHistory: true, bSkipPopup: false};
 }
 
 function replaceURLWithCompare() {
