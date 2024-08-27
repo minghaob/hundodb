@@ -207,9 +207,9 @@ body, html {
 }
 
 @keyframes glow-flashing {
-	0% { filter: drop-shadow(0 0 3px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */}
-	50% { filter: drop-shadow(0 0 1px rgba(255, 255, 0, 1)) brightness(1); /* Yellow glow */}
-	100% { filter: drop-shadow(0 0 3px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */}
+	0% { filter: drop-shadow(0 0 1px rgba(255, 255, 0, 1)) brightness(1); /* Yellow glow */}
+	50% { filter: drop-shadow(0 0 3px rgba(255, 255, 0, 1)) brightness(1.5); /* Yellow glow */}
+	100% { filter: drop-shadow(0 0 1px rgba(255, 255, 0, 1)) brightness(1); /* Yellow glow */}
 }
 
 
