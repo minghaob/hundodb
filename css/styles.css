@@ -217,12 +217,13 @@ body, html {
 	animation: glow-flashing 1.35s infinite;
 }
 
-#help_panel_content span.clickable {
+#help_panel_content span.clickable, a.clickable {
 	color: DeepSkyBlue;
 	font-weight: bold;
+	text-decoration: none;
 }
 
-#help_panel_content span.clickable:hover {
+#help_panel_content span.clickable:hover, a.clickable:hover {
     text-decoration: underline;
 	cursor:pointer;
 }
