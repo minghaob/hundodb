@@ -81,7 +81,7 @@ function labelToClass(label) {
 
 function labelToDivWithclass(label) {
 	let iconUrl = g_markerMapping[label].marker.getIcon().options.iconUrl;
-	return '<span class="' + labelToClass(label) + '">' + '<img src="'+ iconUrl + '" width="16", height="16">'+ label + '</span>'
+	return '<span class="' + labelToClass(label) + '">' + '<img src="'+ iconUrl + '" width="16", height="16">'+ label.replace(/ Shrine$/, '') + '</span>'
 }
 
 function onCompareRunChange() {
