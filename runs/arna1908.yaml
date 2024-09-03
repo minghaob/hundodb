@@ -20,7 +20,7 @@ events:
   - {frame: [50291, 50326], label: X08, type: Korok Seed}
   - {frame: [51187, 51222], label: X13, type: Korok Seed}
   - {frame: [58152, 61021], label: Kaya Wan Shrine, type: Shrine, segments: [[58451, Enter], [60725, Main], [61021, Leave]]}
-  - {frame: [63597, 65391], label: Daka Tuss Shrine, type: Shrine, segments: [[63815, Enter], [65141, Main], [65391, Leave]]}
+  - {frame: [62213, 65391], label: Daka Tuss Shrine, type: Shrine, segments: [[62501, Enter], [65141, Main], [65391, Leave]]}
   - {frame: [66517, 68995], label: Ta'loh Naeg Shrine, type: Shrine, segments: [[66794, Enter], [68690, Main], [68995, Leave]]}
   - {frame: [110668, 110703], label: N42, type: Korok Seed}
   - {frame: [120809, 120842], label: N48, type: Korok Seed}
