@@ -240,3 +240,15 @@ body, html {
 #help_panel_content ol li {
 	line-height: 1.35;
 }
+
+#export_panel_content table tr td {
+	text-align:left;
+	border:none;
+	color:white;
+}
+
+.form-control:disabled {
+	background-color: #adb1b4; /* Light gray background */
+	color: #44494ebb;            /* Gray text */
+	opacity: 1;                /* Override Bootstrap's default transparency */
+}

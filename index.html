@@ -52,6 +52,33 @@
 		<table style="background-color: transparent; border: none; width: 100%" id="compare_table">
 		</table>
 	</div>
+	<div id="export_panel_content" style="display:none">
+		<select class="form-select form-select-sm" id="export_select">
+			<option selected value="">Select Run:</option>
+		</select>
+		<br>
+		<table id="export_split_options" style="background-color: transparent; border: none; width:100%;">
+			<thead class="h6" style="color:white;text-align: center;"">
+				<tr>
+					<th style="width:180px">
+						Split at
+					</th>
+					<th>
+						Format
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<br>
+		<div class="form-check form-switch h6" style="color:white">
+			<input class="form-check-input" type="checkbox" id="export_split_time" style="margin-top: 2px">
+			<label class="form-check-label" for="export_split_time">Export split time</label>
+			<span style="color:gray">(Be aware of <a href="https://github.com/minghaob/hundodb/split_timings" target="_blank" class="clickable">split timings</a>)</span>
+		</div>
+		<button type="button" class="btn btn-sm btn-primary" id="export_splits" style="width:100%" disabled><i class="fa fa-file-export"></i> Export LiveSplit (*.lss)</button>
+	</div>
 	<div id="help_panel_content" style="display:none">
 		<br>
 		<ol style="color:white;">

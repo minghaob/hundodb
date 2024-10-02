@@ -82,6 +82,7 @@ function frameToVideoLinkAndCompareLinkParam(runUID, frame) {
 async function onDBFetched() {
 	addMovesToMap();
 	syncDBToComparePane();
+	syncDBToExportPane();
 
 	if (window.location.hash) {
 		const parts = window.location.hash.split('/').map((e) => decodeURIComponent(e));
