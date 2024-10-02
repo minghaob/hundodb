@@ -10,7 +10,7 @@ function initSidebar() {
 	{
 		g_sidebar.addPanel({
 			id:   'compare',
-			tab:  '<i class="fa fa-database" style="font-size:18px"></i>',
+			tab:  '<i class="fa fa-database"></i>',
 			title: 'Compare Runs',
 			pane: '<div id="compare_panel_container"></div>',
 		});
@@ -23,6 +23,7 @@ function initSidebar() {
 	g_sidebar.on('content', onSidebarContent);
 	g_sidebar.on('closing', () => history.replaceState(null, '', window.location.pathname));
 	
+	initExportPanel();
 	initHelpPanel();
 }
 

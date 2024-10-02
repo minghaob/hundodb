@@ -2,7 +2,7 @@ function initHelpPanel() {
 	// add help panel
 	g_sidebar.addPanel({
 		id:   'help',
-		tab:  '<i class="fa fa-question-circle" style="font-size:18px"></i>',
+		tab:  '<i class="fa fa-question-circle"></i>',
 		title: 'How to Use',
 		pane: '<div id="help_panel_container"></div>',
 	});
