@@ -1,7 +1,7 @@
 ## Split timings
 When exporting LiveSplit (*.lss) from a run in HundoDB, it is possible to also include the split times in the exported file.
 
-However, be aware that the split timing might be different from what the user originally uses.
+However, be aware that the split timing might be different from what the runner uses originally.
 
 If the split times are to be used for comparison (either when practicing or with another run), make sure that you also split as follows:
 | Type   | Split timing |
