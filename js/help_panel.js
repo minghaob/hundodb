@@ -38,6 +38,7 @@ function initHelpPanel() {
 	document.getElementById("help_panel_run").onmouseout = () => highlightPopupTimeCells(isRunCell);
 
 	document.getElementById("help_panel_comparepanel").onclick = () => {g_sidebar.open("compare")};
+	document.getElementById("help_panel_exportpanel").onclick = () => {g_sidebar.open("export")};
 }
 
 function highlightPopupTimeCells(cb) {
